@@ -1,10 +1,11 @@
 import React from "react";
+import './Footer.css';
 
 function Footer() {
   return (
-    <footer className="w3-container w3-dark-grey">
-      <div className="footerContainer">
-        <div className="footerSections">
+    <footer className="footer">
+      <div className="">
+        <div className="">
           <p>Follow us:</p>
           <a href="https://www.instagram.com/4hands_food_studio/?hl=en">
             <p>
@@ -18,7 +19,7 @@ function Footer() {
           </a>
         </div>
 
-        <div className="footerSections">
+        <div className="">
           <p>Read:</p>
           <a href="https://www.irishtimes.com/life-and-style/food-and-drink/restaurant-reviews/review-the-best-pop-up-restaurant-in-ireland-1.4194051">
             <u>Irish Times article</u>
@@ -30,12 +31,12 @@ function Footer() {
         </div>
       </div>
 
-      <div className="middleOfFooter">
+      <div className="">
         <p>4 Hands Food Studio &copy; 2020.</p>
         <br />
       </div>
 
-      <div className="middleOfFooter">
+      <div className="">
         <p>
           <a href="https://eoinlynch.com">
             Design &amp; Code, by <u>Eoin Lynch</u>

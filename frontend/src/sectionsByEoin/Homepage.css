@@ -15,7 +15,7 @@ html{
 }
 
 .homepagebox{
-    margin: 5rem;
+    margin: 2rem;
     padding: 2rem;
     background-color: white;
 }
@@ -27,6 +27,11 @@ html{
 }
 
 .white{
-    padding: 5rem;
+    padding: 2rem;
+
+}
+
+#principles ul li{
+    text-decoration: none;
 }
 
