@@ -28,7 +28,7 @@ function App() {
   };
   return (
     <BrowserRouter>
-      <div className="grid-container">
+      <div className="">
         
         <header className="header">
           <div className="brand">

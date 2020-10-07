@@ -16,7 +16,7 @@ button {
 #root {
   height: 100%;
 }
-.grid-container {
+/* .grid-container {
   display: grid;
   grid-template-areas:
     'header'
@@ -25,7 +25,7 @@ button {
   grid-template-columns: 1fr;
   grid-template-rows: 5rem 1fr 5rem;
   height: 100%;
-}
+} */
 .header {
   grid-area: header;
   background-color: #61892F;
@@ -89,7 +89,14 @@ a:hover {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  border: 1px solid black;
+  background-color: black;
 }
+
+.product img{
+  width: 100%;
+}
+
 .product-name {
   font-size: 2rem;
   font-weight: bold;

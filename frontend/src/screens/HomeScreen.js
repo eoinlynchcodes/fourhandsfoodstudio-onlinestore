@@ -47,7 +47,7 @@ function HomeScreen(props) {
         </li>
       </ul> */}
       <div className="homepageContainer">
-        <section className="leftHandSide">
+        <div className="leftHandSide">
           <section className="homepagebox">
             <div className="black">
               <h2>Vision</h2>
@@ -83,19 +83,15 @@ function HomeScreen(props) {
                     <li key={product._id}>
                       <div className="product">
                         <Link to={"/product/" + product._id}>
-                          <img
-                            className="product-image"
-                            src={product.image}
-                            alt="product"
-                          />
+                          <img className="product-image" src={product.image} />
                         </Link>
                         <div className="product-name">
                           <Link to={"/product/" + product._id}>
                             {product.name}
                           </Link>
                         </div>
-                        <div className="product-brand">{product.brand}</div>
-                        <div className="product-price">€{product.price}</div>
+                        <div className="product">{product.brand}</div>
+                        <div className="product">€{product.price}</div>
                         <Link to={"/product/" + product._id}>
                           <div className="button">Curious?</div>
                         </Link>
@@ -107,11 +103,28 @@ function HomeScreen(props) {
             </div>
           </section>
 
-          <section className="homepagebox"></section>
+          <section className="homepagebox">
+            <div className="black">
+              <h2>Takeaways</h2>
+            </div>
+            <div className="white">
+              <p>
+              Nourishing, sustainable, tasty ready-to-go meal to enjoy with your loved ones in the
+              comfort of your own home.
+              <br/>
+              <br/>
+              Our takeaway is by pre-order only, join our mailing list to receive the weekly menu, or check out the
+              website each Monday for the update.
+              <br/>
+              <br/>
+              Food is served in glass jars, we greatly appreciate the return of clean jars helping eliminate waste.
+              </p>
+            </div>
+          </section>
 
-          <section className="homepagebox"></section>
-        </section>
-        <section className="rightHandSide">
+        </div>
+
+        <div className="rightHandSide">
           <section className="homepagebox">
             <div className="black">
               <h3>Our Principles</h3>
@@ -169,7 +182,47 @@ function HomeScreen(props) {
               <span>10. Lead by example.</span>
             </div>
           </section>
-        </section>
+
+          <section className="homepagebox">
+            <div className="black">
+              <h3>About Rose &amp; Margaux</h3>
+            </div>
+            <div className="white">
+              <p>
+              Rose’s life has always orientated around food, studies in Culinary Arts
+              led to cooking in a number of
+              world renowned restaurants internationally.
+              She has always focused her career on produce, going to the source and supporting farmers while
+              instilling
+              the importance of providence to young budding cooks she mentored throughout her 15 year career as a
+              chef.
+              <br /><br />
+              Always a curious mind, fermentation became a core of her work.
+              Gaining an in-depth understanding of the health benefits of fermentation through collaboration with
+              the
+              microbiology department of Antwerp university, using her knowledge in natural fermentation to assist
+              professors and PHD students in their studies.
+              Margaux’s French roots seen her raised with an appreciation of food
+              culture, which followed her
+              throughout her life as a simple pleasure. It was only later in life she decided to forge a career in
+              her
+              true passion, food.
+              Having a great sensitivity to nature, and all living things, the core of her interest in food was
+              leading
+              the way in sustainable thinking and the betterment of our natural surroundings.
+              <br /><br />
+              Within Europe she gained an extensive knowledge in organic farming practices, working along side some
+              amazing farming minds to develop her own growing style which she uses today.
+              Wellbeing is also key to life, as she continually strives to increase her knowledge in medicinal
+              plants
+              and their uses.
+              Together Rose and Margaux call upon their experience daily to help them achieve their goals as a
+              leading
+              sustainable food business.
+              </p>
+            </div>
+          </section>
+        </div>
       </div>
     </>
   );
