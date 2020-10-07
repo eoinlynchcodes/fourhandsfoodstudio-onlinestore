@@ -1,5 +1,6 @@
 html{
-    background-color: darkgrey;
+    background-color:#222629;
+    color: #5F6366;
 }
 .homepageContainer{
     display: flex;
@@ -17,7 +18,7 @@ html{
 .homepagebox{
     margin: 2rem;
     padding: 2rem;
-    background-color: white;
+    background-color: #F2F2F2;
 }
 
 .black{
@@ -28,6 +29,7 @@ html{
 
 .white{
     padding: 2rem;
+
 
 }
 

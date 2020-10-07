@@ -28,12 +28,15 @@ button {
 }
 .header {
   grid-area: header;
-  background-color: #203040;
+  background-color: #61892F;
   color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem;
+  padding: 1rem;
+}
+
+.brand{
 }
 .brand a {
   color: #ffffff;
@@ -47,7 +50,7 @@ button {
   padding: 1rem;
 }
 .header-links a:hover {
-  color: #ff8000;
+  color: black;
 }
 .main {
   grid-area: main;
@@ -64,7 +67,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #ff8000;
+  color: black;
 }
 /* Home Screen */
 .products {
@@ -121,7 +124,7 @@ ul.review {
 
 /* Rating */
 .rating span {
-  color: #ffb901;
+  color: black;
   font-size: 1.8rem;
   margin: 0.1rem;
 }

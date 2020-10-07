@@ -29,10 +29,13 @@ function App() {
   return (
     <BrowserRouter>
       <div className="grid-container">
+        
         <header className="header">
           <div className="brand">
             <button onClick={openMenu}>&#9776;</button>
-            <Link to="/">fourhandsfoodstudio</Link>
+          </div>
+          <div className="brand">
+          <Link to="/">Four Hands Food Studio</Link>
           </div>
           <div className="header-links">
             <a href="cart.html">Cart</a>
@@ -54,6 +57,7 @@ function App() {
             )}
           </div>
         </header>
+
         <aside className="sidebar">
           <h3>Shopping Categories</h3>
           <button className="sidebar-close-button" onClick={closeMenu}>
