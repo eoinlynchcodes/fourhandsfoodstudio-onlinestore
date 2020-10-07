@@ -19,7 +19,7 @@ function Homepage() {
                 are to live in a world which knows better how to care for itself
                 than we ever could."
               </i>
-              <br /> <br />- Rose Greene & Margaux Dejardin, 4 Hands Food Studio
+              <br /> <br />- Rose Greene &amp; Margaux Dejardin, 4 Hands Food Studio
             </p>
           </div>
         </section>
@@ -33,7 +33,7 @@ function Homepage() {
       <section className="rightHandSide">
         <section className="homepagebox">
           <div className="black">
-            <h2>Principles</h2>
+            <h3>Our Principles</h3>
           </div>
           <div id="principles" className="white">
             <hr/>
@@ -85,7 +85,7 @@ function Homepage() {
             <br />
             <br />
             <hr/>
-            <span>10. Lead by example.</span><hr/>
+            <span>10. Lead by example.</span>
           </div>
         </section>
       </section>
