@@ -5,6 +5,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { listProducts } from "../actions/productActions";
 import Rating from "../components/Rating";
 import Homepage from "../sectionsByEoin/Homepage";
+import rose from '../imagesByEoin/rose.jpeg';
+import margaux from '../imagesByEoin/margaux.jpeg';
 
 function HomeScreen(props) {
   const [searchKeyword, setSearchKeyword] = useState("");
@@ -188,7 +190,19 @@ function HomeScreen(props) {
               <h3>About Rose &amp; Margaux</h3>
             </div>
             <div className="white">
-              <p>
+
+                <img src={rose}/>
+                <p className="w3-container w3-padding w3-black">Rose Greene</p>
+              
+                <img src={margaux}/>
+                <p className="w3-container w3-padding w3-black">Margaux Dejardin
+                </p>
+                </div>
+            <button onclick="openPanelRose()" id="centreAboutRoseButton"
+              className="bg-red-600 hover:bg-black-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+              More About Rose &amp; Margaux
+            </button> <br /> <br/>
+            <p id="rose" className="closedPanel">
               Rose’s life has always orientated around food, studies in Culinary Arts
               led to cooking in a number of
               world renowned restaurants internationally.
@@ -218,9 +232,7 @@ function HomeScreen(props) {
               and their uses.
               Together Rose and Margaux call upon their experience daily to help them achieve their goals as a
               leading
-              sustainable food business.
-              </p>
-            </div>
+              sustainable food business. </p>
           </section>
         </div>
       </div>
