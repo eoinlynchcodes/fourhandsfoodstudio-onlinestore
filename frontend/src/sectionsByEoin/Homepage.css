@@ -1,0 +1,32 @@
+html{
+    background-color: darkgrey;
+}
+.homepageContainer{
+    display: flex;
+
+}
+
+.leftHandSide{
+    width: 66%;
+}
+
+.rightHandSide{
+    width: 33%;
+}
+
+.homepagebox{
+    margin: 5rem;
+    padding: 2rem;
+    background-color: white;
+}
+
+.black{
+    background-color: black;
+    color: white;
+    padding: 0.5rem 5rem;
+}
+
+.white{
+    padding: 5rem;
+}
+

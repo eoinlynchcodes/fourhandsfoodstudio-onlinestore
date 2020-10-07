@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
 import { listProducts } from '../actions/productActions';
 import Rating from '../components/Rating';
+import Homepage from '../sectionsByEoin/Homepage';
 
 function HomeScreen(props) {
   const [searchKeyword, setSearchKeyword] = useState('');
@@ -24,10 +25,10 @@ function HomeScreen(props) {
     e.preventDefault();
     dispatch(listProducts(category, searchKeyword, sortOrder));
   };
-  const sortHandler = (e) => {
-    setSortOrder(e.target.value);
-    dispatch(listProducts(category, searchKeyword, sortOrder));
-  };
+  // const sortHandler = (e) => {
+  //   setSortOrder(e.target.value);
+  //   dispatch(listProducts(category, searchKeyword, sortOrder));
+  // };
 
   return (
     <>
@@ -42,14 +43,6 @@ function HomeScreen(props) {
             />
             <button type="submit">Search</button>
           </form>
-        </li>
-        <li>
-          Sort By{' '}
-          <select name="sortOrder" onChange={sortHandler}>
-            <option value="">Newest</option>
-            <option value="lowest">Lowest</option>
-            <option value="highest">Highest</option>
-          </select>
         </li>
       </ul>
       {loading ? (
@@ -72,7 +65,7 @@ function HomeScreen(props) {
                   <Link to={'/product/' + product._id}>{product.name}</Link>
                 </div>
                 <div className="product-brand">{product.brand}</div>
-                <div className="product-price">${product.price}</div>
+                <div className="product-price">€{product.price}</div>
                 <div className="product-rating">
                   <Rating
                     value={product.rating}
@@ -84,6 +77,7 @@ function HomeScreen(props) {
           ))}
         </ul>
       )}
+      <Homepage/>
     </>
   );
 }
