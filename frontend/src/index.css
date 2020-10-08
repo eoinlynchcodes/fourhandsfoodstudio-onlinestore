@@ -28,24 +28,26 @@ button {
 } */
 .header {
   grid-area: header;
-  background-color: #61892F;
-  color: #ffffff;
+  color: #333333;
+  background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
 }
 
+
 .brand{
+  color: #333333;
 }
 .brand a {
-  color: #ffffff;
+  color: #333333;
   font-size: 3rem;
   font-weight: bold;
   text-decoration: none;
 }
 .header-links a {
-  color: #ffffff;
+  color: #333333;
   text-decoration: none;
   padding: 1rem;
 }
@@ -55,14 +57,14 @@ button {
 .main {
   grid-area: main;
 }
-.footer {
+/* .footer {
   grid-area: footer;
   background-color: #203040;
   color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 a {
   text-decoration: none;
 }
@@ -147,10 +149,10 @@ a > .rating > span:last-child {
 
 .brand button {
   font-size: 3rem;
-  padding: 0.5rem;
+  padding: 1rem;
   background: none;
   border: none;
-  color: #ffffff;
+  color: #333333;
   cursor: pointer;
 }
 .sidebar {
@@ -159,6 +161,7 @@ a > .rating > span:last-child {
   transform: translateX(-30rem);
   width: 30rem;
   background-color: #f0f0f0;
+  padding: 2rem;
   height: 100%;
 }
 .sidebar.open {

@@ -56,3 +56,20 @@ html{
     text-decoration: none;
 }
 
+.flexRoseAndMargaux{
+    display: flex;
+}
+
+.flexRoseAndMargaux img {
+    width: 100%;
+}
+
+
+.contactForm{
+    display: flex;
+    flex-direction: column;
+}
+
+.contactForm input {
+    width: 100%;
+}

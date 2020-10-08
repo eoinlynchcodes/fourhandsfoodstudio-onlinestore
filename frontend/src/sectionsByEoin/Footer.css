@@ -1,0 +1,26 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #333333;
+    padding: 4rem;
+}
+
+footer a{
+    color: white;
+
+ }
+
+.links{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+nav{
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}

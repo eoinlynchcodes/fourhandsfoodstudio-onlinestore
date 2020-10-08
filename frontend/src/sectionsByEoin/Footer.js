@@ -1,20 +1,20 @@
 import React from "react";
-import './Footer.css';
+import "./Footer.css";
 
 function Footer() {
   return (
     <footer className="footer">
-      <div className="">
+      <div className="links">
         <div className="">
           <p>Follow us:</p>
           <a href="https://www.instagram.com/4hands_food_studio/?hl=en">
             <p>
-              <u>Instagram</u>
+              Instagram
             </p>
           </a>
           <a href="https://medium.com/@4handsf">
             <p>
-              <u>Medium</u>
+              Medium
             </p>
           </a>
         </div>
@@ -22,26 +22,35 @@ function Footer() {
         <div className="">
           <p>Read:</p>
           <a href="https://www.irishtimes.com/life-and-style/food-and-drink/restaurant-reviews/review-the-best-pop-up-restaurant-in-ireland-1.4194051">
-            <u>Irish Times article</u>
+            Irish Times article
             <br />
           </a>
           <a href="https://medium.com/@4handsf">
-            <u>4 Hands Food Studio Blog</u>
+            4 Hands Food Studio Blog
           </a>
         </div>
+
+        <nav>
+          <a href="#shop">Shop</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a href="#retailers">Retailers</a>
+          <a href="#takeaways">Order Takeaways</a>
+        </nav>
       </div>
 
-      <div className="">
-        <p>4 Hands Food Studio &copy; 2020.</p>
-        <br />
-      </div>
+      <div className="bottom">
+        <div className="">
+          <p><a>&copy; 4 Hands Food Studio 2020</a></p>
+        </div>
 
-      <div className="">
-        <p>
-          <a href="https://eoinlynch.com">
-            Design &amp; Code, by <u>Eoin Lynch</u>
-          </a>
-        </p>
+        <div className="">
+          <p>
+            <a href="https://eoinlynch.com">
+              Design &amp; Code by <u>Eoin Lynch</u>
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   );

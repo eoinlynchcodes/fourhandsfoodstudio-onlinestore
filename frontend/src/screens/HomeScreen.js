@@ -70,7 +70,7 @@ function HomeScreen(props) {
             </div>
           </section>
 
-          <section className="homepagebox">
+          <section id="shop" className="homepagebox">
             <div className="black">
               <h2>Products</h2>
             </div>
@@ -107,7 +107,7 @@ function HomeScreen(props) {
 
           <section className="homepagebox">
             <div className="black">
-              <h2>Takeaways</h2>
+              <h2>Order our Takeaway</h2>
             </div>
             <div className="white">
               <p>
@@ -189,27 +189,42 @@ function HomeScreen(props) {
             </div>
 
             <div className="white">
-
               <ul>
-                <li>
-                Nuts and Grains	Mullingar, Westmeath
-                </li>
-                <li>
-                Fox's Fruit &amp; Veg	Mullingar, Westmeath
-                </li>
-                <li>
-                Lowe &amp; Co.	Athlone, Westmeath
-                </li>
-                <li>
-                Skelly's	Ballymahon, Longford
-                </li>
-                <li>
-                Wilder and Gold	Ballymahon, Longford
-                </li>
+                <li>Nuts and Grains Mullingar, Westmeath</li>
+                <li>Fox's Fruit &amp; Veg Mullingar, Westmeath</li>
+                <li>Lowe &amp; Co. Athlone, Westmeath</li>
+                <li>Skelly's Ballymahon, Longford</li>
+                <li>Wilder and Gold Ballymahon, Longford</li>
               </ul>
             </div>
-
           </section>
+
+          <section className="contactForm homepagebox">
+            <div className="black">
+              <h2>Contact Us:</h2>
+            </div>
+
+            <div className="white">
+             <form className="contactForm">
+               <p>Feel free to contact us about anything to do with how 4 Hands Food Studio operates, for order enquiries or more..</p>
+                 <input className="formbox" type="text" placeholder="Name:" />
+               <br/>
+
+                 <input className="formbox" type="text" placeholder="Email:"/>
+               <br/>
+
+                 <input className="formbox" type="textarea" placeholder="Message:" />
+              <br/>
+
+              <div className="formbox">
+              <input type="Submit" />
+              </div>
+             </form>
+            </div>
+          </section>
+
+
+       
         </div>
         {/* Beginning of right section */}
 
@@ -274,25 +289,36 @@ function HomeScreen(props) {
 
           <section className="homepagebox">
             <div className="black">
-              <h3>About Rose &amp; Margaux</h3>
+              <h3>About</h3>
             </div>
             <div className="white">
-              <img src={rose} />
-              <p className="w3-container w3-padding w3-black">Rose Greene</p>
-
-              <img src={margaux} />
-              <p className="w3-container w3-padding w3-black">
-                Margaux Dejardin
-              </p>
+            <p>
+              4 Hands Food Studio are producers of naturally fermented foods and drinks. Sourcing the best produce, to
+              make the highest quality product! 4 Hands keeps to its sustainable thinking by the <a
+                href="#principles"><u>principles</u></a> they set in place for their regenerative
+              business model.<br /><br />
+              4 Hands Food Studio's pop-up dinners have been hailed as <a
+                href="https://www.irishtimes.com/life-and-style/food-and-drink/restaurant-reviews/review-the-best-pop-up-restaurant-in-ireland-1.4194051"><i><u>"the
+                    best pop-up restaurant in Ireland"</u></i></a> by the Irish Times.
+              <br /><br />
+              4 Hands was founded by Rose Greene and Margaux Dejardin in 2018, in Rathaspick, Ireland.
+            </p>
             </div>
-            <button
-              onclick="openPanelRose()"
-              id="centreAboutRoseButton"
-              className="bg-red-600 hover:bg-black-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
-            >
-              More About Rose &amp; Margaux
-            </button>{" "}
-            <br /> <br />
+            <div className="flexRoseAndMargaux">
+              <div>
+                <img src={rose} />
+                <p className="w3-container w3-padding w3-black">Rose Greene</p>
+              </div>
+
+              <div>
+                <img src={margaux} />
+                <p className="w3-container w3-padding w3-black">
+                  Margaux Dejardin
+                </p>
+              </div>
+            </div>
+            <br /> 
+            <h4><u>Rose</u></h4>
             <p id="rose" className="closedPanel">
               Rose’s life has always orientated around food, studies in Culinary
               Arts led to cooking in a number of world renowned restaurants
@@ -307,7 +333,12 @@ function HomeScreen(props) {
               fermentation through collaboration with the microbiology
               department of Antwerp university, using her knowledge in natural
               fermentation to assist professors and PHD students in their
-              studies. Margaux’s French roots seen her raised with an
+              studies. 
+              <br/>
+              <br/>
+              <h4><u>Margaux</u></h4>
+            
+              Margaux’s French roots seen her raised with an
               appreciation of food culture, which followed her throughout her
               life as a simple pleasure. It was only later in life she decided
               to forge a career in her true passion, food. Having a great
