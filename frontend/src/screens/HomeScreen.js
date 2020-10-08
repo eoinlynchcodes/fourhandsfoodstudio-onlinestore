@@ -5,8 +5,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { listProducts } from "../actions/productActions";
 import Rating from "../components/Rating";
 import Homepage from "../sectionsByEoin/Homepage";
-import rose from '../imagesByEoin/rose.jpeg';
-import margaux from '../imagesByEoin/margaux.jpeg';
+import rose from "../imagesByEoin/rose.jpeg";
+import margaux from "../imagesByEoin/margaux.jpeg";
 
 function HomeScreen(props) {
   const [searchKeyword, setSearchKeyword] = useState("");
@@ -111,20 +111,70 @@ function HomeScreen(props) {
             </div>
             <div className="white">
               <p>
-              Nourishing, sustainable, tasty ready-to-go meal to enjoy with your loved ones in the
-              comfort of your own home.
-              <br/>
-              <br/>
-              Our takeaway is by pre-order only, join our mailing list to receive the weekly menu, or check out the
-              website each Monday for the update.
-              <br/>
-              <br/>
-              Food is served in glass jars, we greatly appreciate the return of clean jars helping eliminate waste.
+                Nourishing, sustainable, tasty ready-to-go meal to enjoy with
+                your loved ones in the comfort of your own home.
+                <br />
+                <br />
+                Our takeaway is by pre-order only, join our mailing list to
+                receive the weekly menu, or check out the website each Monday
+                for the update.
+                <br />
+                <br />
+                Food is served in glass jars, we greatly appreciate the return
+                of clean jars helping eliminate waste.
               </p>
             </div>
           </section>
 
+          <section className="homepagebox">
+            <div className="black">
+              <h2>Blog</h2>
+            </div>
+            <div className="white">
+              <div
+                class="aroundBlog w3-justify"
+                id="retainable-rss-embed"
+                data-rss="https://medium.com/feed/@4handsf"
+                data-maxcols="3"
+                data-layout="grid"
+                data-poststyle="inline"
+                data-readmore="Read the rest..."
+                data-buttonclass="btn btn-primary"
+                data-offset="-100"
+              ></div>
+            </div>
+          </section>
+
+
+
+          <section className="homepagebox">
+            <div className="black">
+              <h2>Newsletter Signup</h2>
+            </div>
+            <div className="white">         
+            <p>***Text about what our news letter contains and why we send it.</p>
+            <form
+             action="https://gmail.us19.list-manage.com/subscribe/post?u=5f345ee5b52850316f8e104b4&amp;id=e9b9605d2b"
+             method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+             target="_blank" novalidate>
+              <div>
+                <label>Subscribe to our News Letter</label>
+                <div>
+                  <input />
+                  <div>
+                    <input type="submit" value="Subscribe" name="subscribe"  />
+                  </div>
+                </div>
+              </div>
+
+            </form>
+
+
+            </div>
+          </section>
         </div>
+
+        {/* Beginning of right section */}
 
         <div className="rightHandSide">
           <section className="homepagebox">
@@ -190,49 +240,53 @@ function HomeScreen(props) {
               <h3>About Rose &amp; Margaux</h3>
             </div>
             <div className="white">
+              <img src={rose} />
+              <p className="w3-container w3-padding w3-black">Rose Greene</p>
 
-                <img src={rose}/>
-                <p className="w3-container w3-padding w3-black">Rose Greene</p>
-              
-                <img src={margaux}/>
-                <p className="w3-container w3-padding w3-black">Margaux Dejardin
-                </p>
-                </div>
-            <button onclick="openPanelRose()" id="centreAboutRoseButton"
-              className="bg-red-600 hover:bg-black-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
+              <img src={margaux} />
+              <p className="w3-container w3-padding w3-black">
+                Margaux Dejardin
+              </p>
+            </div>
+            <button
+              onclick="openPanelRose()"
+              id="centreAboutRoseButton"
+              className="bg-red-600 hover:bg-black-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"
+            >
               More About Rose &amp; Margaux
-            </button> <br /> <br/>
+            </button>{" "}
+            <br /> <br />
             <p id="rose" className="closedPanel">
-              Rose’s life has always orientated around food, studies in Culinary Arts
-              led to cooking in a number of
-              world renowned restaurants internationally.
-              She has always focused her career on produce, going to the source and supporting farmers while
-              instilling
-              the importance of providence to young budding cooks she mentored throughout her 15 year career as a
-              chef.
-              <br /><br />
+              Rose’s life has always orientated around food, studies in Culinary
+              Arts led to cooking in a number of world renowned restaurants
+              internationally. She has always focused her career on produce,
+              going to the source and supporting farmers while instilling the
+              importance of providence to young budding cooks she mentored
+              throughout her 15 year career as a chef.
+              <br />
+              <br />
               Always a curious mind, fermentation became a core of her work.
-              Gaining an in-depth understanding of the health benefits of fermentation through collaboration with
-              the
-              microbiology department of Antwerp university, using her knowledge in natural fermentation to assist
-              professors and PHD students in their studies.
-              Margaux’s French roots seen her raised with an appreciation of food
-              culture, which followed her
-              throughout her life as a simple pleasure. It was only later in life she decided to forge a career in
-              her
-              true passion, food.
-              Having a great sensitivity to nature, and all living things, the core of her interest in food was
-              leading
-              the way in sustainable thinking and the betterment of our natural surroundings.
-              <br /><br />
-              Within Europe she gained an extensive knowledge in organic farming practices, working along side some
-              amazing farming minds to develop her own growing style which she uses today.
-              Wellbeing is also key to life, as she continually strives to increase her knowledge in medicinal
-              plants
-              and their uses.
-              Together Rose and Margaux call upon their experience daily to help them achieve their goals as a
-              leading
-              sustainable food business. </p>
+              Gaining an in-depth understanding of the health benefits of
+              fermentation through collaboration with the microbiology
+              department of Antwerp university, using her knowledge in natural
+              fermentation to assist professors and PHD students in their
+              studies. Margaux’s French roots seen her raised with an
+              appreciation of food culture, which followed her throughout her
+              life as a simple pleasure. It was only later in life she decided
+              to forge a career in her true passion, food. Having a great
+              sensitivity to nature, and all living things, the core of her
+              interest in food was leading the way in sustainable thinking and
+              the betterment of our natural surroundings.
+              <br />
+              <br />
+              Within Europe she gained an extensive knowledge in organic farming
+              practices, working along side some amazing farming minds to
+              develop her own growing style which she uses today. Wellbeing is
+              also key to life, as she continually strives to increase her
+              knowledge in medicinal plants and their uses. Together Rose and
+              Margaux call upon their experience daily to help them achieve
+              their goals as a leading sustainable food business.{" "}
+            </p>
           </section>
         </div>
       </div>
