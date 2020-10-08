@@ -145,35 +145,72 @@ function HomeScreen(props) {
             </div>
           </section>
 
-
-
           <section className="homepagebox">
             <div className="black">
               <h2>Newsletter Signup</h2>
             </div>
-            <div className="white">         
-            <p>***Text about what our news letter contains and why we send it.</p>
-            <form
-             action="https://gmail.us19.list-manage.com/subscribe/post?u=5f345ee5b52850316f8e104b4&amp;id=e9b9605d2b"
-             method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
-             target="_blank" novalidate>
-              <div>
-                <label>Subscribe to our News Letter</label>
+            <div className="white">
+              <p>
+                ***Text about what our news letter contains and why we send it.
+              </p>
+              <form
+                action="https://gmail.us19.list-manage.com/subscribe/post?u=5f345ee5b52850316f8e104b4&amp;id=e9b9605d2b"
+                method="post"
+                id="mc-embedded-subscribe-form"
+                name="mc-embedded-subscribe-form"
+                class="validate"
+                target="_blank"
+                novalidate
+              >
                 <div>
-                  <input />
+                  <label>Subscribe to our News Letter</label>
                   <div>
-                    <input type="submit" value="Subscribe" name="subscribe"  />
+                    <input />
+                    <div>
+                      <input type="submit" value="Subscribe" name="subscribe" />
+                    </div>
                   </div>
                 </div>
-              </div>
-
-            </form>
-
-
+              </form>
             </div>
           </section>
-        </div>
 
+          <section className="homepagebox">
+            <div className="black">
+              <h2>Gallery</h2>
+            </div>
+
+            <div className="white"></div>
+          </section>
+
+          <section className="homepagebox">
+            <div className="black">
+              <h2>Find 4 Hands Food Studio's Products</h2>
+            </div>
+
+            <div className="white">
+
+              <ul>
+                <li>
+                Nuts and Grains	Mullingar, Westmeath
+                </li>
+                <li>
+                Fox's Fruit &amp; Veg	Mullingar, Westmeath
+                </li>
+                <li>
+                Lowe &amp; Co.	Athlone, Westmeath
+                </li>
+                <li>
+                Skelly's	Ballymahon, Longford
+                </li>
+                <li>
+                Wilder and Gold	Ballymahon, Longford
+                </li>
+              </ul>
+            </div>
+
+          </section>
+        </div>
         {/* Beginning of right section */}
 
         <div className="rightHandSide">
