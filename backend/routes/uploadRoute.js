@@ -36,7 +36,7 @@ const storageS3 = multerS3({
   },
 });
 const uploadS3 = multer({ storage: storageS3 });
-router.post('/s3', uploadS3.single('image'), (req, res) => {
+router.post('/', uploadS3.single('image'), (req, res) => {
   res.send(req.file.location);
 });
 export default router;
