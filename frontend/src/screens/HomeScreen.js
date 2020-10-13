@@ -147,6 +147,16 @@ function HomeScreen(props) {
 
           <section className="homepagebox">
             <div className="black">
+              <h2>Events</h2>
+            </div>
+            <div className="white">
+              <p>4Hands run workshops, private and pop-up dinners. Events are currently restricted due to the Covid-19 situation but expect more in the future.<br/>
+              In 2020, the Irish Times voted 4Hands Food Studio as 'the best pop-up restaurant in Ireland' with dinners being served in the Fumbally Stables, Dublin.</p>
+            </div>
+          </section>
+
+          <section className="homepagebox">
+            <div className="black">
               <h2>Newsletter Signup</h2>
             </div>
             <div className="white">
