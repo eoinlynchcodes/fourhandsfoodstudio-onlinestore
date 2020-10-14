@@ -13,7 +13,7 @@ function ProductsScreen(props) {
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
   const [image, setImage] = useState('');
-  const [brand, setBrand] = useState('');
+  const [ingredients, setIngredients] = useState('');
   const [category, setCategory] = useState('');
   const [countInStock, setCountInStock] = useState('');
   const [description, setDescription] = useState('');
@@ -53,7 +53,7 @@ function ProductsScreen(props) {
     setPrice(product.price);
     setDescription(product.description);
     setImage(product.image);
-    setBrand(product.brand);
+    setIngredients(product.ingredients);
     setCategory(product.category);
     setCountInStock(product.countInStock);
   };
@@ -65,7 +65,7 @@ function ProductsScreen(props) {
         name,
         price,
         image,
-        brand,
+        ingredients,
         category,
         countInStock,
         description,
@@ -148,14 +148,14 @@ function ProductsScreen(props) {
                 {uploading && <div>Uploading...</div>}
               </li>
               <li>
-                <label htmlFor="brand">Brand</label>
-                <input
+                <label htmlFor="ingredients">ingredients</label>
+                <textarea
                   type="text"
-                  name="brand"
-                  value={brand}
-                  id="brand"
-                  onChange={(e) => setBrand(e.target.value)}
-                ></input>
+                  name="ingredients"
+                  value={ingredients}
+                  id="ingredients"
+                  onChange={(e) => setIngredients(e.target.value)}
+                ></textarea>
               </li>
               <li>
                 <label htmlFor="countInStock">CountInStock</label>

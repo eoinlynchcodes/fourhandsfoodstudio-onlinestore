@@ -18,7 +18,7 @@ router.get('/:id', isAuth, async (req, res) => {
   if (order) {
     res.send(order);
   } else {
-    res.status(404).send('Order Not Found.')
+    res.status(404).send('Order Not Found.');
   }
 });
 
@@ -28,7 +28,7 @@ router.delete('/:id', isAuth, isAdmin, async (req, res) => {
     const deletedOrder = await order.remove();
     res.send(deletedOrder);
   } else {
-    res.status(404).send('Order Not Found.')
+    res.status(404).send('Order Not Found.');
   }
 });
 
@@ -57,9 +57,9 @@ router.put('/:id/pay', isAuth, async (req, res) => {
       paymentResult: {
         payerID: req.body.payerID,
         orderID: req.body.orderID,
-        paymentID: req.body.paymentID
-      }
-    }
+        paymentID: req.body.paymentID,
+      },
+    };
     const updatedOrder = await order.save();
     res.send({ message: 'Order Paid.', order: updatedOrder });
   } else {
