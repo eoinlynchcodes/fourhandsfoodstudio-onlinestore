@@ -1,22 +1,23 @@
-import React, { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import axios from "axios";
 import {
   saveProduct,
   listProducts,
   deleteProdcut,
-} from '../actions/productActions';
+} from "../actions/productActions";
 
 function ProductsScreen(props) {
   const [modalVisible, setModalVisible] = useState(false);
-  const [id, setId] = useState('');
-  const [name, setName] = useState('');
-  const [price, setPrice] = useState('');
-  const [image, setImage] = useState('');
-  const [ingredients, setIngredients] = useState('');
-  const [category, setCategory] = useState('');
-  const [countInStock, setCountInStock] = useState('');
-  const [description, setDescription] = useState('');
+  const [id, setId] = useState("");
+  const [name, setName] = useState("");
+  const [price, setPrice] = useState("");
+  const [image, setImage] = useState("");
+  const [ingredients, setIngredients] = useState("");
+  const [category, setCategory] = useState("");
+  const [size, setSize] = useState("");
+  const [countInStock, setCountInStock] = useState("");
+  const [description, setDescription] = useState("");
   const [uploading, setUploading] = useState(false);
   const productList = useSelector((state) => state.productList);
   const { loading, products, error } = productList;
@@ -53,6 +54,7 @@ function ProductsScreen(props) {
     setPrice(product.price);
     setDescription(product.description);
     setImage(product.image);
+    setSize(product.size);
     setIngredients(product.ingredients);
     setCategory(product.category);
     setCountInStock(product.countInStock);
@@ -66,6 +68,7 @@ function ProductsScreen(props) {
         price,
         image,
         ingredients,
+        size,
         category,
         countInStock,
         description,
@@ -78,12 +81,12 @@ function ProductsScreen(props) {
   const uploadFileHandler = (e) => {
     const file = e.target.files[0];
     const bodyFormData = new FormData();
-    bodyFormData.append('image', file);
+    bodyFormData.append("image", file);
     setUploading(true);
     axios
-      .post('/api/uploads/', bodyFormData, {
+      .post("/api/uploads/", bodyFormData, {
         headers: {
-          'Content-Type': 'multipart/form-data',
+          "Content-Type": "multipart/form-data",
         },
       })
       .then((response) => {
@@ -148,23 +151,23 @@ function ProductsScreen(props) {
                 {uploading && <div>Uploading...</div>}
               </li>
               <li>
-                <label htmlFor="ingredients">ingredients</label>
-                <textarea
-                  type="text"
-                  name="ingredients"
-                  value={ingredients}
-                  id="ingredients"
-                  onChange={(e) => setIngredients(e.target.value)}
-                ></textarea>
-              </li>
-              <li>
-                <label htmlFor="countInStock">CountInStock</label>
+                <label htmlFor="countInStock">Count in Stock</label>
                 <input
                   type="text"
                   name="countInStock"
                   value={countInStock}
                   id="countInStock"
                   onChange={(e) => setCountInStock(e.target.value)}
+                ></input>
+              </li>
+              <li>
+                <label htmlFor="size">Size</label>
+                <input
+                  type="text"
+                  name="size"
+                  value={size}
+                  id="size"
+                  onChange={(e) => setSize(e.target.value)}
                 ></input>
               </li>
               <li>
@@ -178,6 +181,16 @@ function ProductsScreen(props) {
                 ></input>
               </li>
               <li>
+                <label htmlFor="ingredients">Ingredients</label>
+                <textarea
+                  type="text"
+                  name="ingredients"
+                  value={ingredients}
+                  id="ingredients"
+                  onChange={(e) => setIngredients(e.target.value)}
+                ></textarea>
+              </li>
+              <li>
                 <label htmlFor="description">Description</label>
                 <textarea
                   name="description"
@@ -188,7 +201,7 @@ function ProductsScreen(props) {
               </li>
               <li>
                 <button type="submit" className="button primary">
-                  {id ? 'Update' : 'Create'}
+                  {id ? "Update" : "Create"}
                 </button>
               </li>
               <li>
@@ -228,7 +241,7 @@ function ProductsScreen(props) {
                 <td>
                   <button className="button" onClick={() => openModal(product)}>
                     Edit
-                  </button>{' '}
+                  </button>{" "}
                   <button
                     className="button"
                     onClick={() => deleteHandler(product)}

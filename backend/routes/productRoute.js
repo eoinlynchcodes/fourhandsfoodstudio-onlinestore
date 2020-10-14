@@ -8,7 +8,6 @@ router.get('/', async (req, res) => {
   const category = req.query.category ? { category: req.query.category } : {};
   const searchKeyword = req.query.searchKeyword ? { name: { $regex: req.query.searchKeyword, $options: 'i' } } : {};
   const sortOrder = req.query.sortOrder ? req.query.sortOrder === 'lowest' ? { price: 1 } : { price: -1 } : { _id: -1 };
-  
   const products = await Product.find({ ...category, ...searchKeyword }).sort(
     sortOrder,
   );
@@ -50,9 +49,10 @@ router.put('/:id', isAuth, isAdmin, async (req, res) => {
     product.name = req.body.name;
     product.price = req.body.price;
     product.image = req.body.image;
-    product.brand = req.body.brand;
+    product.size = req.body.size;
     product.category = req.body.category;
     product.countInStock = req.body.countInStock;
+    product.ingredients = req.body.ingredients;
     product.description = req.body.description;
     const updatedProduct = await product.save();
     if (updatedProduct) {
@@ -79,10 +79,11 @@ router.post('/', isAuth, isAdmin, async (req, res) => {
     name: req.body.name,
     price: req.body.price,
     image: req.body.image,
-    brand: req.body.brand,
+    size: req.body.size,
     category: req.body.category,
     countInStock: req.body.countInStock,
     description: req.body.description,
+    ingredients: req.body.ingredients,
     rating: req.body.rating,
     numReviews: req.body.numReviews,
   });
