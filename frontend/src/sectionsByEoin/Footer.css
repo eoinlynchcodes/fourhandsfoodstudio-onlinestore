@@ -3,6 +3,7 @@ footer{
     flex-direction: column;
     background-color: #333333;
     padding: 4rem;
+    height: .75fr;
 }
 
 footer a{
@@ -23,4 +24,14 @@ nav{
     text-decoration: none;
     display: flex;
     flex-direction: column;
+}
+
+.footerHeading{
+    color: white;
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    border: 5px solid white;
+    width: 40%;
+    margin: 0 auto;
 }

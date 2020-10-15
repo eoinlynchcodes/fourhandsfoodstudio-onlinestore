@@ -38,3 +38,12 @@
 }
 
 
+
+.blackBackgroundAbout{
+  background-color: black;
+  color: white;
+}
+
+.blackBackgroundAbout p{
+  padding: 0rem 2rem;
+}

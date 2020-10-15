@@ -4,6 +4,10 @@ import "./Footer.css";
 function Footer() {
   return (
     <footer className="footer">
+
+      <div className="footerHeading">
+        <h1>4 Hands Food Studio</h1>
+      </div>
       <div className="links">
         <div className="">
           <p>Follow us:</p>
