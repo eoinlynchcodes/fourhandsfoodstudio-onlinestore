@@ -62,7 +62,7 @@ function ProductScreen(props) {
             <div className="details-info">
               <ul>
                 <li>
-                  <h4>{product.name}</h4>
+                  <h2>{product.name}</h2>
                 </li>
                 <li>
                   <a href="#reviews">
@@ -73,7 +73,7 @@ function ProductScreen(props) {
                   </a>
                 </li>
                 <li>
-                  Price: <b>€{product.price}</b>
+                  <b>€{product.price}</b>
                 </li>
                 <li>
                   Description:
@@ -83,13 +83,13 @@ function ProductScreen(props) {
             </div>
             <div className="details-action">
               <ul>
-                <li>Price: {product.price}</li>
+                <li>€{product.price}</li>
                 <li>
                   Status:{' '}
                   {product.countInStock > 0 ? 'In Stock' : 'Unavailable.'}
                 </li>
                 <li>
-                  Qty:{' '}
+                  Quantity:{' '}
                   <select
                     value={qty}
                     onChange={(e) => {
@@ -116,7 +116,8 @@ function ProductScreen(props) {
               </ul>
             </div>
           </div>
-          <div className="content-margined">
+
+          {/* <div className="content-margined">
             <h2>Reviews</h2>
             {!product.reviews.length && <div>There is no review</div>}
             <ul className="review" id="reviews">
@@ -172,7 +173,7 @@ function ProductScreen(props) {
                 )}
               </li>
             </ul>
-          </div>
+          </div> */}
         </>
       )}
     </div>
