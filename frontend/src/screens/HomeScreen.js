@@ -89,19 +89,19 @@ function HomeScreen(props) {
                 <ul className="products">
                   {products.map((product) => (
                     <li key={product._id}>
+                        {console.log(product)}
                       <div className="product">
                         <Link to={"/product/" + product._id}>
                           <img className="product-image" src={product.image} />
                         </Link>
-                        <div className="product-name">
+                        <div className="productDetail">
                           <Link to={"/product/" + product._id}>
                             {product.name}
                           </Link>
                         </div>
-                        <div className="product">{product.brand}</div>
-                        <div className="product">€{product.price}</div>
+                        <div className="productDetail">€{product.price}</div>
                         <Link to={"/product/" + product._id}>
-                          <div className="button">Curious?</div>
+                          <div className="curiousButton">Curious?</div>
                         </Link>
                       </div>
                     </li>

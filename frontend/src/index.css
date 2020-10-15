@@ -74,22 +74,30 @@ a:hover {
 /* Home Screen */
 .products {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
-}
-.products li {
-
-}
-.product {
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+}
+
+.product {
+  padding: 2rem 0rem; 
+}
+
+.product li {
+  text-decoration: none;
+}
+
+.productDetail{
+  padding: 2rem;
 }
 
 .product img{
   width: 100%;
+}
+
+.curiousButton{
+  border: 1px solid black;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 .product-name {
