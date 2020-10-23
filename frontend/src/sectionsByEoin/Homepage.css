@@ -81,5 +81,7 @@ html{
     width: 100%;
 }
 
-.trolley{
+.headingColours{
+    color: white;
+    background-color: black;
 }
