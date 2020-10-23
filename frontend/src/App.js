@@ -15,7 +15,7 @@ import OrderScreen from './screens/OrderScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import OrdersScreen from './screens/OrdersScreen';
 import Footer from './sectionsByEoin/Footer';
-
+import trolley32px from './imagesByEoin/trolley32px.png';
 
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
@@ -41,7 +41,7 @@ function App() {
           <Link to="/">Four Hands Food Studio</Link>
           </div>
           <div className="header-links">
-  <Link to="/cart/:id?">Cart {cart.cartItems.length} </Link>
+  <Link to="/cart/:id?"><img className="trolley" src={trolley32px} /> {cart.cartItems.length ===0 ? null : cart.cartItems.length } </Link>
             {userInfo ? (
               <Link to="/profile">{userInfo.name}</Link>
             ) : null}
