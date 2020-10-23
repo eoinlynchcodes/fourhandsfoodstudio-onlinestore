@@ -40,12 +40,8 @@ html{
     background-color: white;
 }
 
-.homepagebox .white{
-    
-}
-
 .black{
-    background-color: black;
+    background-color: #085401;
     color: white;
     padding: 0.5rem 5rem;
 }
