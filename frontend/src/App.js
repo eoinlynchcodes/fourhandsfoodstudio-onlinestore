@@ -16,9 +16,13 @@ import ProfileScreen from './screens/ProfileScreen';
 import OrdersScreen from './screens/OrdersScreen';
 import Footer from './sectionsByEoin/Footer';
 
+
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
+
+  const cart = useSelector(state => state.cart);
+  const { cartItems } = cart;
 
   const openMenu = () => {
     document.querySelector('.sidebar').classList.add('open');
@@ -29,7 +33,6 @@ function App() {
   return (
     <BrowserRouter>
       <div className="">
-        
         <header className="header">
           <div className="brand">
             <button onClick={openMenu}>&#9776;</button>
@@ -38,7 +41,7 @@ function App() {
           <Link to="/">Four Hands Food Studio</Link>
           </div>
           <div className="header-links">
-            <Link to="/cart/:id?">Cart</Link>
+  <Link to="/cart/:id?">Cart {cart.cartItems.length} </Link>
             {userInfo ? (
               <Link to="/profile">{userInfo.name}</Link>
             ) : null}
