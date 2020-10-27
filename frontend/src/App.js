@@ -33,39 +33,55 @@ function App() {
   return (
     <BrowserRouter>
       <div className="">
-        <header className="header">
-          <div className="brand">
-            <button onClick={openMenu}>&#9776;</button>
+        <header className="flexTheHeader">
+          <div className="header">
+            <div className="brand burgerMenu">
+              <button onClick={openMenu}>&#9776;</button>
+            </div>
+            <div className="brand">
+              <Link to="/">
+                <div className="headingFlexing">
+                  <h2>
+                    <span className="headingColours">Four Hands</span> Food
+                    Studio
+                  </h2>
+                </div>
+                <div>
+                  <p>
+                    <i>Always driven by nature!</i>
+                  </p>
+                </div>
+              </Link>
+            </div>
+            <div className="header-links">
+              <Link className="cartIconAndLength" to="/cart/:id?">
+                <img className="trolley" src={trolley32px} />{" "}
+                <div className="cartLength">
+                  {cart.cartItems.length === 0 ? null : cart.cartItems.length}{" "}
+                </div>
+              </Link>
+              {userInfo ? <Link to="/profile">{userInfo.name}</Link> : null}
+              {userInfo && userInfo.isAdmin && (
+                <div className="dropdown">
+                  <a href="#">Admin</a>
+                  <ul className="dropdown-content">
+                    <li>
+                      <Link to="/orders">Orders</Link>
+                      <Link to="/products">Products</Link>
+                    </li>
+                  </ul>
+                </div>
+              )}
+            </div>
           </div>
-          <div className="brand">
-            <Link to="/">
-              <div className="headingFlexing">
-                <h2>
-                  <span className="headingColours">Four Hands</span> Food Studio
-                </h2>
-              </div>
-            </Link>
-          </div>
-          <div className="header-links">
-            <Link className="cartIconAndLength" to="/cart/:id?">
-              <img className="trolley" src={trolley32px} />{" "}
-              <div className="cartLength">
-                {cart.cartItems.length === 0 ? null : cart.cartItems.length}{" "}
-              </div>
-            </Link>
-            {userInfo ? <Link to="/profile">{userInfo.name}</Link> : null}
-            {userInfo && userInfo.isAdmin && (
-              <div className="dropdown">
-                <a href="#">Admin</a>
-                <ul className="dropdown-content">
-                  <li>
-                    <Link to="/orders">Orders</Link>
-                    <Link to="/products">Products</Link>
-                  </li>
-                </ul>
-              </div>
-            )}
-          </div>
+          <div className="theActualNav">
+              <Link to="/about"><h2>About</h2></Link>
+              <Link to="/products"><h2>Products</h2></Link>
+              <Link to="/takeaway"><h2>Takeaway</h2></Link>
+              <Link to="/recipes"><h2>Recipes</h2></Link>
+              <Link to="/events"><h2>Events</h2></Link>
+              <Link to="/newletter"><h2>Newsletter</h2></Link>
+            </div>
         </header>
 
         <aside className="sidebar">

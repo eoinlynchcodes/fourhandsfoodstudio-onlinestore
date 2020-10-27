@@ -3,7 +3,8 @@ html {
   box-sizing: border-box;
 }
 body {
-  font: 1.6rem Helvetica;
+  font: 1.6rem ;
+  font-family: 'Anonymous Pro', monospace;
   height: 100vh;
   margin: 0;
 }
@@ -34,6 +35,28 @@ button {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+}
+
+.flexTheHeader{
+  display: flex;
+  flex-direction: column;
+}
+
+.theActualNav{
+  background-color: white;
+  text-decoration: none;  
+  color: #333333;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.theActualNav h2{
+  color: #333333;
+}
+
+.theActualNav h2:hover{
+  color: white;
+  background-color: #333333;
 }
 
 
@@ -497,4 +520,9 @@ tbody > tr:nth-child(odd) {
 
 .cartIconAndLength{
   display: flex;
+}
+
+
+.burgerMenu{
+  display: none;
 }

@@ -50,7 +50,7 @@ function HomeScreen(props) {
         </li>
       </ul> */}
 
-      <div className="homeImages">
+    <div className="homeImages">
         <img src={kombuchas} />
       </div>
 
@@ -108,27 +108,6 @@ function HomeScreen(props) {
                   ))}
                 </ul>
               )}
-            </div>
-          </section>
-
-          <section className="homepagebox">
-            <div className="black">
-              <h2>Order our Takeaway</h2>
-            </div>
-            <div className="white">
-              <p>
-                Nourishing, sustainable, tasty ready-to-go meal to enjoy with
-                your loved ones in the comfort of your own home.
-                <br />
-                <br />
-                Our takeaway is by pre-order only, join our mailing list to
-                receive the weekly menu, or check out the website each Monday
-                for the update.
-                <br />
-                <br />
-                Food is served in glass jars, we greatly appreciate the return
-                of clean jars helping eliminate waste.
-              </p>
             </div>
           </section>
 
@@ -227,6 +206,28 @@ function HomeScreen(props) {
         {/* Beginning of right section */}
 
         <div className="rightHandSide">
+
+        <section className="homepagebox">
+            <div className="black">
+              <h2>Takeaway</h2>
+            </div>
+            <div className="white">
+              <p>
+                Nourishing, sustainable, tasty ready-to-go meal to enjoy with
+                your loved ones in the comfort of your own home.
+                <br />
+                <br />
+                Our takeaway is by pre-order only, join our mailing list to
+                receive the weekly menu, or check out the website each Monday
+                for the update.
+                <br />
+                <br />
+                Food is served in glass jars, we greatly appreciate the return
+                of clean jars helping eliminate waste.
+              </p>
+            </div>
+          </section>
+
           <section className="homepagebox">
             <div className="black">
               <h3>Our Principles</h3>

@@ -1,5 +1,4 @@
 import express from 'express';
-import bcrypt from 'bcryptjs';
 import User from '../models/userModel';
 import { getToken, isAuth } from '../util';
 
@@ -26,10 +25,9 @@ router.put('/:id', isAuth, async (req, res) => {
 });
 
 router.post('/signin', async (req, res) => {
-  const hashedPassword = bcrypt.hashSync(req.body.password, 14);
   const signinUser = await User.findOne({
     email: req.body.email,
-    password: hashedPassword,
+    password: req.body.password,
   });
   if (signinUser) {
     res.send({
@@ -45,11 +43,10 @@ router.post('/signin', async (req, res) => {
 });
 
 router.post('/register', async (req, res) => {
-  const hashedPassword = bcrypt.hashSync(req.body.password, 14);
   const user = new User({
     name: req.body.name,
     email: req.body.email,
-    password: hashedPassword,
+    password: req.body.password,
   });
   const newUser = await user.save();
   if (newUser) {
@@ -65,12 +62,12 @@ router.post('/register', async (req, res) => {
   }
 });
 
-router.post('/createadmin', async (req, res) => {
+router.get('/createadmin', async (req, res) => {
   try {
     const user = new User({
-      name: 'Eoin',
-      email: 'eoin@example.com',
-      password: '',
+      name: 'Basir',
+      email: 'admin@example.com',
+      password: '1234',
       isAdmin: true,
     });
     const newUser = await user.save();
