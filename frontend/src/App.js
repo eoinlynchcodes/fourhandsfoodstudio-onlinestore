@@ -75,8 +75,8 @@ function App() {
             </div>
           </div>
           <div className="theActualNav">
-              <Link to="/about"><h2>About</h2></Link>
-              <Link to="/products"><h2>Products</h2></Link>
+              <Link to="/about"><h2 className="barrioFont">About</h2></Link>
+              <Link to="/products"><h2 >Products</h2></Link>
               <Link to="/takeaway"><h2>Takeaway</h2></Link>
               <Link to="/recipes"><h2>Recipes</h2></Link>
               <Link to="/events"><h2>Events</h2></Link>

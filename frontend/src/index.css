@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Barrio&display=swap');
+
 html {
   font-size: 62.5%; /* 16px * 62.5 = 10px = 1rem */
   box-sizing: border-box;
@@ -8,6 +10,11 @@ body {
   height: 100vh;
   margin: 0;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Barrio', cursive;
+}
+
 button {
   font-size: 1.6rem;
 }
@@ -525,4 +532,9 @@ tbody > tr:nth-child(odd) {
 
 .burgerMenu{
   display: none;
+}
+
+
+.barrioFont{
+  font-family: 'Barrio', cursive;
 }

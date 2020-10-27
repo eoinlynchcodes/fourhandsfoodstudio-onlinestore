@@ -225,6 +225,7 @@ function HomeScreen(props) {
                 Food is served in glass jars, we greatly appreciate the return
                 of clean jars helping eliminate waste.
               </p>
+              <button>Order</button>
             </div>
           </section>
 
