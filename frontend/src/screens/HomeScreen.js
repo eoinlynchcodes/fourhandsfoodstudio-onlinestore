@@ -50,16 +50,14 @@ function HomeScreen(props) {
         </li>
       </ul> */}
 
-    <div className="homeImages">
-      <div className="homepageContainer">
-      <img src={kombuchas} />
-
-      </div>
+      <div className="homeImages">
+        <div className="homepageContainer">
+          <img src={kombuchas} />
+        </div>
       </div>
 
       <div className="homepageContainer">
         <div className="leftHandSide">
-  
           <section id="shop" className="homepagebox">
             <div className="coloredBox violet">
               <h2>Products</h2>
@@ -73,7 +71,7 @@ function HomeScreen(props) {
                 <ul className="products">
                   {products.map((product) => (
                     <li key={product._id}>
-                        {console.log(product)}
+                      {console.log(product)}
                       <div className="product">
                         <Link to={"/product/" + product._id}>
                           <img className="product-image" src={product.image} />
@@ -93,10 +91,11 @@ function HomeScreen(props) {
                 </ul>
               )}
             </div>
+            <hr className="bottomHR"/>
           </section>
 
           <section className="homepagebox">
-            <div className="coloredBox">
+            <div className="coloredBox lime">
               <h2>Vision</h2>
             </div>
             <div className="white">
@@ -113,6 +112,7 @@ function HomeScreen(props) {
                 Studio
               </p>
             </div>
+            <hr className="bottomHR"/>
           </section>
 
           <section className="homepagebox">
@@ -132,10 +132,11 @@ function HomeScreen(props) {
                 data-offset="-100"
               ></div>
             </div>
+            <hr className="bottomHR"/>
           </section>
 
           <section className="homepagebox">
-            <div className="coloredBox">
+            <div className="coloredBox whiteBox">
               <h2>Events</h2>
             </div>
             <div className="white">
@@ -149,14 +150,17 @@ function HomeScreen(props) {
                 Fumbally Stables, Dublin.
               </p>
             </div>
+            <hr className="bottomHR"/>
           </section>
 
           <section className="homepagebox">
-            <div className="coloredBox">
+            <div className="coloredBox ">
               <h2>Gallery</h2>
             </div>
 
             <div className="white"></div>
+            <hr className="bottomHR"/>
+
           </section>
 
           <section className="homepagebox">
@@ -173,10 +177,12 @@ function HomeScreen(props) {
                 <li>Wilder and Gold Ballymahon, Longford</li>
               </ul>
             </div>
+            <hr className="bottomHR"/>
+
           </section>
 
           <section className="contactForm homepagebox">
-            <div className="coloredBox">
+            <div className="coloredBox black">
               <h2>Contact Us:</h2>
             </div>
 
@@ -204,14 +210,14 @@ function HomeScreen(props) {
                 </div>
               </form>
             </div>
+            <hr className="bottomHR"/>
           </section>
         </div>
 
         {/* Beginning of right section */}
 
         <div className="rightHandSide">
-
-        <section className="homepagebox">
+          <section className="homepagebox">
             <div className="coloredBox green">
               <h2>Takeaway</h2>
             </div>
@@ -231,10 +237,11 @@ function HomeScreen(props) {
               </p>
               <button>Order</button>
             </div>
+            <hr className="bottomHR"/>
           </section>
 
           <section className="homepagebox">
-            <div className="coloredBox">
+            <div className="coloredBox orange">
               <h3>Our Principles</h3>
             </div>
             <div id="principles" className="white">
@@ -289,10 +296,11 @@ function HomeScreen(props) {
               <hr />
               <span>10. Lead by example.</span>
             </div>
+            <hr className="bottomHR"/>
           </section>
 
           <section className="homepagebox">
-            <div className="coloredBox">
+            <div className="coloredBox red">
               <h3>About</h3>
             </div>
             <div className="white">
@@ -320,13 +328,13 @@ function HomeScreen(props) {
             </div>
             <div className="flexRoseAndMargaux">
               <div className="blackBackgroundAbout">
-                <img src={rose} />
-                <p>Rose Greene</p>
+                <img src={margaux} />
+                <p><u>Margaux Dejardin</u></p>
               </div>
 
               <div className="blackBackgroundAbout">
-                <img src={margaux} />
-                <p>Margaux Dejardin</p>
+                <img src={rose} />
+                <p><u>Rose Greene</u></p>
               </div>
             </div>
             <br />
@@ -372,6 +380,7 @@ function HomeScreen(props) {
                 their goals as a leading sustainable food business.
               </p>
             </div>
+            <hr className="bottomHR"/>
           </section>
 
           <section className="homepagebox">
@@ -402,6 +411,7 @@ function HomeScreen(props) {
                 </div>
               </form>
             </div>
+            <hr className="bottomHR"/>
           </section>
         </div>
       </div>
