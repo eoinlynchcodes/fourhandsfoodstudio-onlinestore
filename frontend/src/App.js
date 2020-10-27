@@ -47,7 +47,7 @@ function App() {
                   </h2>
                 </div>
                 <div>
-                  <p>
+                  <p className="dancingFont">
                     <i>Always driven by nature!</i>
                   </p>
                 </div>
@@ -57,7 +57,7 @@ function App() {
               <Link className="cartIconAndLength" to="/cart/:id?">
                 <img className="trolley" src={trolley32px} />{" "}
                 <div className="cartLength">
-                  {cart.cartItems.length === 0 ? null : cart.cartItems.length}{" "}
+                  {cart.cartItems.length }{" "}
                 </div>
               </Link>
               {userInfo ? <Link to="/profile">{userInfo.name}</Link> : null}

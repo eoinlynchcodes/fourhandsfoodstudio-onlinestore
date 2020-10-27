@@ -51,33 +51,17 @@ function HomeScreen(props) {
       </ul> */}
 
     <div className="homeImages">
-        <img src={kombuchas} />
+      <div className="homepageContainer">
+      <img src={kombuchas} />
+
+      </div>
       </div>
 
       <div className="homepageContainer">
         <div className="leftHandSide">
-          <section className="homepagebox">
-            <div className="black">
-              <h2>Vision</h2>
-            </div>
-            <div className="white">
-              <p>
-                <i>
-                  "To live in a world where nature comes first, where we as
-                  humans see ourselves of part of nature, not above it. To see
-                  all peoples open to receive the goodness our natural
-                  surroundings have to offer, showing respect and gratitude for
-                  how lucky we are to live in a world which knows better how to
-                  care for itself than we ever could."
-                </i>
-                <br /> <br />- Rose Greene &amp; Margaux Dejardin, 4 Hands Food
-                Studio
-              </p>
-            </div>
-          </section>
-
+  
           <section id="shop" className="homepagebox">
-            <div className="black">
+            <div className="coloredBox violet">
               <h2>Products</h2>
             </div>
             <div className="white">
@@ -112,7 +96,27 @@ function HomeScreen(props) {
           </section>
 
           <section className="homepagebox">
-            <div className="black">
+            <div className="coloredBox">
+              <h2>Vision</h2>
+            </div>
+            <div className="white">
+              <p>
+                <i>
+                  "To live in a world where nature comes first, where we as
+                  humans see ourselves of part of nature, not above it. To see
+                  all peoples open to receive the goodness our natural
+                  surroundings have to offer, showing respect and gratitude for
+                  how lucky we are to live in a world which knows better how to
+                  care for itself than we ever could."
+                </i>
+                <br /> <br />- Rose Greene &amp; Margaux Dejardin, 4 Hands Food
+                Studio
+              </p>
+            </div>
+          </section>
+
+          <section className="homepagebox">
+            <div className="coloredBox blue">
               <h2>Blog</h2>
             </div>
             <div className="white">
@@ -131,7 +135,7 @@ function HomeScreen(props) {
           </section>
 
           <section className="homepagebox">
-            <div className="black">
+            <div className="coloredBox">
               <h2>Events</h2>
             </div>
             <div className="white">
@@ -148,7 +152,7 @@ function HomeScreen(props) {
           </section>
 
           <section className="homepagebox">
-            <div className="black">
+            <div className="coloredBox">
               <h2>Gallery</h2>
             </div>
 
@@ -156,7 +160,7 @@ function HomeScreen(props) {
           </section>
 
           <section className="homepagebox">
-            <div className="black">
+            <div className="coloredBox">
               <h2>Find 4 Hands Food Studio's Products</h2>
             </div>
 
@@ -172,7 +176,7 @@ function HomeScreen(props) {
           </section>
 
           <section className="contactForm homepagebox">
-            <div className="black">
+            <div className="coloredBox">
               <h2>Contact Us:</h2>
             </div>
 
@@ -208,7 +212,7 @@ function HomeScreen(props) {
         <div className="rightHandSide">
 
         <section className="homepagebox">
-            <div className="black">
+            <div className="coloredBox green">
               <h2>Takeaway</h2>
             </div>
             <div className="white">
@@ -230,7 +234,7 @@ function HomeScreen(props) {
           </section>
 
           <section className="homepagebox">
-            <div className="black">
+            <div className="coloredBox">
               <h3>Our Principles</h3>
             </div>
             <div id="principles" className="white">
@@ -288,7 +292,7 @@ function HomeScreen(props) {
           </section>
 
           <section className="homepagebox">
-            <div className="black">
+            <div className="coloredBox">
               <h3>About</h3>
             </div>
             <div className="white">
@@ -371,7 +375,7 @@ function HomeScreen(props) {
           </section>
 
           <section className="homepagebox">
-            <div className="black">
+            <div className="coloredBox yellow">
               <h2>Newsletter Signup</h2>
             </div>
             <div className="white">
@@ -390,7 +394,7 @@ function HomeScreen(props) {
                 <div>
                   <label>Subscribe to our News Letter</label>
                   <div>
-                    <input />
+                    <input placeholder="your@email.here" />
                     <div>
                       <input type="submit" value="Subscribe" name="subscribe" />
                     </div>

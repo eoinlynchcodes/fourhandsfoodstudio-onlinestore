@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barrio&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 html {
   font-size: 62.5%; /* 16px * 62.5 = 10px = 1rem */
   box-sizing: border-box;
@@ -41,7 +41,8 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .flexTheHeader{
@@ -537,4 +538,8 @@ tbody > tr:nth-child(odd) {
 
 .barrioFont{
   font-family: 'Barrio', cursive;
+}
+
+.dancingFont{
+  font-family: 'Dancing Script', cursive;
 }
