@@ -35,7 +35,7 @@ function HomeScreen(props) {
   // };
 
   const buyTakeAway = (e) => {
-    history.push('/takeaway');
+    history.push("/takeaway");
   };
 
   return (
@@ -69,12 +69,12 @@ function HomeScreen(props) {
             </div>
             <div className="white">
               <p>
-                We currently offer a small range of fermented vegetables and drinks
-                such as sauerkraut, kimchi and kombucha aswell as fermented vegetable juices.
+                We currently offer a small range of fermented vegetables and
+                drinks such as sauerkraut, kimchi and kombucha aswell as
+                fermented vegetable juices.
               </p>
-       
             </div>
-            <hr className="bottomHR"/>
+            <hr className="bottomHR" />
           </section>
 
           <section className="homepagebox">
@@ -95,7 +95,7 @@ function HomeScreen(props) {
                 Studio
               </p>
             </div>
-            <hr className="bottomHR"/>
+            <hr className="bottomHR" />
           </section>
 
           <section className="homepagebox">
@@ -115,7 +115,7 @@ function HomeScreen(props) {
                 data-offset="-100"
               ></div>
             </div>
-            <hr className="bottomHR"/>
+            <hr className="bottomHR" />
           </section>
 
           <section className="homepagebox">
@@ -133,7 +133,7 @@ function HomeScreen(props) {
                 Fumbally Stables, Dublin.
               </p>
             </div>
-            <hr className="bottomHR"/>
+            <hr className="bottomHR" />
           </section>
 
           <section className="homepagebox">
@@ -142,8 +142,7 @@ function HomeScreen(props) {
             </div>
 
             <div className="white"></div>
-            <hr className="bottomHR"/>
-
+            <hr className="bottomHR" />
           </section>
 
           <section className="homepagebox">
@@ -152,16 +151,34 @@ function HomeScreen(props) {
             </div>
 
             <div className="white">
-              <ul className="removeBullets">
-                <li>Nuts and Grains Mullingar, Westmeath</li>
-                <li>Fox's Fruit &amp; Veg Mullingar, Westmeath</li>
-                <li>Lowe &amp; Co. Athlone, Westmeath</li>
-                <li>Skelly's Ballymahon, Longford</li>
-                <li>Wilder and Gold Ballymahon, Longford</li>
-              </ul>
+              <table className="table">
+                <tr>
+                  <th>Store</th>
+                  <th>Location</th>
+                </tr>
+                <tr>
+                  <td>Nuts and Grains Mullingar</td>
+                  <td>Mullingar, Westmeath</td>
+                </tr>
+                <tr>
+                  <td>Fox's Fruit &amp; Veg</td>
+                  <td>Mullingar, Westmeath</td>
+                </tr>
+                <tr>
+                  <td>Lowe &amp; Co.</td>
+                  <td>Athlone, Westmeath</td>
+                </tr>  
+                <tr>
+                  <td>Skelly's </td>
+                  <td>Ballymahon, Longford</td>
+                </tr>
+                <tr>
+                  <td>Wilder and Gold</td>
+                  <td>Ballymahon, Longford</td>
+                </tr>
+              </table>
             </div>
-            <hr className="bottomHR"/>
-
+            <hr className="bottomHR" />
           </section>
 
           <section className="contactForm homepagebox">
@@ -193,7 +210,7 @@ function HomeScreen(props) {
                 </div>
               </form>
             </div>
-            <hr className="bottomHR"/>
+            <hr className="bottomHR" />
           </section>
         </div>
 
@@ -218,9 +235,16 @@ function HomeScreen(props) {
                 Food is served in glass jars, we greatly appreciate the return
                 of clean jars helping eliminate waste.
               </p>
-              <div onClick={buyTakeAway} className="blackOutlineButton changeMouse"><b><p>ORDER</p></b></div>
+              <div
+                onClick={buyTakeAway}
+                className="blackOutlineButton changeMouse"
+              >
+                <b>
+                  <p>ORDER</p>
+                </b>
+              </div>
             </div>
-            <hr className="bottomHR"/>
+            <hr className="bottomHR" />
           </section>
 
           <section className="homepagebox">
@@ -279,7 +303,7 @@ function HomeScreen(props) {
               <hr />
               <span>10. Lead by example.</span>
             </div>
-            <hr className="bottomHR"/>
+            <hr className="bottomHR" />
           </section>
 
           <section className="homepagebox">
@@ -312,12 +336,16 @@ function HomeScreen(props) {
             <div className="flexRoseAndMargaux">
               <div className="blackBackgroundAbout">
                 <img src={margaux} />
-                <p><u>Margaux Dejardin</u></p>
+                <p>
+                  <u>Margaux Dejardin</u>
+                </p>
               </div>
 
               <div className="blackBackgroundAbout">
                 <img src={rose} />
-                <p><u>Rose Greene</u></p>
+                <p>
+                  <u>Rose Greene</u>
+                </p>
               </div>
             </div>
             <br />
@@ -363,7 +391,7 @@ function HomeScreen(props) {
                 their goals as a leading sustainable food business.
               </p>
             </div>
-            <hr className="bottomHR"/>
+            <hr className="bottomHR" />
           </section>
         </div>
       </div>
