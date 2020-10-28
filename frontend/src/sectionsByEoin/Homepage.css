@@ -169,3 +169,9 @@ html {
 .changeMouse{
   cursor: pointer;
 }
+
+.bottom{
+  display: flex;
+  flex-direction: column;
+  margin: 5rem auto;
+}

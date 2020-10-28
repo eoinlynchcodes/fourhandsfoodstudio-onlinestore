@@ -17,7 +17,7 @@ footer a{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-
+    margin: 5rem 0rem;
 }
 
 nav{
@@ -33,5 +33,5 @@ nav{
     justify-content: center;
     border: 5px solid white;
     width: 40%;
-    margin: 0 auto;
+    margin: 5rem auto;
 }

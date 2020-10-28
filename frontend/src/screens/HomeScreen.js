@@ -137,7 +137,7 @@ function HomeScreen(props) {
           </section>
 
           <section className="homepagebox">
-            <div className="coloredBox ">
+            <div className="coloredBox orange">
               <h2>Gallery</h2>
             </div>
 
@@ -147,8 +147,8 @@ function HomeScreen(props) {
           </section>
 
           <section className="homepagebox">
-            <div className="coloredBox">
-              <h2>Find 4 Hands Food Studio's Products</h2>
+            <div className="coloredBox blue">
+              <h2>Retailers</h2>
             </div>
 
             <div className="white">
