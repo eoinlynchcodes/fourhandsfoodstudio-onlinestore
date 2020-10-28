@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import axios from "axios";
 import "../sectionsByEoin/Homepage.css";
 import { useSelector, useDispatch } from "react-redux";
@@ -11,6 +11,7 @@ import fourhandshome from "../imagesByEoin/fourhandshome.png";
 
 function HomeScreen(props) {
   const [searchKeyword, setSearchKeyword] = useState("");
+  const history = useHistory();
   const [sortOrder, setSortOrder] = useState("");
   const category = props.match.params.id ? props.match.params.id : "";
   const productList = useSelector((state) => state.productList);
@@ -32,6 +33,10 @@ function HomeScreen(props) {
   //   setSortOrder(e.target.value);
   //   dispatch(listProducts(category, searchKeyword, sortOrder));
   // };
+
+  const buyTakeAway = (e) => {
+    history.push('/takeaway');
+  };
 
   return (
     <>
@@ -63,33 +68,11 @@ function HomeScreen(props) {
               <h2>Products</h2>
             </div>
             <div className="white">
-              {loading ? (
-                <div>Loading...</div>
-              ) : error ? (
-                <div>{error}</div>
-              ) : (
-                <ul className="products">
-                  {products.map((product) => (
-                    <li key={product._id}>
-                      {console.log(product)}
-                      <div className="product">
-                        <Link to={"/product/" + product._id}>
-                          <img className="product-image" src={product.image} />
-                        </Link>
-                        <div className="productDetail">
-                          <Link to={"/product/" + product._id}>
-                            {product.name}
-                          </Link>
-                        </div>
-                        <div className="productDetail">€{product.price}</div>
-                        <Link to={"/product/" + product._id}>
-                          <div className="curiousButton">Curious?</div>
-                        </Link>
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              )}
+              <p>
+                We currently offer a small range of fermented vegetables and drinks
+                such as sauerkraut, kimchi and kombucha aswell as fermented vegetable juices.
+              </p>
+       
             </div>
             <hr className="bottomHR"/>
           </section>
@@ -235,7 +218,7 @@ function HomeScreen(props) {
                 Food is served in glass jars, we greatly appreciate the return
                 of clean jars helping eliminate waste.
               </p>
-              <div className="blackOutlineButton"><b><p>ORDER</p></b></div>
+              <div onClick={buyTakeAway} className="blackOutlineButton changeMouse"><b><p>ORDER</p></b></div>
             </div>
             <hr className="bottomHR"/>
           </section>
