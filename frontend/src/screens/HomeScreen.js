@@ -7,7 +7,7 @@ import { listProducts } from "../actions/productActions";
 import Rating from "../components/Rating";
 import rose from "../imagesByEoin/rose.jpeg";
 import margaux from "../imagesByEoin/margaux.jpeg";
-import kombuchas from "../imagesByEoin/kombuchas.jpg";
+import fourhandshome from "../imagesByEoin/fourhandshome.png";
 
 function HomeScreen(props) {
   const [searchKeyword, setSearchKeyword] = useState("");
@@ -52,7 +52,7 @@ function HomeScreen(props) {
 
       <div className="homeImages">
         <div className="homepageContainer">
-          <img src={kombuchas} />
+          <img src={fourhandshome} />
         </div>
       </div>
 
@@ -169,7 +169,7 @@ function HomeScreen(props) {
             </div>
 
             <div className="white">
-              <ul>
+              <ul className="removeBullets">
                 <li>Nuts and Grains Mullingar, Westmeath</li>
                 <li>Fox's Fruit &amp; Veg Mullingar, Westmeath</li>
                 <li>Lowe &amp; Co. Athlone, Westmeath</li>
@@ -235,7 +235,7 @@ function HomeScreen(props) {
                 Food is served in glass jars, we greatly appreciate the return
                 of clean jars helping eliminate waste.
               </p>
-              <button>Order</button>
+              <div className="blackOutlineButton"><b><p>ORDER</p></b></div>
             </div>
             <hr className="bottomHR"/>
           </section>

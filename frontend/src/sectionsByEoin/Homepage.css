@@ -10,6 +10,7 @@ html {
 
 .homeImages {
   height: 50rem;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -51,6 +52,15 @@ html {
   background-color: white;
   border-left: 2px solid black;
   border-right: 2px solid black;
+}
+
+.blackOutlineButton{
+  border: 3px solid black;
+  margin: 5rem auto 0rem auto;
+  padding: 1rem 2rem;
+  width: 70%;
+  display: flex;
+  justify-content: center;
 }
 
 .coloredBox {
@@ -150,4 +160,8 @@ html {
 .bottomHR{
   margin: 0 auto;
   width: 50%;
+}
+
+.removeBullets li{
+  list-style-type: none;
 }

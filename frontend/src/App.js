@@ -5,6 +5,9 @@ import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen";
 import CartScreen from "./screens/CartScreen";
 import SigninScreen from "./screens/SigninScreen";
+import Newsletter from './sectionsByEoin/Newsletter';
+import Shop from './sectionsByEoin/Shop';
+import Takeaway from './sectionsByEoin/Takeaway';
 import { useSelector } from "react-redux";
 import RegisterScreen from "./screens/RegisterScreen";
 import ProductsScreen from "./screens/ProductsScreen";
@@ -16,6 +19,7 @@ import ProfileScreen from "./screens/ProfileScreen";
 import OrdersScreen from "./screens/OrdersScreen";
 import Footer from "./sectionsByEoin/Footer";
 import trolley32px from "./imagesByEoin/trolley32px.png";
+import About from "./sectionsByEoin/About";
 
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
@@ -76,11 +80,11 @@ function App() {
           </div>
           <div className="theActualNav">
               <Link to="/about"><h2 className="barrioFont">About</h2></Link>
-              <Link to="/products"><h2 >Products</h2></Link>
+              <Link to="/shop"><h2>Products</h2></Link>
               <Link to="/takeaway"><h2>Takeaway</h2></Link>
               <Link to="/recipes"><h2>Recipes</h2></Link>
               <Link to="/events"><h2>Events</h2></Link>
-              <Link to="/newletter"><h2>Newsletter</h2></Link>
+              <Link to="/newsletter"><h2>Newsletter</h2></Link>
             </div>
         </header>
 
@@ -97,6 +101,10 @@ function App() {
         </aside>
         <main className="main">
           <div className="content">
+            <Route path="/takeaway" component={Takeaway} />
+            <Route path="/newsletter" component={Newsletter} />
+            <Route path="/about" component={About} />
+            <Route path="/shop" component={Shop} />
             <Route path="/orders" component={OrdersScreen} />
             <Route path="/profile" component={ProfileScreen} />
             <Route path="/order/:id" component={OrderScreen} />
