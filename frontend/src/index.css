@@ -359,7 +359,7 @@ a > .rating > span:last-child {
 input {
   padding: 1rem;
   border: 0.1rem #c0c0c0 solid;
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
 }
 
 /* Products */
@@ -542,4 +542,9 @@ tbody > tr:nth-child(odd) {
 
 .dancingFont{
   font-family: 'Dancing Script', cursive;
+}
+
+.fiftyButtonWidth{
+  width: 50%;
+  margin: 0 auto;
 }

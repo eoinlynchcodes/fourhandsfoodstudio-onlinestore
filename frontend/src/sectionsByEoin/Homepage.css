@@ -175,3 +175,10 @@ html {
   flex-direction: column;
   margin: 5rem auto;
 }
+
+.submitButton{
+  width: 50%;
+  border: 2px solid black;
+  color: white;
+  background-color: red;
+}

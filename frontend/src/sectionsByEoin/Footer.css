@@ -35,3 +35,13 @@ nav{
     width: 40%;
     margin: 5rem auto;
 }
+
+.subscribeButton{
+    background-color: black;
+    color: red
+}
+
+.widthfifty{
+    margin: 0 auto;
+    width: 50%;
+}
