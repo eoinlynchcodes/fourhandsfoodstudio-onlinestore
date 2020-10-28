@@ -71,8 +71,14 @@ function HomeScreen(props) {
               <p>
                 We currently offer a small range of fermented vegetables and
                 drinks such as sauerkraut, kimchi and kombucha aswell as
-                fermented vegetable juices.
+                fermented vegetable juices.<br/><br/>
+                We focus on a starting point: the raw produce.<br/>
+                The ingredients we use have to be alive, chemical free and ethically driven.<br/><br/>
+                We sell in <a href="#retailers">shops,</a> through Neighborfood Mullingar and our own <span>Online Store</span>
               </p>
+              <div className="blackOutlineButton">
+                <p><b>CHECK OUT HERE</b></p>
+              </div>
             </div>
             <hr className="bottomHR" />
           </section>
@@ -145,7 +151,7 @@ function HomeScreen(props) {
             <hr className="bottomHR" />
           </section>
 
-          <section className="homepagebox">
+          <section id="retailers" className="homepagebox">
             <div className="coloredBox blue">
               <h2>Retailers</h2>
             </div>
@@ -237,7 +243,7 @@ function HomeScreen(props) {
               </p>
               <div
                 onClick={buyTakeAway}
-                className="blackOutlineButton changeMouse"
+                className="blackOutlineButton"
               >
                 <b>
                   <p>ORDER</p>
