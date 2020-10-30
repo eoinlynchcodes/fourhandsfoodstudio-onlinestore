@@ -79,7 +79,7 @@ function App() {
             </div>
           </div>
           <div className="theActualNav">
-              <Link to="/about"><h2 className="barrioFont">About</h2></Link>
+              <Link to="/about"><h2 >About</h2></Link>
               <Link to="/shop"><h2>Products</h2></Link>
               <Link to="/takeaway"><h2>Takeaway</h2></Link>
               <Link to="/recipes"><h2>Recipes</h2></Link>
@@ -95,7 +95,12 @@ function App() {
           </button>
           <ul className="categories">
             <li>
-              <Link to="">Nav Needed?</Link>
+              <Link to="#about">About</Link>
+              <Link to="/shop">Shop</Link>
+              <Link to="/takeaway">Takeaway</Link>
+              <Link to="/recipes">Recipes</Link>
+              <Link to="/events">Events</Link>
+              <Link t0="/newsletter">Newsletter</Link>
             </li>
           </ul>
         </aside>
