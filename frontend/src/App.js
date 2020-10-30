@@ -36,7 +36,7 @@ function App() {
   };
   return (
     <BrowserRouter>
-      <div className="">
+      <div className="entireparentcontainer">
         <header className="flexTheHeader">
           <div className="header">
             <div className="brand burgerMenu">

@@ -3,7 +3,7 @@ import React from "react";
 function Newsletter() {
   return (
     <div>
-      <section className="homepagebox">
+      <section className="homepagebox centreThis">
         <div className="coloredBox yellow">
           <h2>Newsletter Signup</h2>
         </div>
@@ -20,11 +20,9 @@ function Newsletter() {
           >
             <div>
               <label>Subscribe to our News Letter</label>
-              <div>
+              <div className="newsletterForm">
                 <input placeholder="your@email.here" />
-                <div>
-                  <input type="submit" value="Subscribe" name="subscribe" />
-                </div>
+                <input className="subscribeButton" type="submit" value="Subscribe" name="subscribe" />
               </div>
             </div>
           </form>

@@ -82,6 +82,11 @@ button {
   justify-content: space-evenly;
 }
 
+@media only screen and (max-width: 768px) {
+  .theActualNav{
+    display: none;
+  }
+}
 .theActualNav h2{
   color: #333333;
 }
@@ -110,7 +115,8 @@ button {
   color: black;
 }
 .main {
-  grid-area: main;
+  margin: auto 0;
+  width: 100%;
 }
 /* .footer {
   grid-area: footer;
@@ -313,6 +319,7 @@ a > .rating > span:last-child {
   flex-wrap: wrap;
   margin: 1rem;
   align-items: flex-start;
+  height: 50rem;
 }
 .cart-list {
   flex: 3 1 60rem;
@@ -570,5 +577,10 @@ tbody > tr:nth-child(odd) {
 
 .fiftyButtonWidth{
   width: 50%;
+  margin: 0 auto;
+}
+
+.entireparentcontainer{
+  width: 100%;
   margin: 0 auto;
 }

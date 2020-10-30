@@ -21,7 +21,7 @@ function Takeaway() {
             Food is served in glass jars, we greatly appreciate the return of
             clean jars helping eliminate waste.
           </p>
-          <div className="blackOutlineButton">
+          <div className="redButton">
             <b>
               <p>ORDER</p>
             </b>

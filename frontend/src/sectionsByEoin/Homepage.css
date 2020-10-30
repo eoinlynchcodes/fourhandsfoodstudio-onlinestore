@@ -61,6 +61,24 @@ html {
   background-color: #dddddd;
 }
 
+.redButton{
+  border: 1px solid black;
+  margin: 5rem auto 0rem auto;
+  padding: 1rem 2rem;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  cursor: crosshair;
+  color: black;
+  background-color: #f44336;
+}
+
+
+.newsletterForm{
+  display: flex;
+  flex-direction: colum;
+}
+
 .blackOutlineButton{
   border: 3px solid black;
   margin: 5rem auto 0rem auto;

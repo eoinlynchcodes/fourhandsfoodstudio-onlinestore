@@ -38,6 +38,10 @@ function HomeScreen(props) {
     history.push("/takeaway");
   };
 
+  const goToProducts = (e) => {
+    history.push('/shop');
+  }
+
   return (
     <>
       {category && <h2>{category}</h2>}
@@ -74,10 +78,10 @@ function HomeScreen(props) {
                 fermented vegetable juices.<br/><br/>
                 We focus on a starting point: the raw produce.<br/>
                 The ingredients we use have to be alive, chemical free and ethically driven.<br/><br/>
-                We sell in <a href="#retailers">shops,</a> through Neighborfood Mullingar and our own <span>Online Store</span>
+                We sell in <a href="#retailers">shops,</a> through <a href="https://www.neighbourfood.ie/markets/mullingar/collection/2373">Neighbourfood Mullingar</a> and our own <span>Online Store</span>
               </p>
-              <div className="blackOutlineButton">
-                <p><b>CHECK OUT HERE</b></p>
+              <div className="redButton" onClick={goToProducts}>
+                <p><b>SHOP</b></p>
               </div>
             </div>
             <hr className="bottomHR" />
@@ -204,9 +208,10 @@ function HomeScreen(props) {
                 <input className="formbox" type="text" placeholder="Email:" />
                 <br />
 
-                <input
+                <textarea
                   className="formbox"
-                  type="textarea"
+                  rows="6"
+                  cols="60"
                   placeholder="Message:"
                 />
                 <br />
@@ -243,7 +248,7 @@ function HomeScreen(props) {
               </p>
               <div
                 onClick={buyTakeAway}
-                className="blackOutlineButton"
+                className="redButton"
               >
                 <b>
                   <p>ORDER</p>

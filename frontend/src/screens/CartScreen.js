@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { addToCart, removeFromCart } from '../actions/cartActions';
 import { useDispatch, useSelector } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 function CartScreen(props) {
 
@@ -24,6 +25,12 @@ function CartScreen(props) {
     props.history.push("/signin?redirect=shipping");
   }
 
+  const history = useHistory();
+
+  const goToShop = () => {
+    history.push('/shop');
+  }
+
   return <div className="cart">
     <div className="cart-list">
       <ul className="cart-list-container">
@@ -38,7 +45,8 @@ function CartScreen(props) {
         {
           cartItems.length === 0 ?
             <div>
-              Cart is empty
+              Cart is empty. <br/><br/>
+              <button onClick={goToShop}>Go to our Shop</button>
           </div>
             :
             cartItems.map(item =>
