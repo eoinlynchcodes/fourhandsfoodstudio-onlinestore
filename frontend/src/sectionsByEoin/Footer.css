@@ -45,3 +45,17 @@ nav{
     margin: 0 auto;
     width: 50%;
 }
+
+@media only screen and (max-width: 768px) {
+    .links{
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    .links nav{
+        display: none;
+    }
+}

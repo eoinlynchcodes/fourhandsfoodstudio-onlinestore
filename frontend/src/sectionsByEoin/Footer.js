@@ -25,10 +25,18 @@ function Footer() {
           novalidate
         >
           <div>
-            <label><u>Newsletter Signup</u></label>
-            <div><br/>
+            <label>
+              <u>Newsletter Signup</u>
+            </label>
+            <div>
+              <br />
               <input type="text" placeholder="your@email.here" />
-              <input type="submit" className="subscribeButton" value="Sign Up" name="subscribe" />
+              <input
+                type="submit"
+                className="subscribeButton"
+                value="Sign Up"
+                name="subscribe"
+              />
             </div>
           </div>
         </form>
@@ -57,6 +65,7 @@ function Footer() {
         </div>
 
         <nav>
+          <p><u>Navigation:</u></p>
           <a href="#shop">Shop</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>

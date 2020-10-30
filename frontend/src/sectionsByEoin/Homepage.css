@@ -31,7 +31,7 @@ html {
 @media only screen and (max-width: 768px) {
   .homepageContainer {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .leftHandSide {
