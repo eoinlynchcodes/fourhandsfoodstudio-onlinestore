@@ -31,7 +31,7 @@ function Shop(props){
             <div className="coloredBox violet">
               <h2>Products</h2>
             </div>
-            <div className="white">
+            <div className="productPlacer">
               {loading ? (
                 <div>Loading...</div>
               ) : error ? (

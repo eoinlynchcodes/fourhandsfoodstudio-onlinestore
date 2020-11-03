@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { saveShipping } from '../actions/cartActions';
+import { savePayment } from '../actions/cartActions';
 import CheckoutSteps from '../components/CheckoutSteps';
 
 function ShippingScreen(props) {
@@ -11,12 +12,15 @@ function ShippingScreen(props) {
   const [postalCode, setPostalCode] = useState('');
   const [country, setCountry] = useState('');
 
+  const [paymentMethod, setPaymentMethod] = useState('');
+
   const dispatch = useDispatch();
 
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(saveShipping({ address, city, postalCode, country }));
-    props.history.push('payment');
+    dispatch(savePayment({ paymentMethod: 'paypal' }));
+    props.history.push('placeorder');
   }
   return <div>
     <CheckoutSteps step1 step2 ></CheckoutSteps>
@@ -55,7 +59,6 @@ function ShippingScreen(props) {
             <input type="text" name="country" id="country" onChange={(e) => setCountry(e.target.value)}>
             </input>
           </li>
-
 
           <li>
             <button type="submit" className="button primary">Continue</button>

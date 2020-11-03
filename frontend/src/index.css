@@ -138,6 +138,22 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 0 auto;
+}
+
+.productPlacer{
+
+}
+
+@media only screen and (max-width: 768px){
+  .productPlacer{
+    background-color: firebrick;
+    margin: auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 0rem;
+  }
 }
 
 .product {
@@ -363,7 +379,17 @@ a > .rating > span:last-child {
 }
 .cart-name {
   flex: 8 1;
+  color: black;
 }
+
+.listItemCart{
+  display: flex;
+}
+
+.cart-product-name{
+  color: black;
+}
+
 .cart-price {
   flex: 1 1;
   font-size: 2.5rem;

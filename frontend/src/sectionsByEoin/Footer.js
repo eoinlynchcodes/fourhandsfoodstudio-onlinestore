@@ -40,32 +40,36 @@ function Footer() {
             </div>
           </div>
         </form>
-        <div className="">
-          <p>
-            <u>Follow us:</u>
-          </p>
-          <a href="https://www.instagram.com/4hands_food_studio/?hl=en">
-            <p>Instagram</p>
-          </a>
-          <a href="https://medium.com/@4handsf">
-            <p>Medium</p>
-          </a>
-        </div>
+        <div className="flexinthefooter">
+          <div className="">
+            <p>
+              <u>Follow us:</u>
+            </p>
+            <a href="https://www.instagram.com/4hands_food_studio/?hl=en">
+              <p>Instagram</p>
+            </a>
+            <a href="https://medium.com/@4handsf">
+              <p>Medium</p>
+            </a>
+          </div>
 
-        <div className="">
-          <p>
-            <u>Read:</u>
-          </p>
-          <a href="https://www.irishtimes.com/life-and-style/food-and-drink/restaurant-reviews/review-the-best-pop-up-restaurant-in-ireland-1.4194051">
-            Our Irish Times article
-          </a>
-          <br />
-          <br />
-          <a href="https://medium.com/@4handsf">4 Hands Food Studio Blog</a>
+          <div className="">
+            <p>
+              <u>Read:</u>
+            </p>
+            <a href="https://www.irishtimes.com/life-and-style/food-and-drink/restaurant-reviews/review-the-best-pop-up-restaurant-in-ireland-1.4194051">
+              Our Irish Times article
+            </a>
+            <br />
+            <br />
+            <a href="https://medium.com/@4handsf">4 Hands Food Studio Blog</a>
+          </div>
         </div>
 
         <nav>
-          <p><u>Navigation:</u></p>
+          <h4>
+            <u>Navigation:</u>
+          </h4>
           <a href="#shop">Shop</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>

@@ -11,7 +11,7 @@ function PaymentScreen(props) {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(savePayment({ paymentMethod }));
+    dispatch(savePayment({ paymentMethod: 'paypal' }));
     props.history.push('placeorder');
   };
   return (
@@ -24,7 +24,7 @@ function PaymentScreen(props) {
               <h2>Payment</h2>
             </li>
 
-            <li>
+            {/* <li>
               <div>
                 <input
                   type="radio"
@@ -35,10 +35,10 @@ function PaymentScreen(props) {
                 ></input>
                 <label for="paymentMethod">Paypal</label>
               </div>
-            </li>
+            </li> */}
 
             <li>
-              <button type="submit" className="button primary">
+              <button  type="submit" className="button primary">
                 Continue
               </button>
             </li>

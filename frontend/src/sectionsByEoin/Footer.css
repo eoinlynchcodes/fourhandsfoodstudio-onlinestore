@@ -32,7 +32,8 @@ nav{
     display: flex;
     justify-content: center;
     border: 5px solid white;
-    width: 40%;
+    width: 50%;
+    padding: 2rem;
     margin: 5rem auto;
 }
 
@@ -58,4 +59,5 @@ nav{
     .links nav{
         display: none;
     }
+
 }

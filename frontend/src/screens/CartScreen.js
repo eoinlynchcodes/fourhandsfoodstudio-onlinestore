@@ -56,10 +56,9 @@ function CartScreen(props) {
                 </div>
                 <div className="cart-name">
                   <div>
-                    <Link to={"/product/" + item.product}>
+                    <Link className="cart-product-name" to={"/product/" + item.product}>
                       {item.name}
                     </Link>
-
                   </div>
                   <div>
                     Qty:
@@ -89,7 +88,7 @@ function CartScreen(props) {
          € {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
       </h3>
       <button onClick={checkoutHandler} className="button primary full-width" disabled={cartItems.length === 0}>
-        Proceed to Checkout
+        Checkout
       </button>
 
     </div>
