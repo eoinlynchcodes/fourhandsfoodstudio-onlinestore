@@ -46,7 +46,7 @@ function App() {
               <Link to="/">
                 <div className="headingFlexing">
                   <h2>
-                    <span className="headingColours">Four Hands</span> Food
+                    <span className="headingColours">4 Hands</span> Food
                     Studio
                   </h2>
                 </div>
@@ -82,7 +82,7 @@ function App() {
               <Link to="/about"><h2 >About</h2></Link>
               <Link to="/shop"><h2>Products</h2></Link>
               <Link to="/takeaway"><h2>Takeaway</h2></Link>
-              <Link to="/recipes"><h2>Recipes</h2></Link>
+              <Link to="/recipes"><h2>Blog</h2></Link>
               <Link to="/events"><h2>Events</h2></Link>
               <Link to="/newsletter"><h2>Newsletter</h2></Link>
             </div>
@@ -95,6 +95,7 @@ function App() {
           </button>
           <ul className="categories">
             <li>
+              <Link to="/">Home</Link>
               <Link to="#about">About</Link>
               <Link to="/shop">Shop</Link>
               <Link to="/takeaway">Takeaway</Link>

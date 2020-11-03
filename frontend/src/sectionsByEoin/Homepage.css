@@ -56,9 +56,8 @@ html {
   margin-top: 5rem;
   margin-bottom: 10rem;
   background-color: white;
-  border-left: 2px solid black;
-  border-right: 2px solid black;
-  background-color: #dddddd;
+  border-left: 0.025px solid black;
+  /* border-right: 0.025px solid black; */
 }
 
 .redButton{
@@ -171,9 +170,10 @@ html {
   width: 100%;
 }
 
-.headingColours {
-  color: white;
-  background-color: black;
+.headingColours{
+  color: black;
+  background-color: orange;
+  padding: 0rem 1rem;
 }
 
 .blackBackgroundAbout{

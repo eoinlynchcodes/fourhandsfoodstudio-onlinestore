@@ -84,7 +84,6 @@ function HomeScreen(props) {
                 <p><b>SHOP</b></p>
               </div>
             </div>
-            <hr className="bottomHR" />
           </section>
 
           <section className="homepagebox">
@@ -105,7 +104,6 @@ function HomeScreen(props) {
                 Studio
               </p>
             </div>
-            <hr className="bottomHR" />
           </section>
 
           <section className="homepagebox">
@@ -125,7 +123,6 @@ function HomeScreen(props) {
                 data-offset="-100"
               ></div>
             </div>
-            <hr className="bottomHR" />
           </section>
 
           <section className="homepagebox">
@@ -143,7 +140,6 @@ function HomeScreen(props) {
                 Fumbally Stables, Dublin.
               </p>
             </div>
-            <hr className="bottomHR" />
           </section>
 
           <section className="homepagebox">
@@ -152,7 +148,6 @@ function HomeScreen(props) {
             </div>
 
             <div className="white"></div>
-            <hr className="bottomHR" />
           </section>
 
           <section id="retailers" className="homepagebox">
@@ -188,7 +183,6 @@ function HomeScreen(props) {
                 </tr>
               </table>
             </div>
-            <hr className="bottomHR" />
           </section>
 
           <section className="contactForm homepagebox">
@@ -221,7 +215,6 @@ function HomeScreen(props) {
                 </div>
               </form>
             </div>
-            <hr className="bottomHR" />
           </section>
         </div>
 
@@ -255,7 +248,6 @@ function HomeScreen(props) {
                 </b>
               </div>
             </div>
-            <hr className="bottomHR" />
           </section>
 
           <section className="homepagebox">
@@ -314,7 +306,6 @@ function HomeScreen(props) {
               <hr />
               <span>10. Lead by example.</span>
             </div>
-            <hr className="bottomHR" />
           </section>
 
           <section className="homepagebox">
@@ -402,7 +393,6 @@ function HomeScreen(props) {
                 their goals as a leading sustainable food business.
               </p>
             </div>
-            <hr className="bottomHR" />
           </section>
         </div>
       </div>

@@ -26,7 +26,7 @@ function Footer() {
         >
           <div>
             <label>
-              <u>Newsletter Signup</u>
+              <u><p>Newsletter Signup:</p></u>
             </label>
             <div>
               <br />
@@ -40,7 +40,6 @@ function Footer() {
             </div>
           </div>
         </form>
-        <div className="flexinthefooter">
           <div className="">
             <p>
               <u>Follow us:</u>
@@ -58,25 +57,19 @@ function Footer() {
               <u>Read:</u>
             </p>
             <a href="https://www.irishtimes.com/life-and-style/food-and-drink/restaurant-reviews/review-the-best-pop-up-restaurant-in-ireland-1.4194051">
-              Our Irish Times article
+              <p>Our Irish Times article</p>
             </a>
-            <br />
-            <br />
-            <a href="https://medium.com/@4handsf">4 Hands Food Studio Blog</a>
+            <a href="https://medium.com/@4handsf"><p>4 Hands Food Studio Blog</p></a>
           </div>
-        </div>
-
-        <nav>
-          <h4>
-            <u>Navigation:</u>
-          </h4>
-          <a href="#shop">Shop</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-          <a href="#retailers">Retailers</a>
-          <a href="#takeaways">Takeaways</a>
-        </nav>
       </div>
+
+      <nav className="footerNavigation">
+          <a href="#shop"><p>Shop</p></a>
+          <a href="#about"><p>About</p></a>
+          <a href="#contact"><p>Contact</p></a>
+          <a href="#retailers"><p>Retailers</p></a>
+          <a href="#takeaways"><p>Takeaways</p></a>
+        </nav>
 
       <div className="bottom">
         <div className="">
