@@ -1,5 +1,6 @@
 html {
   color: #5f6366;
+  font-size: 62.5%;
 }
 .homepageContainer {
   display: flex;
@@ -67,6 +68,8 @@ html {
   text-align: center;
   height: 15rem;
   padding: 2rem 5rem;
+  width: 60%;
+  margin: 0 auto;
 }
 
 .vl {

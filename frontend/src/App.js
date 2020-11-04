@@ -39,30 +39,28 @@ function App() {
       <div className="entireparentcontainer">
         <header className="flexTheHeader">
           <div className="header">
+            
             <div className="brand burgerMenu">
               <button onClick={openMenu}>&#9776;</button>
             </div>
-            <div className="brand">
+
+            <div className="fourHandsHeading">
               <Link to="/">
-                <div className="headingFlexing">
-                  <h2>
+                  <h2 className="fourHandsHeadingText">
                     <span className="headingColours">4 Hands</span> Food
                     Studio
                   </h2>
-                </div>
-                <div>
                   <p className="dancingFont">
                     <i>Always driven by nature!</i>
                   </p>
-                </div>
               </Link>
             </div>
+
             <div className="header-links">
               <Link className="cartIconAndLength" to="/cart/:id?">
                 <img className="trolley" src={trolley32px} />{" "}
-                <div className="cartLength">
-                  {cart.cartItems.length }{" "}
-                </div>
+                
+                  {cart.cartItems.length ? (<div className="cartLength"></div>) : null }
               </Link>
               {userInfo ? <Link to="/profile">{userInfo.name}</Link> : null}
               {userInfo && userInfo.isAdmin && (

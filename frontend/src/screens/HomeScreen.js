@@ -68,7 +68,7 @@ function HomeScreen(props) {
         <div className="leftHandSide">
           <section id="shop" className="homepagebox">
             <div className="coloredBox violet">
-              <h2>The Fermented Goods</h2>
+              <h1>The Fermented Goods</h1>
             </div>
             <p className="paragraph">
               We currently offer a small range of fermented vegetables and
@@ -84,7 +84,7 @@ function HomeScreen(props) {
               <a className="linkToNormalise" href="https://www.neighbourfood.ie/markets/mullingar/collection/2373">
                 <u>Neighbourfood Mullingar</u>
               </a>{" "}
-              and our own <span>Online Store</span>
+              and our own <a className="linkToNormalise" href="/shop"><u>Online Store</u></a>
             </p>
             <div className="redButton" onClick={goToProducts}>
               <p>
@@ -99,7 +99,7 @@ function HomeScreen(props) {
         <div className="rightHandSide">
           <section className="homepagebox">
             <div className="coloredBox green">
-              <h2>TAKE-AWAY Dinner</h2>
+              <h1>TAKE-AWAY Dinner</h1>
             </div>
             <p className="paragraph">
               We offer a weekly takeaway dinner, in between fine and casual. An iedal choice when going out is not on your agenda and microwave food is not an option. Spaces are limisted so click in to order!
