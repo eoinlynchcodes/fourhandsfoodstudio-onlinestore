@@ -9,7 +9,6 @@ html {
 }
 
 .homeImages {
-  height: 50rem;
   width: 100%;
   overflow: hidden;
 }
@@ -25,13 +24,17 @@ html {
 }
 
 .leftHandSide {
-  width: 66%;
+  width: 60%;
   /* margin: auto 0; */
 }
 
 .rightHandSide {
-  width: 33%;
+  width: 40%;
   /* margin: auto 0; */
+}
+
+.linkToNormalise{
+  color: black;
 }
 
 @media only screen and (max-width: 768px) {
@@ -56,20 +59,31 @@ html {
   margin-top: 5rem;
   margin-bottom: 10rem;
   background-color: white;
-  border-left: 0.025px solid black;
-  /* border-right: 0.025px solid black; */
+  height: 45rem;
+  align-content: space-around;
+}
+
+.paragraph{
+  text-align: center;
+  height: 15rem;
+  padding: 2rem 5rem;
+}
+
+.vl {
+  border-left: 1px solid black;
+  height: 325px;
+  margin: 5rem auto;
 }
 
 .redButton{
-  border: 1px solid black;
-  margin: 5rem auto 0rem auto;
-  padding: 1rem 2rem;
-  width: 70%;
+  border: 5px solid black;
+  margin: 0 auto;
+  width: 20rem;
   display: flex;
   justify-content: center;
   cursor: crosshair;
   color: black;
-  background-color: #f44336;
+  align-content: flex-end;
 }
 
 
@@ -97,8 +111,8 @@ html {
 }
 
 .violet {
-  background-color: violet;
-  color: white;
+  background-color: #EDCCE0;
+  color: #4D453A;
 }
 
 .orange{
@@ -128,7 +142,7 @@ html {
 }
 
 .green {
-  background-color: teal;
+  background-color: #718279;
   color: white;
 }
 
