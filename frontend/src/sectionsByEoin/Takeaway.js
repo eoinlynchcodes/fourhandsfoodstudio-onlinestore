@@ -1,9 +1,11 @@
 import React from "react";
+import TakeawayContainer from "./TakeawayContainer";
 
 function Takeaway() {
   return (
-    <div>
-      <section className="homepagebox">
+    <section className="aboutContainer">
+      <div class="vl"></div>
+      <div>
         <div className="coloredBox green">
           <h2>Takeaway</h2>
         </div>
@@ -26,10 +28,11 @@ function Takeaway() {
               <p>ORDER</p>
             </b>
           </div>
+          <TakeawayContainer/>
         </div>
-        <hr className="bottomHR" />
-      </section>
-    </div>
+      </div>
+      <div class="vl"></div>
+    </section>
   );
 }
 

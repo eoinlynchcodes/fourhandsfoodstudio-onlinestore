@@ -9,6 +9,10 @@ router.get('/', async (req, res) => {
   res.send(takeaway);
 });
 
+router.get('/test', (req, res) => {
+  res.send('hello');
+});
+
 router.post('/', isAuth, isAdmin, async (req, res) => {
   const takeaway = new Takeaway({
     starterName: req.body.starterName,
@@ -25,6 +29,5 @@ router.post('/', isAuth, isAdmin, async (req, res) => {
   }
   return res.status(500).send({ message: 'Error in creating the takeaway.' });
 });
-
 
 export default router;

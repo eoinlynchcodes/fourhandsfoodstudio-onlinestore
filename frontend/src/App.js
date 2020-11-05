@@ -20,6 +20,7 @@ import OrdersScreen from "./screens/OrdersScreen";
 import Footer from "./sectionsByEoin/Footer";
 import trolley32px from "./imagesByEoin/trolley32px.png";
 import About from "./sectionsByEoin/About";
+import TakeawayHandling from './screens/TakeawayHandling';
 
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
@@ -113,6 +114,7 @@ function App() {
             <Route path="/profile" component={ProfileScreen} />
             <Route path="/order/:id" component={OrderScreen} />
             <Route path="/products" component={ProductsScreen} />
+            <Route path="/takeawayhandling" component={TakeawayHandling} />
             <Route path="/shipping" component={ShippingScreen} />
             {/* <Route path="/payment" component={PaymentScreen} /> */}
             <Route path="/placeorder" component={PlaceOrderScreen} />
