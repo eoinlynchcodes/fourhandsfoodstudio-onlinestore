@@ -4,10 +4,10 @@ import margaux from "../imagesByEoin/margaux.jpeg";
 
 function About() {
   return (
-      <section className="aboutContainer">
-        <div class="vl"></div>
-        <div>
-        <div className="coloredBox red">
+    <section className="aboutContainer">
+      <div class="vl"></div>
+      <div>
+        <div className="coloredBox extraMargin red">
           <h3>About</h3>
         </div>
         <div className="aboutMainText">
@@ -21,7 +21,10 @@ function About() {
             they set in place for their regenerative business model.
             <br />
             <br />4 Hands Food Studio's pop-up dinners have been hailed as{" "}
-            <a className="blacken" href="https://www.irishtimes.com/life-and-style/food-and-drink/restaurant-reviews/review-the-best-pop-up-restaurant-in-ireland-1.4194051">
+            <a
+              className="blacken"
+              href="https://www.irishtimes.com/life-and-style/food-and-drink/restaurant-reviews/review-the-best-pop-up-restaurant-in-ireland-1.4194051"
+            >
               <i>
                 <u>"the best pop-up restaurant in Ireland"</u>
               </i>
@@ -95,9 +98,87 @@ function About() {
           </div>
         </div>
         <br />
-        </div>
-        <div class="vl"></div>
-      </section>
+        <hr/>
+        <section className="principlesbox">
+            <div className="coloredBox extraMargin lime">
+              <h2>Vision</h2>
+            </div>
+            <div className="visionText">
+              <p>
+                <i>
+                  "To live in a world where nature comes first, where we as
+                  humans see ourselves of part of nature, not above it. To see
+                  all peoples open to receive the goodness our natural
+                  surroundings have to offer, showing respect and gratitude for
+                  how lucky we are to live in a world which knows better how to
+                  care for itself than we ever could."
+                </i>
+                <br /> <br /><p className="centreThisHereText">- Rose Greene &amp; Margaux Dejardin, 4 Hands Food
+                Studio</p>
+              </p>
+            </div>
+          </section>
+          <hr/>
+        <section className="principlesbox">
+            <div className="coloredBox extraMargin orange">
+              <h3>Our Principles</h3>
+            </div>
+            <div id="principles" className="white">
+              <hr />
+              <p>1. Make the best product possible</p>
+              <br />
+              <br />
+              <hr />
+              <p>
+                2. Always strive to improve and innovate on every level.
+              </p>
+              <br />
+              <br />
+              <hr />
+              <p>3. Nutrition is key.</p>
+              <br />
+              <br />
+              <hr />
+              <p>
+                4. Connect with suppliers, continually control and monitor
+                supply chain.
+              </p>
+              <br />
+              <br />
+              <hr />
+              <p>5. Minimize the creation of waste.</p>
+              <br />
+              <br />
+              <hr />
+              <p>
+                6. Assess the environmental outcome of any business decision
+                before making
+              </p>
+              <br />
+              <br />
+              <hr />
+              <p>7. Support and promote farmers that fit principles.</p>
+              <br />
+              <br />
+              <hr />
+              <p>8. Engage with and teach food citizens (customers).</p>
+              <br />
+              <br />
+              <hr />
+              <p>
+                9. Continually push for the collective good, to give better
+                access to sustainable food to a maximum of people, while
+                supporting biodiversity and regenerative agriculture.
+              </p>
+              <br />
+              <br />
+              <hr />
+              <p>10. Lead by example.</p>
+            </div>
+          </section>
+      </div>
+      <div class="vl"></div>
+    </section>
   );
 }
 

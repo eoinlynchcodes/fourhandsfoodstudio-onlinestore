@@ -123,6 +123,14 @@ html {
   justify-content: center;
 }
 
+.extraMargin{
+  margin: 5rem auto 0rem auto;
+}
+
+.centreThisHereText{
+  text-align: center;
+}
+
 .violet {
   background-color: #EDCCE0;
   color: #4D453A;
@@ -186,14 +194,27 @@ html {
   align-items: center;
 }
 
+
 .aboutText{
   width: 40%;
+}
+
+.visionText{
+  width: 50%;
+  margin: 10rem auto;
+
+}
+
+.principlesbox{
+  padding: 4rem 4rem;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .aboutMainText{
   width: 80%;
   margin: 0 auto;
-  padding: 4rem;
+  padding: 8rem;
   text-align: center;
 }
 
@@ -220,6 +241,10 @@ html {
 .blackBackgroundAbout p{
   padding: 2rem 2rem;
   margin: 0 auto; 
+}
+
+.blackBackgroundAbout img{
+  width: 100%;
 }
 
 .bottomHR{
