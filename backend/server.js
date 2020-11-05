@@ -7,6 +7,7 @@ import userRoute from './routes/userRoute';
 import productRoute from './routes/productRoute';
 import orderRoute from './routes/orderRoute';
 import uploadRoute from './routes/uploadRoute';
+import takeawayRoute from './routes/takeawayRoute';
 
 const mongodbUrl = config.MONGODB_URL;
 mongoose
@@ -20,6 +21,7 @@ mongoose
 const app = express();
 app.use(bodyParser.json());
 app.use('/api/uploads', uploadRoute);
+app.use('/api/takeaway', takeawayRoute);
 app.use('/api/users', userRoute);
 app.use('/api/products', productRoute);
 app.use('/api/orders', orderRoute);
