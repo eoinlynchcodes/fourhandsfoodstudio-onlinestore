@@ -60,7 +60,7 @@ function App() {
               <Link className="cartIconAndLength" to="/cart/:id?">
                 <img className="trolley" src={trolley32px} />{" "}
                 
-                  {cart.cartItems.length ? (<div className="cartLength"></div>) : null }
+  {cart.cartItems.length ? (<div className="cartLength"><p>{ cart.cartItems.length }</p></div>) : null }
               </Link>
               {userInfo ? <Link to="/profile">{userInfo.name}</Link> : null}
               {userInfo && userInfo.isAdmin && (

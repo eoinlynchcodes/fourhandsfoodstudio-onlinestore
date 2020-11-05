@@ -593,6 +593,7 @@ tbody > tr:nth-child(odd) {
   border-radius: 50%;
   border: 1px solid black;
   width: 25px;
+  color: black;
   margin: .5rem auto;
   height: 25px;
   display: flex;
@@ -639,3 +640,10 @@ tbody > tr:nth-child(odd) {
   width: 100%;
   margin: 0 auto;
 }
+
+.aboutContainer{
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+}
+
