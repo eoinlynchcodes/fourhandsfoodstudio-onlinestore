@@ -21,6 +21,7 @@ import Footer from "./sectionsByEoin/Footer";
 import trolley32px from "./imagesByEoin/trolley32px.png";
 import About from "./sectionsByEoin/About";
 import TakeawayHandling from './screens/TakeawayHandling';
+import Blog from './sectionsByEoin/Blog';
 
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
@@ -81,7 +82,7 @@ function App() {
               <Link to="/about"><h2 >About</h2></Link>
               <Link to="/shop"><h2>Products</h2></Link>
               <Link to="/takeaway"><h2>Takeaway</h2></Link>
-              <Link to="/recipes"><h2>Blog</h2></Link>
+              <Link to="/blog"><h2>Blog</h2></Link>
               <Link to="/events"><h2>Events</h2></Link>
               <Link to="/newsletter"><h2>Newsletter</h2></Link>
             </div>
@@ -98,7 +99,7 @@ function App() {
               <Link to="#about">About</Link>
               <Link to="/shop">Shop</Link>
               <Link to="/takeaway">Takeaway</Link>
-              <Link to="/recipes">Recipes</Link>
+              <Link to="/blog">Recipes</Link>
               <Link to="/events">Events</Link>
               <Link t0="/newsletter">Newsletter</Link>
             </li>
@@ -120,6 +121,7 @@ function App() {
             <Route path="/placeorder" component={PlaceOrderScreen} />
             <Route path="/signin" component={SigninScreen} />
             <Route path="/register" component={RegisterScreen} />
+            <Route path="/blog" component={Blog} />
             <Route path="/product/:id" component={ProductScreen} />
             <Route path="/cart/:id?" component={CartScreen} />
             <Route path="/category/:id" component={HomeScreen} />
