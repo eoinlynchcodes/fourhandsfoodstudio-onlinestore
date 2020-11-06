@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
   res.send(takeaway);
 });
 
-router.get('/test', (req, res) => {
+router.get('/', (req, res) => {
   res.send('hello');
 });
 
@@ -28,6 +28,16 @@ router.post('/', isAuth, isAdmin, async (req, res) => {
     return res.status(201).send({ message: 'Takeaway was successfully created.', data: newTakeAway });
   }
   return res.status(500).send({ message: 'Error in creating the takeaway.' });
+});
+
+router.delete('/:id', async (req, res) => {
+  const deletedTakeaway = await Takeaway.findById(req.params.id);
+  if (deletedTakeaway) {
+    await deletedTakeaway.remove();
+    res.send({ message: 'Takeaway Deleted' });
+  } else {
+    res.send('Error in Deletion.');
+  }
 });
 
 export default router;

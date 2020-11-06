@@ -8,6 +8,10 @@ import {
   productDeleteReducer,
   productReviewSaveReducer,
 } from './reducers/productReducers';
+import {
+  getTakeawayReducer,
+  deleteTakeawayReducer
+} from './reducers/takeawayReducers';
 import { cartReducer } from './reducers/cartReducers';
 import {
   userSigninReducer,
@@ -30,6 +34,7 @@ const initialState = {
   cart: { cartItems, shipping: {}, payment: {} },
   userSignin: { userInfo },
 };
+
 const reducer = combineReducers({
   productList: productListReducer,
   productDetails: productDetailsReducer,
@@ -46,6 +51,8 @@ const reducer = combineReducers({
   myOrderList: myOrderListReducer,
   orderList: orderListReducer,
   orderDelete: orderDeleteReducer,
+  getTakeaway: getTakeawayReducer,
+  deleteTakeaway: deleteTakeawayReducer,
 });
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(

@@ -3,6 +3,7 @@ import { addToCart, removeFromCart } from '../actions/cartActions';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+
 function CartScreen(props) {
 
   const cart = useSelector(state => state.cart);

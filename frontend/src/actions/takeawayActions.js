@@ -1,19 +1,36 @@
 import Axios from 'axios';
 import axios from 'axios';
 
-import { GET_TAKEAWAY_DATA, DELETE_TAKEAWAY_DATA, TAKEAWAY_DATA_RETURNED, TAKEAWAY_DATA_ERROR } from '../constants/takeawayConstants';
+import { TAKEAWAY_DATA_REQUEST, TAKEAWAY_DATA_RECEIVED, TAKEAWAY_DATA_ERROR, TAKEAWAY_DELETE_REQUEST, TAKEAWAY_DELETE_SUCCESS, TAKEAWAY_DELETE_ERROR } from '../constants/takeawayConstants';
 
-const getTakeawayData = ( ) => async ( dispatch ) => {
+const getTakeawayData = ( takeaway ) => async ( dispatch ) => {
     try {
-        dispatch({ type: GET_TAKEAWAY_DATA });
+        dispatch({ type: TAKEAWAY_DATA_REQUEST });
         const { data } = await axios.get('/api/takeaway/');
-        dispatch({ type: TAKEAWAY_DATA_RETURNED, payload: data });
+        dispatch({ type: TAKEAWAY_DATA_RECEIVED, payload: data });
     } catch (error) {
         dispatch( { type: TAKEAWAY_DATA_ERROR, payload: error.message });
     }
 };
 
+const deleteTakeawayData = (takeawayId) => async (dispatch, getState) => {
+    try{
+        const {
+            userSignin: { userInfo },
+            } = getState();
+      dispatch({ type: TAKEAWAY_DELETE_REQUEST, payload: takeawayId });
+      const { data } = await axios.delete('/api/takeaway/' + takeawayId,{
+        headers: {
+            Authorization: 'Bearer ' + userInfo.token,
+          },
+      });
+      dispatch({ type: TAKEAWAY_DELETE_SUCCESS, payload: data, success: true });
+    } catch (error) {
+        dispatch({ type: TAKEAWAY_DELETE_ERROR, payload: error.message })
+    }
+};
 
 export { 
-    getTakeawayData
+    getTakeawayData,
+    deleteTakeawayData
 };
