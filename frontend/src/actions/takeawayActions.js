@@ -15,16 +15,14 @@ const getTakeawayData = ( takeaway ) => async ( dispatch ) => {
 
 const deleteTakeawayData = (takeawayId) => async (dispatch, getState) => {
     try{
-        const {
-            userSignin: { userInfo },
-            } = getState();
-      dispatch({ type: TAKEAWAY_DELETE_REQUEST, payload: takeawayId });
-      const { data } = await axios.delete('/api/takeaway/' + takeawayId,{
-        headers: {
-            Authorization: 'Bearer ' + userInfo.token,
-          },
-      });
-      dispatch({ type: TAKEAWAY_DELETE_SUCCESS, payload: data, success: true });
+        dispatch({ type: TAKEAWAY_DELETE_REQUEST, payload: takeawayId });
+        const { userSignin: { userInfo } } = getState();
+        const { data } = await axios.delete('/api/takeaway/' + takeawayId, {
+            headers: {
+                Authorization: 'Bearer ' + userInfo.token,
+            },
+        });
+        dispatch({ type: TAKEAWAY_DELETE_SUCCESS, payload: data });
     } catch (error) {
         dispatch({ type: TAKEAWAY_DELETE_ERROR, payload: error.message })
     }

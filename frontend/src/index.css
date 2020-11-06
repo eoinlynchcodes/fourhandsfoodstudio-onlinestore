@@ -103,9 +103,6 @@ button {
   margin: 0 auto;
 }
 
-.headingFlexing{
-
-}
 
 .brand a {
   color: #333333;
@@ -119,8 +116,8 @@ button {
   padding: 1rem;
 }
 .header-links a:hover {
-  color: white;
-  background-color: silver;
+  color: black;
+  background-color: white;
 }
 .main {
   margin: auto 0;

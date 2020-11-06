@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
   res.send('hello');
 });
 
-router.post('/', isAuth, isAdmin, async (req, res) => {
+router.post('/', async (req, res) => {
   const takeaway = new Takeaway({
     starterName: req.body.starterName,
     starterItems: req.body.starterItems,
@@ -30,7 +30,7 @@ router.post('/', isAuth, isAdmin, async (req, res) => {
   return res.status(500).send({ message: 'Error in creating the takeaway.' });
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', isAuth, isAdmin, async (req, res) => {
   const deletedTakeaway = await Takeaway.findById(req.params.id);
   if (deletedTakeaway) {
     await deletedTakeaway.remove();

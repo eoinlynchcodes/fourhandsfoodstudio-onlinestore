@@ -11,7 +11,8 @@ function EditTakeaway(props) {
   const dispatch = useDispatch();
 
   const deleteHandler = (takeawayData) => {
-      dispatch(deleteTakeawayData(takeawayData._id));
+    console.log(takeawayData[0]._id);
+      dispatch(deleteTakeawayData(takeawayData[0]._id));
   };
 
   useEffect(() => {

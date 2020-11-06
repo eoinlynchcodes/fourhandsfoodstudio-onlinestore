@@ -5,9 +5,9 @@ import HomeScreen from "./screens/HomeScreen";
 import ProductScreen from "./screens/ProductScreen";
 import CartScreen from "./screens/CartScreen";
 import SigninScreen from "./screens/SigninScreen";
-import Newsletter from './sectionsByEoin/Newsletter';
-import Shop from './sectionsByEoin/Shop';
-import Takeaway from './sectionsByEoin/Takeaway';
+import Newsletter from "./sectionsByEoin/Newsletter";
+import Shop from "./sectionsByEoin/Shop";
+import Takeaway from "./sectionsByEoin/Takeaway";
 import { useSelector } from "react-redux";
 import RegisterScreen from "./screens/RegisterScreen";
 import ProductsScreen from "./screens/ProductsScreen";
@@ -20,8 +20,8 @@ import OrdersScreen from "./screens/OrdersScreen";
 import Footer from "./sectionsByEoin/Footer";
 import trolley32px from "./imagesByEoin/trolley32px.png";
 import About from "./sectionsByEoin/About";
-import TakeawayHandling from './screens/TakeawayHandling';
-import Blog from './sectionsByEoin/Blog';
+import TakeawayHandling from "./screens/TakeawayHandling";
+import Blog from "./sectionsByEoin/Blog";
 import EditTakeaway from "./sectionsByEoin/EditTakeaway";
 
 function App() {
@@ -42,28 +42,29 @@ function App() {
       <div className="entireparentcontainer">
         <header className="flexTheHeader">
           <div className="header">
-            
             <div className="brand burgerMenu">
               <button onClick={openMenu}>&#9776;</button>
             </div>
 
             <div className="fourHandsHeading">
               <Link to="/">
-                  <h2 className="fourHandsHeadingText">
-                    <span className="headingColours">4 Hands</span> Food
-                    Studio
-                  </h2>
-                  <p className="dancingFont">
-                    <i>Always driven by nature!</i>
-                  </p>
+                <h2 className="fourHandsHeadingText">
+                  <span className="headingColours">4 Hands</span> Food Studio
+                </h2>
+                <p className="dancingFont">
+                  <i>Always driven by nature!</i>
+                </p>
               </Link>
             </div>
 
             <div className="header-links">
               <Link className="cartIconAndLength" to="/cart/:id?">
                 <img className="trolley" src={trolley32px} />{" "}
-                
-  {cart.cartItems.length ? (<div className="cartLength"><p>{ cart.cartItems.length }</p></div>) : null }
+                {cart.cartItems.length ? (
+                  <div className="cartLength">
+                    <p>{cart.cartItems.length}</p>
+                  </div>
+                ) : null}
               </Link>
               {userInfo ? <Link to="/profile">{userInfo.name}</Link> : null}
               {userInfo && userInfo.isAdmin && (
@@ -80,13 +81,25 @@ function App() {
             </div>
           </div>
           <div className="theActualNav">
-              <Link to="/about"><h2 >About</h2></Link>
-              <Link to="/shop"><h2>Products</h2></Link>
-              <Link to="/takeaway"><h2>Takeaway</h2></Link>
-              <Link to="/blog"><h2>Blog</h2></Link>
-              <Link to="/events"><h2>Events</h2></Link>
-              <Link to="/newsletter"><h2>Newsletter</h2></Link>
-            </div>
+            <Link to="/about">
+              <h2>About</h2>
+            </Link>
+            <Link to="/shop">
+              <h2>Products</h2>
+            </Link>
+            <Link to="/takeaway">
+              <h2>Takeaway</h2>
+            </Link>
+            <Link to="/blog">
+              <h2>Blog</h2>
+            </Link>
+            <Link to="/events">
+              <h2>Events</h2>
+            </Link>
+            <Link to="/newsletter">
+              <h2>Newsletter</h2>
+            </Link>
+          </div>
         </header>
 
         <aside className="sidebar">
