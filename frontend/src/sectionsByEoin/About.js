@@ -25,9 +25,8 @@ function About() {
               className="blacken"
               href="https://www.irishtimes.com/life-and-style/food-and-drink/restaurant-reviews/review-the-best-pop-up-restaurant-in-ireland-1.4194051"
             >
-              <i>
+
                 <u>"the best pop-up restaurant in Ireland"</u>
-              </i>
             </a>{" "}
             by the Irish Times.
             <br />
@@ -107,8 +106,8 @@ function About() {
               <p>
                 <i>
                   "To live in a world where nature comes first, where we as
-                  humans see ourselves of part of nature, not above it. To see
-                  all peoples open to receive the goodness our natural
+                  humans see ourselves of part of nature, not above it.<br/> To see
+                  all people open to receive the goodness that our natural
                   surroundings have to offer, showing respect and gratitude for
                   how lucky we are to live in a world which knows better how to
                   care for itself than we ever could."

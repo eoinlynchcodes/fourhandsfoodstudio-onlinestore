@@ -66,9 +66,6 @@ html {
 
 .paragraph{
   text-align: center;
-  height: 15rem;
-  padding: 2rem 5rem;
-  width: 60%;
   margin: 0 auto;
 }
 
@@ -123,6 +120,9 @@ html {
   justify-content: center;
 }
 
+.coloredBox h1{
+}
+
 .extraMargin{
   margin: 5rem auto 0rem auto;
 }
@@ -168,8 +168,8 @@ html {
 }
 
 .yellow {
-  background-color: #ece81a;
-  color: #333333;
+  background-color: #E0B930;
+  color: #4D453A;
 }
 
 .blue {
@@ -200,21 +200,19 @@ html {
 }
 
 .visionText{
-  width: 50%;
-  margin: 10rem auto;
-
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
 }
 
 .principlesbox{
-  padding: 4rem 4rem;
-  width: 80%;
   margin: 0 auto;
 }
 
 .aboutMainText{
   width: 80%;
   margin: 0 auto;
-  padding: 8rem;
+  padding: 4rem 0rem;
   text-align: center;
 }
 

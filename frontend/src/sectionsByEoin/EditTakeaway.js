@@ -12,7 +12,7 @@ function EditTakeaway(props) {
 
   const deleteHandler = (takeawayData) => {
     console.log(takeawayData[0]._id);
-      dispatch(deleteTakeawayData(takeawayData[0]._id));
+    dispatch(deleteTakeawayData(takeawayData[0]._id));
   };
 
   useEffect(() => {
