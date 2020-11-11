@@ -47,6 +47,11 @@ nav{
     width: 50%;
 }
 
+#bottom{
+    display: flex;
+    justify-content: center;
+}
+
 @media only screen and (max-width: 768px) {
     .links{
       display: flex;
@@ -57,6 +62,10 @@ nav{
     }
 
     .links nav{
+        display: none;
+    }
+
+    .dancingFont{
         display: none;
     }
 

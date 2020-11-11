@@ -68,7 +68,7 @@ button {
 
 .fourHandsHeadingText{
   color: #718279;
-  font-size: 4rem;
+  font-size: 3.5em;
   margin: 0 auto;
 }
 
@@ -89,6 +89,7 @@ button {
   .theActualNav{
     display: none;
   }
+
 }
 .theActualNav h2{
   color: #333333;
@@ -159,6 +160,10 @@ a:hover {
     justify-content: center;
     align-items: center;
     padding: 0rem 0rem;
+  }
+
+  .fourHandsHeadingText{
+    font-size: 2.5em;
   }
 }
 

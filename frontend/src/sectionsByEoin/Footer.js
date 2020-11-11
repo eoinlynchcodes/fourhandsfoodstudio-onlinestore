@@ -11,6 +11,24 @@ function Footer() {
 
   return (
     <footer className="footer">
+      <nav className="footerNavigation">
+        <a href="#shop">
+          <p>Shop</p>
+        </a>
+        <a href="#about">
+          <p>About</p>
+        </a>
+        <a href="#contact">
+          <p>Contact</p>
+        </a>
+        <a href="#retailers">
+          <p>Retailers</p>
+        </a>
+        <a href="#takeaways">
+          <p>Takeaways</p>
+        </a>
+      </nav>
+
       <div className="footerHeading changeMouse">
         <h1 onClick={gohome}>4 Hands Food Studio</h1>
       </div>
@@ -26,7 +44,9 @@ function Footer() {
         >
           <div>
             <label>
-              <u><p>Newsletter Signup:</p></u>
+              <u>
+                <p>Newsletter Signup:</p>
+              </u>
             </label>
             <div>
               <br />
@@ -40,51 +60,41 @@ function Footer() {
             </div>
           </div>
         </form>
-          <div className="">
-            <p>
-              <u>Follow us:</u>
-            </p>
-            <a href="https://www.instagram.com/4hands_food_studio/?hl=en">
-              <p>Instagram</p>
-            </a>
-            <a href="https://medium.com/@4handsf">
-              <p>Medium</p>
-            </a>
-          </div>
-
-          <div className="">
-            <p>
-              <u>Read:</u>
-            </p>
-            <a href="https://www.irishtimes.com/life-and-style/food-and-drink/restaurant-reviews/review-the-best-pop-up-restaurant-in-ireland-1.4194051">
-              <p>Our Irish Times article</p>
-            </a>
-            <a href="https://medium.com/@4handsf"><p>4 Hands Food Studio Blog</p></a>
-          </div>
-      </div>
-
-      <nav className="footerNavigation">
-          <a href="#shop"><p>Shop</p></a>
-          <a href="#about"><p>About</p></a>
-          <a href="#contact"><p>Contact</p></a>
-          <a href="#retailers"><p>Retailers</p></a>
-          <a href="#takeaways"><p>Takeaways</p></a>
-        </nav>
-
-      <div className="bottom">
         <div className="">
           <p>
-            <a>&copy; 4 Hands Food Studio 2020</a>
+            <u>Follow us:</u>
           </p>
+          <a href="https://www.instagram.com/4hands_food_studio/?hl=en">
+            <p>Instagram</p>
+          </a>
+          <a href="https://medium.com/@4handsf">
+            <p>Medium</p>
+          </a>
         </div>
 
         <div className="">
           <p>
+            <u>Read:</u>
+          </p>
+          <a href="https://www.irishtimes.com/life-and-style/food-and-drink/restaurant-reviews/review-the-best-pop-up-restaurant-in-ireland-1.4194051">
+            <p>Our Irish Times article</p>
+          </a>
+          <a href="https://medium.com/@4handsf">
+            <p>4 Hands Food Studio Blog</p>
+          </a>
+        </div>
+      </div>
+
+      <div className="">
+          <p id="bottom">
+            <a>&copy; 4 Hands Food Studio 2020</a>
+          </p>
+
+          <p id="bottom">
             <a href="https://eoinlynch.com">
               Design &amp; Code by <u>Eoin Lynch</u>
             </a>
           </p>
-        </div>
       </div>
     </footer>
   );

@@ -3,10 +3,9 @@ html {
   font-size: 62.5%;
 }
 .homepageContainer {
-  display: flex;
   width: 90%;
+  display: flex;
   margin: 0 auto;
-  align-content: flex-start;
 }
 
 .homeImages {
@@ -36,6 +35,12 @@ html {
 
 .linkToNormalise{
   color: black;
+}
+
+.homepageSection{
+  margin: 0 auto;
+  width: 90%;
+  padding: 4em 4em;
 }
 
 @media only screen and (max-width: 768px) {
@@ -118,9 +123,6 @@ html {
   margin: 0 auto;
   display: flex;
   justify-content: center;
-}
-
-.coloredBox h1{
 }
 
 .extraMargin{
@@ -258,11 +260,6 @@ html {
   cursor: pointer;
 }
 
-.bottom{
-  display: flex;
-  flex-direction: column;
-  margin: 5rem auto;
-}
 
 .submitButton{
   width: 50%;
