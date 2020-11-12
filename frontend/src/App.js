@@ -110,7 +110,7 @@ function App() {
           <ul className="categories">
             <li>
               <Link to="/">Home</Link>
-              <Link to="#about">About</Link>
+              <Link to="/about">About</Link>
               <Link to="/shop">Shop</Link>
               <Link to="/takeaway">Takeaway</Link>
               <Link to="/blog">Recipes</Link>
