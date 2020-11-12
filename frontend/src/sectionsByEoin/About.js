@@ -34,13 +34,14 @@ function About() {
             2018, in Rathaspick, Ireland.
           </p>
         </div>
-        <div className="flexRoseAndMargaux">
+        <div id="straightenOutRose" className="flexRoseAndMargaux">
           <div className="blackBackgroundAbout">
             <img src={rose} />
             <p>
               <u>Rose Greene</u>
             </p>
           </div>
+      
           <div className="aboutText">
             <h4>
               <u>Rose</u>
@@ -64,7 +65,10 @@ function About() {
           </div>
         </div>
 
-        <div className="flexRoseAndMargaux">
+        <br/>
+        <br/>
+
+        <div id="straightenOutMargaux" className="flexRoseAndMargaux">
           <div className="aboutText">
             <h4>
               <u>Margaux</u>
@@ -112,7 +116,7 @@ function About() {
                   how lucky we are to live in a world which knows better how to
                   care for itself than we ever could."
                 </i>
-                <br /> <br /><p className="centreThisHereText">- Rose Greene &amp; Margaux Dejardin, 4 Hands Food
+                <br /> <br /><p className="centreThisHereText">- Rose Greene &amp; Margaux Dejardin,<br/> 4 Hands Food
                 Studio</p>
               </p>
             </div>

@@ -15,7 +15,33 @@ html {
 
 @media only screen and (max-width: 768px){
   .homeImages{
-    height: 100%;;
+    height: 100%;
+  }
+
+  .flexRoseAndMargaux{
+    flex-direction: column;
+  }
+  .aboutText{
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .blackBackgroundAbout{
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .blackBackgroundAbout img{
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  #straightenOutRose{
+    flex-direction: column;
+  }
+
+  #straightenOutMargaux{
+    flex-direction: column-reverse;
   }
 }
 
@@ -193,7 +219,6 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: center;
 }
 
 
@@ -233,16 +258,15 @@ flex-basis: 50%;
   padding: 0rem 1rem;
 }
 
+.blackBackgroundAbout{
+  flex-basis: 40%;
+}
 
 .blackBackgroundAbout p{
   padding: 2rem 2rem;
   background-color: #333333;
   color: white;
   margin: 0 auto; 
-}
-
-.blackBackgroundAbout img{
-  flex-basis: 50%
 }
 
 .bottomHR{
