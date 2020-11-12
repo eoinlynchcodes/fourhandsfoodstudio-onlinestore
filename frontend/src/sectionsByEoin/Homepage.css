@@ -198,7 +198,7 @@ html {
 
 
 .aboutText{
-  width: 40%;
+flex-basis: 50%;
 }
 
 .visionText{
@@ -233,18 +233,16 @@ html {
   padding: 0rem 1rem;
 }
 
-.blackBackgroundAbout{
-  margin: 2rem;
-  border: 2px solid black;
-}
 
 .blackBackgroundAbout p{
   padding: 2rem 2rem;
+  background-color: #333333;
+  color: white;
   margin: 0 auto; 
 }
 
 .blackBackgroundAbout img{
-  width: 100%;
+  flex-basis: 50%
 }
 
 .bottomHR{
