@@ -48,9 +48,9 @@ function App() {
 
             <div className="fourHandsHeading">
               <Link to="/">
-                <h2 className="fourHandsHeadingText">
+                <h4 className="fourHandsHeadingText">
                   <span className="headingColours">4 Hands</span> Food Studio
-                </h2>
+                </h4>
                 <p className="dancingFont">
                   <i>Always driven by nature!</i>
                 </p>

@@ -66,58 +66,61 @@ function HomeScreen(props) {
       <div className="homepageContainer">
         <div class="vl"></div>
         <div>
-          <section className="homepageSection">
-            <div className="violet">
-              <h1>The Fermented Goods</h1>
-            </div>
-            <p className="paraforalignment">
-              We currently offer a small range of fermented vegetables and
-              drinks well known as sauerkraut, kimchi and kombucha aswell as
-              fermented vegetable juices.
-              <br />
-              We focus on a starting point: the raw produce.
-              <br />
-              The ingredients we use have to be alive, chemical free and
-              ethically produced.
-              <br />
-              We sell in {" "}
-              <a className="linkToNormalise" href="#retailers">
-                <u>shops,</u>{" "}
-              </a>
-              through{" "}
-              <a
-                className="linkToNormalise"
-                href="https://www.neighbourfood.ie/markets/mullingar/collection/2373"
-              >
-                <u>Neighbourfood Mullingar</u>
-              </a>{" "}
-              and our own{" "}
-              <a className="linkToNormalise" href="/shop">
-                <u>Online Store</u>
-              </a>
-            </p>
-            <div className="redButton" onClick={goToProducts}>
-              <p>
-                <b>CHECK OUT HERE</b>
+          <div className="homepageFirstPiece">
+            <section className="first homepageSection">
+              <div className="violet">
+                <h1>The Fermented Goods</h1>
+              </div>
+              <p className="paraforalignment">
+                We currently offer a small range of fermented vegetables and
+                drinks well known as sauerkraut, kimchi and kombucha aswell as
+                fermented vegetable juices.
+                <br />
+                We focus on a starting point: the raw produce.
+                <br />
+                The ingredients we use have to be alive, chemical free and
+                ethically produced.
+                <br />
+                We sell in{" "}
+                <a className="linkToNormalise" href="#retailers">
+                  <u>shops,</u>{" "}
+                </a>
+                through{" "}
+                <a
+                  className="linkToNormalise"
+                  href="https://www.neighbourfood.ie/markets/mullingar/collection/2373"
+                >
+                  <u>Neighbourfood Mullingar</u>
+                </a>{" "}
+                and our own{" "}
+                <a className="linkToNormalise" href="/shop">
+                  <u>Online Store</u>
+                </a>
               </p>
-            </div>
-          </section>
+              <div className="redButton" onClick={goToProducts}>
+                <p>
+                  <b>CHECK OUT HERE</b>
+                </p>
+              </div>
+            </section>
 
-          <section className="homepageSection">
-            <div className="green">
-              <h1>TAKE-AWAY Dinner</h1>
-            </div>
-            <p className="paraforalignment">
-              We offer a weekly takeaway dinner, in between fine and casual. An
-              ideal choice when going out is not on your agenda and microwave
-              food is not an option. Spaces are limited so click in to order!
-            </p>
-            <div onClick={buyTakeAway} className="redButton">
-              <b>
-                <p>ORDER</p>
-              </b>
-            </div>
-          </section>
+            <section className="second homepageSection">
+              <div  className="green">
+                <h1>TAKE-AWAY Dinner</h1>
+              </div>
+              <p className="paraforalignment">
+                We offer a weekly takeaway dinner, in between fine and casual.
+                An ideal choice when going out is not on your agenda and
+                microwave food is not an option. Spaces are limited so click in
+                to order!
+              </p>
+              <div onClick={buyTakeAway} className="redButton">
+                <b>
+                  <p>ORDER</p>
+                </b>
+              </div>
+            </section>
+          </div>
 
           <section className="homepageSection">
             <div className="yellow">

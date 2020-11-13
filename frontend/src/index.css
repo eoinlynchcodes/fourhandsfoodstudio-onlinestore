@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Barrio&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 html {
-  font-size: 62.5%; /* 16px * 62.5 = 10px = 1rem */
+  font-size: 16px; /* 16px * 62.5 = 10px = 1rem */
   box-sizing: border-box;
 }
 body {
@@ -109,14 +109,14 @@ button {
 
 .brand a {
   color: #333333;
-  font-size: 3rem;
+  font-size: 3em;
   font-weight: bold;
   text-decoration: none;
 }
 .header-links a {
   color: black;
   text-decoration: none;
-  padding: 1rem;
+  padding: 1em;
 }
 .header-links a:hover {
   color: black;
@@ -196,23 +196,23 @@ a:hover {
 }
 
 .product-name {
-  font-size: 2rem;
+  font-size: 2em;
   font-weight: bold;
 }
 .product-brand {
-  font-size: 1.2rem;
+  font-size: 1.2em;
   color: #808080;
 }
 .product-price {
-  font-size: 2rem;
+  font-size: 2em;
   font-weight: bold;
 }
 .product-image {
-  max-width: 34rem;
-  max-height: 34rem;
+  max-width: 34em;
+  max-height: 34em;
 }
 .product-rating {
-  margin-bottom: 1rem;
+  margin-bottom: 1em;
 }
 /* Reviews */
 ul.review {
