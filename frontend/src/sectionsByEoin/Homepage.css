@@ -14,6 +14,13 @@ html {
 }
 
 @media only screen and (max-width: 768px){
+
+
+  .homepageContainer{
+    width: 100%;
+    padding: 0rem 0rem;
+  }
+
   .homeImages{
     height: 100%;
   }
@@ -73,6 +80,13 @@ html {
   .homepageContainer {
     display: flex;
     flex-direction: column-reverse;
+  }
+
+  .homepageSection{
+    padding: 4rem 0rem;
+    width: 90%;
+    margin: 0 auto;
+
   }
 
   .leftHandSide {
@@ -259,8 +273,12 @@ flex-basis: 50%;
 }
 
 .blackBackgroundAbout{
-  flex-basis: 40%;
 }
+
+.paraforalignment{
+  text-align: center;
+}
+
 
 .blackBackgroundAbout p{
   padding: 2rem 2rem;

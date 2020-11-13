@@ -70,7 +70,7 @@ function HomeScreen(props) {
             <div className="violet">
               <h1>The Fermented Goods</h1>
             </div>
-            <p className="">
+            <p className="paraforalignment">
               We currently offer a small range of fermented vegetables and
               drinks well known as sauerkraut, kimchi and kombucha aswell as
               fermented vegetable juices.
@@ -80,10 +80,10 @@ function HomeScreen(props) {
               The ingredients we use have to be alive, chemical free and
               ethically produced.
               <br />
-              We sell in{" "}
+              We sell in {" "}
               <a className="linkToNormalise" href="#retailers">
-                <u>shops,</u>
-              </a>{" "}
+                <u>shops,</u>{" "}
+              </a>
               through{" "}
               <a
                 className="linkToNormalise"
@@ -107,7 +107,7 @@ function HomeScreen(props) {
             <div className="green">
               <h1>TAKE-AWAY Dinner</h1>
             </div>
-            <p className="">
+            <p className="paraforalignment">
               We offer a weekly takeaway dinner, in between fine and casual. An
               ideal choice when going out is not on your agenda and microwave
               food is not an option. Spaces are limited so click in to order!
@@ -126,7 +126,7 @@ function HomeScreen(props) {
             <div class="vl"></div>
 
             <div className="newsletterComponent">
-              <p>
+              <p className="paraforalignment">
                 Join our mailing list to receive our weekly takeaway offering
                 and latest news!
               </p>
