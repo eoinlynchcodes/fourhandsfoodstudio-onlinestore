@@ -271,11 +271,21 @@ flex-basis: 50%;
   padding: 0rem 1rem;
 }
 
-.blackBackgroundAbout{
-}
-
 .paraforalignment{
   text-align: center;
+  height: 240px;
+  padding-top: 1em;
+}
+
+#centeringTakeaway{
+  display: flex;
+  align-items: center;
+}
+
+.centreNewsletter{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 

@@ -90,6 +90,11 @@ button {
     display: none;
   }
 
+  .homepageFirstPiece{
+    display: flex;
+    flex-direction: column;
+  }
+
 }
 .theActualNav h2{
   color: #333333;
@@ -656,4 +661,8 @@ tbody > tr:nth-child(odd) {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.homepageFirstPiece{
+  display: flex;
 }

@@ -77,24 +77,18 @@ function HomeScreen(props) {
                 fermented vegetable juices.
                 <br />
                 We focus on a starting point: the raw produce.
-                <br />
+                <br /><br />
                 The ingredients we use have to be alive, chemical free and
                 ethically produced.
-                <br />
-                We sell in{" "}
-                <a className="linkToNormalise" href="#retailers">
-                  <u>shops,</u>{" "}
-                </a>
-                through{" "}
-                <a
+                <br />              
+                We sell in <a className="linkToNormalise" href="#retailers"><u> shops,</u></a> through <a
                   className="linkToNormalise"
                   href="https://www.neighbourfood.ie/markets/mullingar/collection/2373"
                 >
                   <u>Neighbourfood Mullingar</u>
-                </a>{" "}
-                and our own{" "}
+                </a> and our own 
                 <a className="linkToNormalise" href="/shop">
-                  <u>Online Store</u>
+                  <u> Online Store</u>
                 </a>
               </p>
               <div className="redButton" onClick={goToProducts}>
@@ -104,11 +98,13 @@ function HomeScreen(props) {
               </div>
             </section>
 
+            <div class="vl"></div>
+
             <section className="second homepageSection">
               <div  className="green">
                 <h1>TAKE-AWAY Dinner</h1>
               </div>
-              <p className="paraforalignment">
+              <p id="centeringTakeaway" className="paraforalignment">
                 We offer a weekly takeaway dinner, in between fine and casual.
                 An ideal choice when going out is not on your agenda and
                 microwave food is not an option. Spaces are limited so click in
@@ -128,8 +124,8 @@ function HomeScreen(props) {
             </div>
             <div class="vl"></div>
 
-            <div className="newsletterComponent">
-              <p className="paraforalignment">
+            <div className="newsletterComponent centreNewsletter">
+              <p>
                 Join our mailing list to receive our weekly takeaway offering
                 and latest news!
               </p>

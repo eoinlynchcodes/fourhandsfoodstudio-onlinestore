@@ -46,7 +46,7 @@ function Footer() {
             <section>
             <label>
               <u>
-                <p>Newsletter Signup:</p>
+                <p id="centreTheNLText">Newsletter Signup:</p>
               </u>
             </label>
             <div>
