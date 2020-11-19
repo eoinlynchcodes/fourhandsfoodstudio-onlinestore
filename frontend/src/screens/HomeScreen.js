@@ -69,7 +69,7 @@ function HomeScreen(props) {
           <div className="homepageFirstPiece">
             <section className="first homepageSection">
               <div className="violet">
-                <h1>The Fermented Goods</h1>
+                <h3>The Fermented Goods</h3>
               </div>
               <p className="paraforalignment">
                 We currently offer a small range of fermented vegetables and
@@ -81,14 +81,14 @@ function HomeScreen(props) {
                 The ingredients we use have to be alive, chemical free and
                 ethically produced.
                 <br />              
-                We sell in <a className="linkToNormalise" href="#retailers"><u> shops,</u></a> through <a
+                We sell in <a className="linkToNormalise" href="#retailers"><u> shops</u></a>, through <a
                   className="linkToNormalise"
                   href="https://www.neighbourfood.ie/markets/mullingar/collection/2373"
                 >
                   <u>Neighbourfood Mullingar</u>
-                </a> and our own 
-                <a className="linkToNormalise" href="/shop">
-                  <u> Online Store</u>
+                </a> and our  {" "}  
+                 <a className="linkToNormalise" href="/shop"> 
+                    <u>Online Store. </u>
                 </a>
               </p>
               <div className="redButton" onClick={goToProducts}>
@@ -98,11 +98,11 @@ function HomeScreen(props) {
               </div>
             </section>
 
-            <div class="vl"></div>
+            <div id="thisOneVL"></div>
 
             <section className="second homepageSection">
               <div  className="green">
-                <h1>TAKE-AWAY Dinner</h1>
+                <h3>TAKE-AWAY Dinner</h3>
               </div>
               <p id="centeringTakeaway" className="paraforalignment">
                 We offer a weekly takeaway dinner, in between fine and casual.
@@ -123,9 +123,9 @@ function HomeScreen(props) {
               <h2>Newsletter Signup</h2>
             </div>
             <div class="vl"></div>
-
             <div className="newsletterComponent centreNewsletter">
-              <p>
+            <br/><br/>
+              <p className="paraforalignment">
                 Join our mailing list to receive our weekly takeaway offering
                 and latest news!
               </p>

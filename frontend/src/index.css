@@ -78,12 +78,13 @@ button {
   text-decoration: none;  
   display: flex;
   justify-content: space-evenly;
-  padding-bottom: 2rem;
+  padding-bottom: 2em;
 }
 
 .theActualNav a h2{
   color: #4D453A;
 }
+
 
 @media only screen and (max-width: 768px) {
   .theActualNav{
@@ -164,16 +165,27 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0rem 0rem;
+    padding: 0em 0em;
   }
 
   .fourHandsHeadingText{
-    font-size: 2.5em;
+    font-size: 2em;
+    margin: 0 auto;
+  }
+  
+}
+
+@media only screen and (max-width: 768px){
+  .fourHandsHeadingText{
+    font-size: 1.3em;
+    margin: 0 auto;
   }
 }
 
+
+
 .product {
-  padding: 2rem 0rem; 
+  padding: 2em 0em; 
 }
 
 .product li {
@@ -181,7 +193,7 @@ a:hover {
 }
 
 .productDetail{
-  padding: 2rem;
+  padding: 2em;
 }
 
 .product img{
@@ -196,7 +208,7 @@ a:hover {
   align-content: center;
   justify-content: center;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 1em;
   border-radius: 12px;
 }
 
@@ -225,22 +237,22 @@ ul.review {
   padding: 0;
 }
 .review li {
-  margin: 1rem;
-  margin-bottom: 2rem;
+  margin: 1em;
+  margin-bottom: 2em;
 }
 .review li > div {
-  margin: 0.5rem;
+  margin: 0.5em;
 }
 
 /* Rating */
 .rating span {
   color: black;
-  font-size: 1.8rem;
-  margin: 0.1rem;
+  font-size: 1.8em;
+  margin: 0.1em;
 }
 .rating span:last-child {
   color: #444444;
-  font-size: 1.4rem;
+  font-size: 1.4em;
 }
 a > .rating > span:last-child {
   color: #0000ff;
@@ -615,7 +627,7 @@ tbody > tr:nth-child(odd) {
 }
 
 .trolley{
-  margin: 0 2rem;
+  margin: 0 2em;
 }
 
 .burgerMenu{

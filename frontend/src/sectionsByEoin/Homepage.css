@@ -1,6 +1,5 @@
 html {
   color: #5f6366;
-  font-size: 62.5%;
 }
 .homepageContainer {
   width: 90%;
@@ -13,12 +12,33 @@ html {
   overflow: hidden;
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 1200px){
 
+  .homepageContainer{
+    border-left: .5px solid black;
+    border-right: .5px solid black;
+  }
+
+  .homepageFirstPiece{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .paraforalignment{
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .vl{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px){
 
   .homepageContainer{
     width: 100%;
-    padding: 0rem 0rem;
+    margin: 0 auto;
   }
 
   .homeImages{
@@ -50,6 +70,10 @@ html {
   #straightenOutMargaux{
     flex-direction: column-reverse;
   }
+
+  .homepageSection{
+    padding: 0em 0em;
+  }
 }
 
 .homeImages img {
@@ -65,6 +89,13 @@ html {
   width: 40%;
   /* margin: auto 0; */
 }
+.first{
+  width: 55%;
+}
+
+.second{
+  width: 45%;
+}
 
 .linkToNormalise{
   color: black;
@@ -76,27 +107,63 @@ html {
   padding: 4em 4em;
 }
 
-@media only screen and (max-width: 768px) {
+#thisOneVL{
+  border-left: 1px solid black;
+  height: 1fr;
+  margin: 5rem auto;
+}
+
+.visionText{
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+@media only screen and (max-width: 1200px) {
   .homepageContainer {
     display: flex;
     flex-direction: column-reverse;
+    width: 80%;
+  }
+
+  .homepageFirstPiece{
+    display: flex;
+    flex-direction: column;
   }
 
   .homepageSection{
-    padding: 4rem 0rem;
-    width: 90%;
+    width: 100%;
+  }
+
+  .first{
+    width: 80%;
+    height: auto;
+  }
+
+  .second{
+    width: 80%;
+  }
+
+  .paraforalignment{
     margin: 0 auto;
-
   }
 
-  .leftHandSide {
-    width: 100%;
-    margin: auto 0;
+  #thisOneVL{
+    display: none;
   }
 
-  .rightHandSide {
+  .redButton{
+    margin: 0 auto;
+  }
+
+  .homepageSection{
+    padding: 4em 0em;
     width: 100%;
-    margin: auto 0;
+    margin: 0 auto;
+  }
+
+  .yellow{
+    margin: 0 0;
+    width: 100%;
   }
 }
 
@@ -133,12 +200,11 @@ html {
 .redButton{
   border: 5px solid black;
   margin: 0 auto;
-  width: 20rem;
+  width: 20em;
   display: flex;
   justify-content: center;
   cursor: crosshair;
   color: black;
-  align-content: flex-end;
 }
 
 .newsletterForm{
@@ -149,7 +215,7 @@ html {
 .blackOutlineButton{
   border: 3px solid black;
   margin: 5rem auto 0rem auto;
-  padding: 1rem 2rem;
+  padding: 1em 2em;
   width: 70%;
   display: flex;
   justify-content: center;
@@ -175,6 +241,8 @@ html {
 .violet {
   background-color: #EDCCE0;
   color: #4D453A;
+  display: flex;
+  justify-content: center;
 }
 
 .orange{
@@ -206,11 +274,16 @@ html {
 .green {
   background-color: #718279;
   color: white;
+  display: flex;
+  justify-content: center;
 }
 
 .yellow {
   background-color: #E0B930;
   color: #4D453A;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .blue {
@@ -219,7 +292,7 @@ html {
 }
 
 .white {
-  padding: 4rem 0rem;
+  padding: 4em 0em;
   margin: 0 auto;
   width: 80%;
 }
@@ -252,7 +325,7 @@ flex-basis: 50%;
 .aboutMainText{
   width: 80%;
   margin: 0 auto;
-  padding: 4rem 0rem;
+  padding: 4em 0em;
   text-align: center;
 }
 
@@ -268,13 +341,11 @@ flex-basis: 50%;
 .headingColours{
   color: black;
   background-color: orange;
-  padding: 0rem 1rem;
+  padding: 0em 1em;
 }
 
 .paraforalignment{
   text-align: center;
-  height: 240px;
-  padding-top: 1em;
 }
 
 #centeringTakeaway{
@@ -290,7 +361,7 @@ flex-basis: 50%;
 
 
 .blackBackgroundAbout p{
-  padding: 2rem 2rem;
+  padding: 2em 2em;
   background-color: #333333;
   color: white;
   margin: 0 auto; 
