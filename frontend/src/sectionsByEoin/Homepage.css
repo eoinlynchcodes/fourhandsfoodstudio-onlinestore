@@ -182,6 +182,7 @@ html {
 
   .fourHandsHeadingText{
       margin: 0 auto;
+      flex-direction: row;
     }
 }
 
@@ -362,6 +363,8 @@ flex-basis: 50%;
   color: black;
   background-color: orange;
   padding: 0em 1em;
+  display: flex;
+  flex-direction: row;
 }
 
 .paraforalignment{

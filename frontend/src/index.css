@@ -72,7 +72,7 @@ button {
   font-size: 3.5em;
   margin: 0 auto;
   display: flex;
-
+  flex-direction: row;
 }
 
 
@@ -170,7 +170,6 @@ a:hover {
 
 @media only screen and (max-width: 768px){
   .productPlacer{
-    background-color: firebrick;
     margin: auto 0;
     display: flex;
     justify-content: center;
@@ -189,6 +188,7 @@ a:hover {
   .fourHandsHeadingText{
     font-size: 1.3em;
     margin: 0 auto;
+    flex-direction: row;
   }
 }
 
