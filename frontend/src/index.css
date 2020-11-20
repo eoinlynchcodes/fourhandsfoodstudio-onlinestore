@@ -192,6 +192,14 @@ a:hover {
   }
 }
 
+.orderButton{
+  border: 3px solid black;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
 
 .menuTakeawaySection{
   background-color: skyblue;
