@@ -91,6 +91,7 @@ function HomeScreen(props) {
                     <u>Online Store. </u>
                 </a>
               </p>
+
               <div className="redButton" onClick={goToProducts}>
                 <p>
                   <b>CHECK OUT HERE</b>
@@ -124,7 +125,7 @@ function HomeScreen(props) {
             </div>
             <div class="vl"></div>
             <div className="newsletterComponent centreNewsletter">
-            <br/><br/>
+            <br/>
               <p className="paraforalignment">
                 Join our mailing list to receive our weekly takeaway offering
                 and latest news!

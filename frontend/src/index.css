@@ -54,6 +54,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 1em;
 }
 
 .flexTheHeader{
@@ -70,6 +71,8 @@ button {
   color: #718279;
   font-size: 3.5em;
   margin: 0 auto;
+  display: flex;
+
 }
 
 
@@ -97,6 +100,17 @@ button {
   }
 
 }
+
+
+@media only screen and (min-width: 1200px){
+
+  .paraforalignment{
+    height: 60%;
+  }
+
+}
+
+
 .theActualNav h2{
   color: #333333;
 }
@@ -152,10 +166,6 @@ a:hover {
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0 auto;
-}
-
-.productPlacer{
-
 }
 
 @media only screen and (max-width: 768px){
@@ -648,6 +658,8 @@ tbody > tr:nth-child(odd) {
 .dancingFont{
   font-family: 'Dancing Script', cursive;
   color: #4D453A;
+  display: flex;
+  align-self: center;
 }
 
 .fiftyButtonWidth{

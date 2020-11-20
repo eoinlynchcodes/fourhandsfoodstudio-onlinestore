@@ -13,7 +13,6 @@ html {
 }
 
 @media only screen and (max-width: 1200px){
-
   .homepageContainer{
     border-left: .5px solid black;
     border-right: .5px solid black;
@@ -27,6 +26,7 @@ html {
   .paraforalignment{
     margin: 0 auto;
     width: 80%;
+    padding: 4rem 0rem;
   }
 
   .vl{
@@ -103,8 +103,8 @@ html {
 
 .homepageSection{
   margin: 0 auto;
-  width: 90%;
-  padding: 4em 4em;
+  width: 100%;
+  padding: 0em 4em;
 }
 
 #thisOneVL{
@@ -116,6 +116,10 @@ html {
 .visionText{
   padding-top: 4em;
   padding-bottom: 4em;
+}
+
+.redButton{
+  max-width: 100%;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -209,7 +213,7 @@ html {
 
 .newsletterForm{
   display: flex;
-  flex-direction: colum;
+  flex-direction: column;
 }
 
 .blackOutlineButton{

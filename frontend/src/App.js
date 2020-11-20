@@ -42,6 +42,7 @@ function App() {
       <div className="entireparentcontainer">
         <header className="flexTheHeader">
           <div className="header">
+            
             <div className="brand burgerMenu">
               <button onClick={openMenu}>&#9776;</button>
             </div>
@@ -51,9 +52,6 @@ function App() {
                 <h4 className="fourHandsHeadingText">
                   <span className="headingColours">4 Hands</span> Food Studio
                 </h4>
-                <p className="dancingFont">
-                  <i>Always driven by nature!</i>
-                </p>
               </Link>
             </div>
 
@@ -80,6 +78,10 @@ function App() {
               )}
             </div>
           </div>
+          <h2 className="dancingFont">
+                  <i>Always driven by nature!</i>
+                </h2>
+                <hr/>
           <div className="theActualNav">
             <Link to="/about">
               <h2>About</h2>
@@ -101,6 +103,7 @@ function App() {
             </Link>
           </div>
         </header>
+       
 
         <aside className="sidebar">
           <h3>Navigation</h3>
