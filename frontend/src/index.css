@@ -193,6 +193,14 @@ a:hover {
 }
 
 
+.menuTakeawaySection{
+  background-color: skyblue;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 2em 2em;
+  margin: 0 auto;
+}
+
 
 .product {
   padding: 2em 0em; 

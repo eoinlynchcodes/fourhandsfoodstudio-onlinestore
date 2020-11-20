@@ -23,19 +23,33 @@ function TakeawayContainer(props) {
       {takeawayData.map((takeaway) => {
         console.log(takeaway);
         return (
-          <div>
+          <div className="menuTakeawaySection">
             <div>
-              <h4><u>{ takeaway.starterName }, { takeaway.starterPrice }</u></h4>
-              <p>{ takeaway.starterItems }</p>
+              <h2>This Week's Menu</h2>
+              <h4>
+                <u>
+                  {takeaway.starterName}, {takeaway.starterPrice}
+                </u>
+              </h4>
+              <p>{takeaway.starterItems}</p>
             </div>
             <div>
               <h4>
-                <u>{ takeaway.menuName }, { takeaway.menuPrice }</u>
-                <p> { takeaway.menuItems }</p>
+                <u>
+                  {takeaway.menuName}, {takeaway.menuPrice}
+                </u>
+                <p> {takeaway.menuItems}</p>
               </h4>
             </div>
-            <p><u>Pick-up points:</u></p>
-            <p>{ takeaway.pickUpPoints }</p>
+            <p>
+              <u>Pick-up points:</u>
+            </p>
+            <p>{takeaway.pickUpPoints}</p>
+            <div className="redButton">
+              <b>
+                <p>ORDER</p>
+              </b>
+            </div>
           </div>
         );
       })}
