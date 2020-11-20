@@ -286,6 +286,7 @@ a > .rating > span:last-child {
   background-color: black;
   padding: 2rem;
   height: 100%;
+  max-width: 70%;
 }
 
 .sidebar h3{

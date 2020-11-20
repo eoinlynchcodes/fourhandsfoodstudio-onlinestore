@@ -104,7 +104,8 @@ html {
 .homepageSection{
   margin: 0 auto;
   width: 100%;
-  padding: 0em 4em;
+  padding: 4em 4em;
+
 }
 
 #thisOneVL{
@@ -119,7 +120,7 @@ html {
 }
 
 .redButton{
-  max-width: 100%;
+  max-width: 80%;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -171,6 +172,20 @@ html {
   }
 }
 
+@media only screen and (max-width: 375px) {
+
+  header{
+    display: flex;
+    max-width: 80%;
+    margin: 0 auto;  
+  }
+
+  .fourHandsHeadingText{
+      margin: 0 auto;
+    }
+}
+
+
 .homepagebox {
   margin: 2rem;
   margin-top: 5rem;
@@ -214,6 +229,7 @@ html {
 .newsletterForm{
   display: flex;
   flex-direction: column;
+  max-width: 80%;
 }
 
 .blackOutlineButton{
