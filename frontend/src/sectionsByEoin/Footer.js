@@ -30,7 +30,7 @@ function Footer() {
       </nav>
 
       <div className="footerHeading changeMouse">
-        <h1 onClick={gohome}>4 Hands Food Studio</h1>
+        <h3 onClick={gohome}>4 Hands Food Studio</h3>
       </div>
       <div className="links">
         <form
