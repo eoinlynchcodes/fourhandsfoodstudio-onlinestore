@@ -60,6 +60,7 @@ button {
 .flexTheHeader{
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .fourHandsHeading{
@@ -126,10 +127,14 @@ button {
   margin: 0 auto;
 }
 
+#noMargin{
+  margin: 0 0;
+}
+
 
 .brand a {
   color: #333333;
-  font-size: 3em;
+  font-size: 2em;
   font-weight: bold;
   text-decoration: none;
 }
@@ -654,7 +659,6 @@ tbody > tr:nth-child(odd) {
 }
 
 .trolley{
-  margin: 0 2em;
 }
 
 .burgerMenu{

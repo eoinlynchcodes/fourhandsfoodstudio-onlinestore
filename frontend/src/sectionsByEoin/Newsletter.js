@@ -4,10 +4,12 @@ function Newsletter() {
   return (
     <div className="aboutContainer">
       <div class="vl"></div>
-      <section className="homepagebox centreThis">
-        <div className="coloredBox yellow">
+      <div>
+      <div className="coloredBox yellow">
           <h2>Newsletter Signup</h2>
         </div>
+      <section className="homepagebox centreThis">
+        
         <div class="vl"></div>
 
         <div className="newsletterComponent">
@@ -34,6 +36,7 @@ function Newsletter() {
 
         <hr className="bottomHR" />
       </section>
+      </div>
       <div class="vl"></div>
 
     </div>

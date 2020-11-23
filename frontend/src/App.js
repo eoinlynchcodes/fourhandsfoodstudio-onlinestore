@@ -43,7 +43,7 @@ function App() {
         <header className="flexTheHeader">
           <div className="header">
             
-            <div className="brand burgerMenu">
+            <div id="noMargin" className="brand burgerMenu">
               <button onClick={openMenu}>&#9776;</button>
             </div>
 
@@ -118,7 +118,7 @@ function App() {
               <Link to="/takeaway">Takeaway</Link>
               <Link to="/blog">Recipes</Link>
               <Link to="/events">Events</Link>
-              <Link t0="/newsletter">Newsletter</Link>
+              <Link to="/newsletter">Newsletter</Link>
             </li>
           </ul>
         </aside>

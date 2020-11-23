@@ -181,9 +181,15 @@ html {
   }
 
   .fourHandsHeadingText{
+    font-size: 1em;
+  }
+
+  .fourHandsHeadingText{
       margin: 0 auto;
-      flex-direction: row;
+      display: inline;
     }
+
+
 }
 
 

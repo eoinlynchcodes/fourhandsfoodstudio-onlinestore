@@ -8,8 +8,8 @@ function About() {
     <section className="aboutContainer">
       <div class="vl"></div>
       <div>
-        <div className="coloredBox extraMargin red">
-          <h3>About</h3>
+        <div className="coloredBox red">
+          <h2>About</h2>
         </div>
         <br/>
         <div className="abouttopImage">
