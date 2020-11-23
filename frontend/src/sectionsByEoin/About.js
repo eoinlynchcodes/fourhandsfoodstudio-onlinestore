@@ -1,6 +1,7 @@
 import React from "react";
 import rose from "../imagesByEoin/rose.jpeg";
 import margaux from "../imagesByEoin/margaux.jpeg";
+import roseintro from '../imagesByEoin/roseintro.jpeg';
 
 function About() {
   return (
@@ -10,6 +11,11 @@ function About() {
         <div className="coloredBox extraMargin red">
           <h3>About</h3>
         </div>
+        <br/>
+        <div className="abouttopImage">
+          <img src={roseintro} />
+        </div>
+
         <div className="aboutMainText">
           <p>
             4 Hands Food Studio are producers of naturally fermented foods and

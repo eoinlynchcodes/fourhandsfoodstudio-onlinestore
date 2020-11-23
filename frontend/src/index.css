@@ -707,3 +707,12 @@ tbody > tr:nth-child(odd) {
 .homepageFirstPiece{
   display: flex;
 }
+
+.abouttopImage{
+  display: flex;
+  justify-content: center;
+}
+
+.abouttopImage img {
+  width: 80%;
+}
