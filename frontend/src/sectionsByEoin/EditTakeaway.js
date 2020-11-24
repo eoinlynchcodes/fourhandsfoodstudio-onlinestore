@@ -26,7 +26,13 @@ function EditTakeaway(props) {
 
   const deleteHandler = (takeawayData) => {
     console.log(takeawayData[0]._id);
-    axios.delete()
+    axios.delete(`/api/takeaway/${takeawayData[0]._id}`)
+    .then(response => {
+      console.log(response);
+    })
+    .catch(error => {
+      console.log(error);
+    });
   };
 
   const handleChange = (event) => {

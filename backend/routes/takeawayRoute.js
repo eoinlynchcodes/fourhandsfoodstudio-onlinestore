@@ -31,7 +31,7 @@ router.post('/', async (req, res) => {
   return res.status(500).send({ message: 'Error in creating the takeaway.' });
 });
 
-router.delete('/:id', isAuth, isAdmin, async (req, res) => {
+router.delete('/:id', async (req, res) => {
   const deletedTakeaway = await Takeaway.findById(req.params.id);
   if (deletedTakeaway) {
     await deletedTakeaway.remove();
