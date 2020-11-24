@@ -2,13 +2,18 @@ import mongoose from 'mongoose';
 
 const takeAwaySchema = new mongoose.Schema(
   {
-    starterName: { type: String, required: true },
-    starterItems: { type: String, required: true },
-    menuName: { type: String, required: true },
-    menuItems: { type: String, required: true },
-    pickUpPoints: { type: String, required: true },
-    menuPrice: { type: Number, required: true },
-    starterPrice: { type: Number, required: true },
+    collectionDate: { type: String, required: true },
+    headingOnePrice: { type: Number, required: true },
+    headingOne: { type: String, required: true },
+    textOne: { type: String, required: true },
+    headingTwoPrice: { type: Number, required: true },
+    headingTwo: { type: String, required: true },
+    textTwo: { type: String, required: true },
+    headingThreePrice: { type: Number, required: true },
+    headingThree: { type: String, required: true },
+    textThree: { type: String, required: true },
+    pickupPoints: { type: String, required: true },
+    otherinfo: { type: String, required: true },
   },
 );
 

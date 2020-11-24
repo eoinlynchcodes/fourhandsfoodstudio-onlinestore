@@ -198,16 +198,18 @@ a:hover {
 }
 
 .orderButton{
-  border: 3px solid black;
+  border: 3px solid red;
+  background-color: red;
+  color: white;
   margin: 0 auto;
   display: flex;
+  width: 40%;
   justify-content: center;
   align-content: center;
 }
 
 
 .menuTakeawaySection{
-  background-color: skyblue;
   border: 2px solid black;
   border-radius: 20px;
   padding: 2em 2em;

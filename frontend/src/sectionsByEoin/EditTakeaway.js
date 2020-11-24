@@ -6,14 +6,47 @@ import { useSelector, useDispatch } from "react-redux";
 import { getTakeaway, deleteTakeawayData } from "../actions/takeawayActions";
 
 function EditTakeaway(props) {
+  const [outgoingTakeawayData, setOutgoingTakeawayData] = useState({
+    collectionDate: "",
+    headingOnePrice: 0,
+    headingOne: "",
+    textOne: "",
+    headingTwoPrice: 0,
+    headingTwo: "",
+    textTwo: "",
+    headingThreePrice: 0,
+    headingThree: "",
+    textThree: "",
+    pickupPoints: "",
+    otherinfo: ""
+  });
   const [takeawayData, setTakeawayData] = useState([]);
 
   const dispatch = useDispatch();
 
   const deleteHandler = (takeawayData) => {
     console.log(takeawayData[0]._id);
-    dispatch(deleteTakeawayData(takeawayData[0]._id));
+    axios.delete()
   };
+
+  const handleChange = (event) => {
+    setOutgoingTakeawayData({
+      ...takeawayData,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    debugger
+    axios.post('/api/takeaway/', outgoingTakeawayData)
+    .then(response => {
+      console.log(response);
+    })
+    .catch(error => {
+      console.log(error);
+    });
+  }
 
   useEffect(() => {
     axios
@@ -31,12 +64,15 @@ function EditTakeaway(props) {
       <hr />
       <div className="editTakeawaySection">
         <div>
-          <button onClick={() => deleteHandler(takeawayData)}>Delete Takeaway</button>
+          <button onClick={() => deleteHandler(takeawayData)}>
+            Delete Takeaway
+          </button>
           <br />
           {takeawayData.map((takeaway) => {
-            console.log(takeaway);
+            console.log("Here lies the takeaway:" + takeaway);
             return (
               <div>
+                <h2>Menu currently online</h2>
                 <div>
                   <h4>
                     <u>
@@ -46,8 +82,12 @@ function EditTakeaway(props) {
                   <p>{takeaway.starterItems}</p>
                 </div>
                 <div>
-                  <h4><u>{takeaway.menuName}, {takeaway.menuPrice}</u></h4>
-                    <p> {takeaway.menuItems}</p>
+                  <h4>
+                    <u>
+                      {takeaway.menuName}, {takeaway.menuPrice}
+                    </u>
+                  </h4>
+                  <p> {takeaway.menuItems}</p>
                 </div>
                 <p>
                   <u>Pick-up points:</u>
@@ -58,50 +98,100 @@ function EditTakeaway(props) {
           })}
         </div>
         <div>
-          <form className="editTakeawayForm">
+          <form onSubmit={event => handleSubmit(event)} className="editTakeawayForm">
             <h3>Add Takeaway</h3>
-            <label>
-              {" "}
-              Starter Name:
-              <br />
-              <input />
-            </label>
-            <label>
-              {" "}
-              Starter Items:
-              <br />
-              <input />
-            </label>
-            <label>
-              {" "}
-              Starter Price:
-              <br />
-              <input />
-            </label>
-            <label>
-              {" "}
-              Menu Name:
-              <br />
-              <input />
-            </label>
-            <label>
-              {" "}
-              Menu Items:
-              <br />
-              <input type="textarea"/>
-            </label>
-            <label>
-              {" "}
-              Menu Price:
-              <br />
-              <input />
-            </label>
-            <label>
-              {" "}
-              Pick-Up Points:
-              <br />
-              <input />
-            </label>
+
+            <label>Collection Date:</label>
+            <input
+              name="collectionDate"
+              onChange={(event) => handleChange(event)}
+            />
+            <br />
+
+            <label>Heading One Price:</label>
+            <input 
+            name="headingOnePrice"
+            type="price"
+            onChange={(event) => handleChange(event)}
+            />
+            <br/>
+
+            <label>Heading One:</label>
+            <textarea
+              name="headingOne"
+              onChange={(event) => handleChange(event)}
+            />
+            <br />
+
+            <label>Text Area One:</label>
+            <textarea
+              name="textOne"
+              rows="6"
+              onChange={(event) => handleChange(event)}
+            />
+            <br />
+
+            <label>Heading Two Price:</label>
+            <input 
+            name="headingTwoPrice"
+            type="price"
+            onChange={(event) => handleChange(event)}
+            />
+            <br/>
+
+            <label>Heading Two:</label>
+            <textarea
+              name="headingTwo"
+              onChange={(event) => handleChange(event)}
+            />
+            <br />
+
+            <label>Text Area Two:</label>
+            <textarea
+              name="textTwo"
+              rows="6"
+              onChange={(event) => handleChange(event)}
+            />
+            <br />
+
+    <label>Heading Three Price:</label>
+            <input 
+            name="headingThreePrice"
+            type="price"
+            onChange={(event) => handleChange(event)}
+            />
+            <br/>
+
+
+            <label>Heading Three:</label>
+            <textarea
+              name="headingThree"
+              onChange={(event) => handleChange(event)}
+            />
+            <br />
+
+            <label>Text Area Three:</label>
+            <textarea
+              name="textThree"
+              rows="6"
+              onChange={(event) => handleChange(event)}
+            />
+            <br />
+
+            <label>Pick-Up Points:</label>
+            <textarea
+              name="pickupPoints"
+              rows="6"
+              onChange={(event) => handleChange(event)}
+            />
+
+            <label>Other Information to Add:</label>
+            <textarea 
+            name="otherinfo"
+            rows="8"
+            onChange={(event) => handleChange(event)}
+            />
+            <br />
             <br />
             <button type="submit">Add</button>
             <br />

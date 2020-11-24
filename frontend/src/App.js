@@ -49,9 +49,9 @@ function App() {
 
             <div className="fourHandsHeading">
               <Link to="/">
-                <h4 className="fourHandsHeadingText">
+                <h3 className="fourHandsHeadingText">
                   <span className="headingColours">4 Hands</span> Food Studio
-                </h4>
+                </h3>
               </Link>
             </div>
 
@@ -72,6 +72,7 @@ function App() {
                     <li>
                       <Link to="/orders">Orders</Link>
                       <Link to="/products">Products</Link>
+                      <Link to="/edittakeaway">Takeaway</Link>
                     </li>
                   </ul>
                 </div>

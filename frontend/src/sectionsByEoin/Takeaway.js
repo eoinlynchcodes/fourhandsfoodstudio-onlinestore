@@ -1,15 +1,23 @@
 import React from "react";
 import TakeawayContainer from "./TakeawayContainer";
-
+import takeawaypicture from "../imagesByEoin/takeawaypicture.png";
 function Takeaway() {
   return (
     <section className="aboutContainer">
-      <div class="vl"></div>
+      <div className="vl"></div>
       <div>
         <div className="coloredBox green">
           <h2>Takeaway</h2>
         </div>
-        <div className="white">
+        <br />
+
+        <div className="homeImages">
+          <div className="homepageContainer">
+            <img src={takeawaypicture} />
+          </div>
+        </div>
+
+        <div className="aboutMainText">
           <p>
             Nourishing, sustainable, tasty ready-to-go meal to enjoy with your
             loved ones in the comfort of your own home.
@@ -23,10 +31,10 @@ function Takeaway() {
             Food is served in glass jars, we greatly appreciate the return of
             clean jars helping eliminate waste.
           </p>
-          <TakeawayContainer/>
+          <TakeawayContainer />
         </div>
       </div>
-      <div class="vl"></div>
+      <div className="vl"></div>
     </section>
   );
 }

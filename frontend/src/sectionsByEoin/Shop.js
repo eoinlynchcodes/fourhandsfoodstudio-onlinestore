@@ -25,7 +25,7 @@ function Shop(props) {
 
   return (
     <section className="homepageContainer">
-      <div class="vl"></div>
+      <div className="vl"></div>
       <section id="shop" className="">
         <div className="coloredBox violet">
           <h2>Products</h2>
@@ -43,7 +43,6 @@ function Shop(props) {
             <ul className="products removeBullets">
               {products.map((product) => (
                 <li key={product._id}>
-                  {console.log(product)}
                   <div className="product">
                     <Link to={"/product/" + product._id}>
                       <img className="product-image" src={product.image} />
@@ -63,7 +62,7 @@ function Shop(props) {
         </div>
         <hr className="bottomHR" />
       </section>
-      <div class="vl"></div>
+      <div className="vl"></div>
     </section>
   );
 }

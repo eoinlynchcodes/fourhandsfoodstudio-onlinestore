@@ -64,7 +64,7 @@ function HomeScreen(props) {
       </div>
 
       <div className="homepageContainer">
-        <div class="vl"></div>
+        <div className="vl"></div>
         <div>
           <div className="homepageFirstPiece">
             <section className="first homepageSection">
@@ -122,7 +122,7 @@ function HomeScreen(props) {
             <div className="yellow">
               <h2>Newsletter Signup</h2>
             </div>
-            <div class="vl"></div>
+            <div className="vl"></div>
             <div className="newsletterComponent centreNewsletter">
             <br/><br/>
               <p className="paraforalignment">
@@ -151,12 +151,12 @@ function HomeScreen(props) {
                 </div>
               </form>
             </div>
-            <div class="vl"></div>
+            <div className="vl"></div>
 
             <hr className="bottomHR" />
           </section>
         </div>
-        <div class="vl"></div>
+        <div className="vl"></div>
       </div>
     </>
   );

@@ -6,7 +6,6 @@ function TakeawayHandling(){
     return (
         <div>
             <EditTakeaway/>
-            
         </div>
     );
 }

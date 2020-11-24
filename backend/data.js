@@ -19,7 +19,7 @@ export default {
       price: 50,
       brand: ' Nike',
       rating: 4.2,
-      numReviews: 5
+      numReviews: 5,
     },
     {
       _id: '3',
@@ -42,5 +42,5 @@ export default {
       numReviews: 8,
       countInStock: 6,
     },
-  ]
-}
+  ],
+};

@@ -9,19 +9,20 @@ router.get('/', async (req, res) => {
   res.send(takeaway);
 });
 
-router.get('/', (req, res) => {
-  res.send('hello');
-});
-
 router.post('/', async (req, res) => {
   const takeaway = new Takeaway({
-    starterName: req.body.starterName,
-    starterItems: req.body.starterItems,
-    menuName: req.body.menuName,
-    menuItems: req.body.menuItems,
-    pickUpPoints: req.body.pickUpPoints,
-    menuPrice: req.body.menuPrice,
-    starterPrice: req.body.starterPrice,
+    collectionDate: req.body.collectionDate,
+    headingOnePrice: req.body.headingOnePrice,
+    headingOne: req.body.headingOne,
+    textOne: req.body.textOne,
+    headingTwoPrice: req.body.headingTwoPrice,
+    headingTwo: req.body.headingTwo,
+    textTwo: req.body.textTwo,
+    headingThreePrice: req.body.headingThreePrice,
+    headingThree: req.body.headingThree,
+    textThree: req.body.textThree,
+    pickupPoints: req.body.pickupPoints,
+    otherinfo: req.body.otherinfo,
   });
   const newTakeAway = await takeaway.save();
   if (newTakeAway) {

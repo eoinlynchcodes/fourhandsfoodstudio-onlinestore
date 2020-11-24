@@ -3,14 +3,14 @@ import React from "react";
 function Newsletter() {
   return (
     <div className="aboutContainer">
-      <div class="vl"></div>
+      <div className="vl"></div>
       <div>
       <div className="coloredBox yellow">
           <h2>Newsletter Signup</h2>
         </div>
       <section className="homepagebox centreThis">
         
-        <div class="vl"></div>
+        <div className="vl"></div>
 
         <div className="newsletterComponent">
           <p>Join our mailing list to receive our weekly takeaway offering and latest news!</p>
@@ -32,12 +32,12 @@ function Newsletter() {
             </div>
           </form>
         </div>
-        <div class="vl"></div>
+        <div className="vl"></div>
 
         <hr className="bottomHR" />
       </section>
       </div>
-      <div class="vl"></div>
+      <div className="vl"></div>
 
     </div>
   );
