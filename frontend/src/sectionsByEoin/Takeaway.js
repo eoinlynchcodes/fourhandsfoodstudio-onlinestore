@@ -1,6 +1,7 @@
 import React from "react";
 import TakeawayContainer from "./TakeawayContainer";
 import takeawaypicture from "../imagesByEoin/takeawaypicture.png";
+
 function Takeaway() {
   return (
     <section className="aboutContainer">

@@ -28,7 +28,7 @@ aws.config.update({
 const s3 = new aws.S3();
 const storageS3 = multerS3({
   s3,
-  bucket: 'fourhandsfoodstudio-bucket',
+  bucket: 'fourhandsfoodstudio-products',
   acl: 'public-read',
   contentType: multerS3.AUTO_CONTENT_TYPE,
   key(req, file, cb) {
@@ -36,7 +36,7 @@ const storageS3 = multerS3({
   },
 });
 const uploadS3 = multer({ storage: storageS3 });
-router.post('/', uploadS3.single('image'), (req, res) => {
+router.post('/s3', uploadS3.single('image'), (req, res) => {
   res.send(req.file.location);
 });
 export default router;
