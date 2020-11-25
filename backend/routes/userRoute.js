@@ -71,7 +71,6 @@ router.post('/createadmin', async (req, res) => {
       isAdmin: true,
     });
     const newUser = await user.save();
-    console.log(newUser);
     res.send(newUser);
   } catch (error) {
     res.send({ message: error.message });
