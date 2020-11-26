@@ -18,6 +18,9 @@ function TakeawayContainer(props) {
       });
   }, []);
 
+  const orderTakeaway = () => {
+  }
+
   return (
     <div>
       {takeawayData.map((takeaway) => {
@@ -47,7 +50,7 @@ function TakeawayContainer(props) {
               <u>Pick-up points:</u>
             </p>
             <p>{takeaway.pickupPoints}</p>
-            <div className="orderButton">
+            <div onClick={orderTakeaway} className="orderButton">
               <b>
                 <p>ORDER</p>
               </b>

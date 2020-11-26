@@ -123,7 +123,6 @@ function ProductsScreen(props) {
                 <input
                   type="text"
                   name="name"
-                  value={name}
                   id="name"
                   onChange={(e) => setName(e.target.value)}
                 ></input>
@@ -133,7 +132,6 @@ function ProductsScreen(props) {
                 <input
                   type="text"
                   name="price"
-                  value={price}
                   id="price"
                   onChange={(e) => setPrice(e.target.value)}
                 ></input>
@@ -155,7 +153,6 @@ function ProductsScreen(props) {
                 <input
                   type="text"
                   name="countInStock"
-                  value={countInStock}
                   id="countInStock"
                   onChange={(e) => setCountInStock(e.target.value)}
                 ></input>
@@ -165,7 +162,6 @@ function ProductsScreen(props) {
                 <input
                   type="text"
                   name="size"
-                  value={size}
                   id="size"
                   onChange={(e) => setSize(e.target.value)}
                 ></input>
@@ -175,7 +171,6 @@ function ProductsScreen(props) {
                 <input
                   type="text"
                   name="category"
-                  value={category}
                   id="category"
                   onChange={(e) => setCategory(e.target.value)}
                 ></input>
@@ -185,7 +180,6 @@ function ProductsScreen(props) {
                 <textarea
                   type="text"
                   name="ingredients"
-                  value={ingredients}
                   id="ingredients"
                   onChange={(e) => setIngredients(e.target.value)}
                 ></textarea>
@@ -194,7 +188,6 @@ function ProductsScreen(props) {
                 <label htmlFor="description">Description</label>
                 <textarea
                   name="description"
-                  value={description}
                   id="description"
                   onChange={(e) => setDescription(e.target.value)}
                 ></textarea>

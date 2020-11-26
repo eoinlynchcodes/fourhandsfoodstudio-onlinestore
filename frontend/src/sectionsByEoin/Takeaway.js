@@ -1,6 +1,7 @@
 import React from "react";
 import TakeawayContainer from "./TakeawayContainer";
 import takeawaypicture from "../imagesByEoin/takeawaypicture.png";
+import { Link } from 'react-router-dom';
 
 function Takeaway() {
   return (
@@ -32,7 +33,10 @@ function Takeaway() {
             Food is served in glass jars, we greatly appreciate the return of
             clean jars helping eliminate waste.
           </p>
-          <TakeawayContainer />
+          <TakeawayContainer /><br/>
+          <div className="ProductsFromMenu">
+            <Link>Order other products for collection with takeaway</Link>
+          </div>
         </div>
       </div>
       <div className="vl"></div>
