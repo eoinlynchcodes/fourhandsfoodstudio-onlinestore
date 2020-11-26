@@ -1,6 +1,6 @@
 import express from 'express';
 import Takeaway from '../models/takeawayModel';
-import { isAuth, isAdmin } from '../util';
+// import { isAuth, isAdmin } from '../util';
 
 const router = express.Router();
 

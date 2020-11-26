@@ -4,17 +4,21 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useSelector, useDispatch } from "react-redux";
 import { getTakeaway, deleteTakeawayData } from "../actions/takeawayActions";
+import { useHistory } from 'react-router-dom';
 
 function EditTakeaway(props) {
+
+  const history = useHistory();
+
   const [outgoingTakeawayData, setOutgoingTakeawayData] = useState({
     collectionDate: "",
-    headingOnePrice: 0,
+    headingOnePrice: null,
     headingOne: "",
     textOne: "",
-    headingTwoPrice: 0,
+    headingTwoPrice: null,
     headingTwo: "",
     textTwo: "",
-    headingThreePrice: 0,
+    headingThreePrice: null,
     headingThree: "",
     textThree: "",
     pickupPoints: "",
@@ -28,7 +32,7 @@ function EditTakeaway(props) {
     console.log(takeawayData[0]._id);
     axios.delete(`/api/takeaway/${takeawayData[0]._id}`)
     .then(response => {
-      console.log(response);
+      window.location.reload();
     })
     .catch(error => {
       console.log(error);
@@ -37,17 +41,18 @@ function EditTakeaway(props) {
 
   const handleChange = (event) => {
     setOutgoingTakeawayData({
-      ...takeawayData,
+      ...outgoingTakeawayData,
       [event.target.name]: event.target.value,
     });
   };
 
   const handleSubmit = (event) => {
+    console.log(outgoingTakeawayData);
     event.preventDefault();
-    debugger
     axios.post('/api/takeaway/', outgoingTakeawayData)
     .then(response => {
-      console.log(response);
+      setOutgoingTakeawayData(response.data);
+      window.location.reload();
     })
     .catch(error => {
       console.log(error);
@@ -58,6 +63,7 @@ function EditTakeaway(props) {
     axios
       .get("/api/takeaway/")
       .then((response) => {
+        console.log(response.data);
         setTakeawayData(response.data);
       })
       .catch((error) => {
@@ -66,7 +72,7 @@ function EditTakeaway(props) {
   }, []);
 
   return (
-    <section>
+    <section className="homepageContainer">
       <hr />
       <div className="editTakeawaySection">
         <div>
@@ -82,23 +88,23 @@ function EditTakeaway(props) {
                 <div>
                   <h4>
                     <u>
-                      {takeaway.starterName}, {takeaway.starterPrice}
+                      {takeaway.headingOne}, {takeaway.headingOnePrice}
                     </u>
                   </h4>
-                  <p>{takeaway.starterItems}</p>
+                  <p>{takeaway.textOne}</p>
                 </div>
                 <div>
                   <h4>
                     <u>
-                      {takeaway.menuName}, {takeaway.menuPrice}
+                      {takeaway.headingTwo}, {takeaway.headingTwoPrice}
                     </u>
                   </h4>
-                  <p> {takeaway.menuItems}</p>
+                  <p> {takeaway.textTwo}</p>
                 </div>
                 <p>
                   <u>Pick-up points:</u>
                 </p>
-                <p>{takeaway.pickUpPoints}</p>
+                <p>{takeaway.pickupPoints}</p>
               </div>
             );
           })}

@@ -5,11 +5,9 @@ const userSchema = new mongoose.Schema({
   email: {
     type: String, required: true, unique: true, index: true, dropDups: true,
   },
-  password: { type: String, required: true, bcrypt: true },
+  password: { type: String, required: true },
   isAdmin: { type: Boolean, required: true, default: false },
 });
-
-userSchema.plugin(require('mongoose-bcrypt'));
 
 const userModel = mongoose.model('User', userSchema);
 

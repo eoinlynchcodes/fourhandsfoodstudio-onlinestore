@@ -27,26 +27,26 @@ function TakeawayContainer(props) {
             <div>
               
               <h2>This week's menu:</h2>
-              <h3>For collection on: {takeaway.collectionDate}</h3>
-              <h4>
+              <p>For collection on: <u>{takeaway.collectionDate}</u></p>
+              <p className="yellowText">
                 <u>
-                  {takeaway.starterName}, {takeaway.starterPrice}
+                  {takeaway.headingOne}, {takeaway.headingOnePrice}
                 </u>
-              </h4>
-              <p>{takeaway.starterItems}</p>
+              </p>
+              <p>{takeaway.textOne}</p>
             </div>
             <div>
-              <h4>
-                <u>
-                  {takeaway.menuName}, {takeaway.menuPrice}
+              <p>
+                <u className="yellowText">
+                  {takeaway.headingTwo}, {takeaway.headingTwoPrice}
                 </u>
-                <p> {takeaway.menuItems}</p>
-              </h4>
+                <p> {takeaway.textTwo}</p>
+              </p>
             </div>
-            <p>
+            <p className="yellowText">
               <u>Pick-up points:</u>
             </p>
-            <p>{takeaway.pickUpPoints}</p>
+            <p>{takeaway.pickupPoints}</p>
             <div className="orderButton">
               <b>
                 <p>ORDER</p>
