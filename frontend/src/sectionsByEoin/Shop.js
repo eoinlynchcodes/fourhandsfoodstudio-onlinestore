@@ -30,7 +30,7 @@ function Shop(props) {
         <div className="coloredBox violet">
           <h2>Products</h2>
         </div>
-        <p>
+        <p className="paraforalignment">
           Our online store is where you can buy fermented products directly from 4 Hands Food Studio.<br/>
           Enter other text to accompany this. 
         </p>
