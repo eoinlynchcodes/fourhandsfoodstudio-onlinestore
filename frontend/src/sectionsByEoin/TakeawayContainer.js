@@ -19,6 +19,8 @@ function TakeawayContainer(props) {
   }, []);
 
   const orderTakeaway = () => {
+    props.history.push('/cart/' + props.match.params.id);
+
   }
 
   return (

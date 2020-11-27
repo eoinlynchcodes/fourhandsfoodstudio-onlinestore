@@ -198,7 +198,8 @@ a:hover {
 }
 
 .orderButton{
-  border: 3px solid red;
+  cursor: pointer;
+  border: 1px solid black;
   background-color: red;
   color: white;
   margin: 0 auto;
