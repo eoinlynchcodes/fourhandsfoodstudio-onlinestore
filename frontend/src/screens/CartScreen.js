@@ -3,6 +3,7 @@ import { addToCart, removeFromCart } from '../actions/cartActions';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import takeawaypicture from "../imagesByEoin/takeawaypicture.png";
 
 function CartScreen(props) {
 
@@ -53,12 +54,12 @@ function CartScreen(props) {
             cartItems.map(item =>
               <li>
                 <div className="cart-image">
-                  <img src={item.image} alt="product" />
+                  <img src={item.image ? item.image : takeawaypicture} alt="product" />
                 </div>
                 <div className="cart-name">
                   <div>
                     <Link className="cart-product-name" to={"/product/" + item.product}>
-                      {item.name}
+                      {item.name ? item.name : 'Friday Takeaway'}
                     </Link>
                   </div>
                   <div>
