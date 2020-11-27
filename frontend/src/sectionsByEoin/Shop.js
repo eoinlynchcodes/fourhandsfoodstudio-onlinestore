@@ -41,7 +41,9 @@ function Shop(props) {
             <div>{error}</div>
           ) : (
             <ul className="products removeBullets">
-              {products.map((product) => (
+              {products.map((product) => {
+                if(product.isTakeaway === false){
+                  return (
                 <li key={product._id}>
                   <div className="product">
                     <Link to={"/product/" + product._id}>
@@ -56,7 +58,10 @@ function Shop(props) {
                     </Link>
                   </div>
                 </li>
-              ))}
+                )} else {
+                  return null;
+                }
+            })}
             </ul>
           )}
         </div>

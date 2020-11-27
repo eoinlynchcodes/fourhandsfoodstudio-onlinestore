@@ -74,8 +74,9 @@ router.delete('/:id', isAuth, isAdmin, async (req, res) => {
   }
 });
 
-router.post('/', isAuth, isAdmin, async (req, res) => {
+router.post('/', async (req, res) => {
   const product = new Product({
+    isTakeaway: req.body.isTakeaway,
     name: req.body.name,
     price: req.body.price,
     image: req.body.image,
@@ -86,6 +87,18 @@ router.post('/', isAuth, isAdmin, async (req, res) => {
     ingredients: req.body.ingredients,
     rating: req.body.rating,
     numReviews: req.body.numReviews,
+    collectionDate: req.body.collectionDate,
+    headingOnePrice: req.body.headingOnePrice,
+    headingOne: req.body.headingOne,
+    textOne: req.body.textOne,
+    headingTwoPrice: req.body.headingTwoPrice,
+    headingTwo: req.body.headingTwo,
+    textTwo: req.body.textTwo,
+    headingThreePrice: req.body.headingThreePrice,
+    headingThree: req.body.headingThree,
+    textThree: req.body.textThree,
+    pickupPoints: req.body.pickupPoints,
+    otherinfo: req.body.otherinfo,
   });
   const newProduct = await product.save();
   if (newProduct) {

@@ -10,6 +10,7 @@ import {
 function ProductsScreen(props) {
   const [modalVisible, setModalVisible] = useState(false);
   const [id, setId] = useState("");
+  const [isTakeaway, setIsTakeaway] = useState("");
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
   const [image, setImage] = useState("");
@@ -50,6 +51,7 @@ function ProductsScreen(props) {
   const openModal = (product) => {
     setModalVisible(true);
     setId(product._id);
+    setIsTakeaway(false);
     setName(product.name);
     setPrice(product.price);
     setDescription(product.description);
@@ -64,6 +66,7 @@ function ProductsScreen(props) {
     dispatch(
       saveProduct({
         _id: id,
+        isTakeaway,
         name,
         price,
         image,
@@ -228,10 +231,15 @@ function ProductsScreen(props) {
               <th>Category</th>
               <th>Brand</th>
               <th>Action</th>
+
             </tr>
           </thead>
           <tbody>
-            {products.map((product) => (
+            {products.map((product) => {
+              if(product.isTakeaway === true){
+                return null;
+              } else {
+                return (
               <tr key={product._id}>
                 <td>{product._id}</td>
                 <td>{product.name}</td>
@@ -249,8 +257,8 @@ function ProductsScreen(props) {
                     Delete
                   </button>
                 </td>
-              </tr>
-            ))}
+              </tr>)};
+            })}
           </tbody>
         </table>
       </div>

@@ -11,6 +11,7 @@ function EditTakeaway(props) {
   const history = useHistory();
 
   const [outgoingTakeawayData, setOutgoingTakeawayData] = useState({
+    isTakeaway: true,
     collectionDate: "",
     headingOnePrice: null,
     headingOne: "",
@@ -30,7 +31,7 @@ function EditTakeaway(props) {
 
   const deleteHandler = (takeawayData) => {
     console.log(takeawayData[0]._id);
-    axios.delete(`/api/takeaway/${takeawayData[0]._id}`)
+    axios.delete(`/api/products/${takeawayData[0]._id}`)
     .then(response => {
       window.location.reload();
     })
@@ -47,9 +48,10 @@ function EditTakeaway(props) {
   };
 
   const handleSubmit = (event) => {
-    console.log(outgoingTakeawayData);
     event.preventDefault();
-    axios.post('/api/takeaway/', outgoingTakeawayData)
+    debugger
+    console.log(outgoingTakeawayData);
+    axios.post('/api/products/', outgoingTakeawayData)
     .then(response => {
       setOutgoingTakeawayData(response.data);
       window.location.reload();
@@ -61,7 +63,7 @@ function EditTakeaway(props) {
 
   useEffect(() => {
     axios
-      .get("/api/takeaway/")
+      .get("/api/products/")
       .then((response) => {
         console.log(response.data);
         setTakeawayData(response.data);
@@ -80,8 +82,10 @@ function EditTakeaway(props) {
             Delete Takeaway
           </button>
           <br />
-          {takeawayData.map((takeaway) => {
-            console.log("Here lies the takeaway:" + takeaway);
+          {
+          takeawayData.map((takeaway) => {
+            console.log(takeaway);
+            if(takeaway.isTakeaway === true){
             return (
               <div>
                 <h2>Menu currently online</h2>
@@ -106,7 +110,9 @@ function EditTakeaway(props) {
                 </p>
                 <p>{takeaway.pickupPoints}</p>
               </div>
-            );
+            );} else {
+              return null;
+            }
           })}
         </div>
         <div>
