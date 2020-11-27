@@ -3,9 +3,11 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import { getTakeaway } from "../actions/takeawayActions";
+import { useHistory } from 'react-router-dom';
 
 function TakeawayContainer(props) {
   const [takeawayData, setTakeawayData] = useState([]);
+  const history = useHistory();
 
   useEffect(() => {
     axios
@@ -18,8 +20,10 @@ function TakeawayContainer(props) {
       });
   }, []);
 
-  const orderTakeaway = () => {
-    
+  const orderTakeaway = (id) => {
+    debugger
+    console.log(id);
+    history.push('/cart/' + id);
   }
 
   return (
@@ -28,8 +32,7 @@ function TakeawayContainer(props) {
         if(takeaway.isTakeaway === true){
         return (
           <div className="menuTakeawaySection">
-            <div>
-              
+            <div>{console.log(takeaway)}
               <h2>This week's menu:</h2>
               <p>For collection on: <u>{takeaway.collectionDate}</u></p>
               <p className="yellowText">
@@ -51,7 +54,7 @@ function TakeawayContainer(props) {
               <u>Pick-up points:</u>
             </p>
             <p>{takeaway.pickupPoints}</p>
-            <div onClick={orderTakeaway} className="orderButton">
+            <div onClick={() => orderTakeaway(takeaway._id)} className="orderButton">
               <b>
                 <p>ORDER</p>
               </b>

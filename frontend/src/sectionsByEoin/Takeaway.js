@@ -4,6 +4,8 @@ import takeawaypicture from "../imagesByEoin/takeawaypicture.png";
 import { Link } from 'react-router-dom';
 
 function Takeaway() {
+
+  
   return (
     <section className="aboutContainer">
       <div className="vl"></div>
