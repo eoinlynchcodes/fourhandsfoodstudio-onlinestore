@@ -9,7 +9,7 @@ function TakeawayContainer(props) {
 
   useEffect(() => {
     axios
-      .get("/api/takeaway/")
+      .get("/api/products/")
       .then((response) => {
         setTakeawayData(response.data);
       })
@@ -19,14 +19,13 @@ function TakeawayContainer(props) {
   }, []);
 
   const orderTakeaway = () => {
-    props.history.push('/cart/' + props.match.params.id);
-
+    
   }
 
   return (
     <div>
       {takeawayData.map((takeaway) => {
-        console.log(takeaway);
+        if(takeaway.isTakeaway === true){
         return (
           <div className="menuTakeawaySection">
             <div>
@@ -58,7 +57,9 @@ function TakeawayContainer(props) {
               </b>
             </div>
           </div>
-        );
+        );} else {
+          return null;
+        }
       })}
     </div>
   );
