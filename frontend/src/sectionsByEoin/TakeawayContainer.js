@@ -47,14 +47,16 @@ function TakeawayContainer(props) {
                 <u className="yellowText">
                   {takeaway.courseTitle}
                 </u>
-                {takeaway.price ? <p><u>Price:</u> €{takeaway.price} </p> : null}
                 <p> {takeaway.courseText}</p>
+
+                {takeaway.price ? <p><u>Price:</u> €{takeaway.price} </p> : null}
               </p>
             </div>
             <div>
             { takeaway.price ? <div onClick={() => orderTakeaway(takeaway._id)} className="orderButton"><b><p>ORDER</p></b></div> : null }
             { takeaway.pickupPoints ? (<p><u className="yellowText">Pick-up points:</u><br/> {takeaway.pickupPoints}</p>) : null }
             </div>
+            <hr/>
           </div>
         );} else {
           return null;
