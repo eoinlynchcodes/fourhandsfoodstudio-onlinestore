@@ -64,7 +64,7 @@ router.put('/:id', isAuth, isAdmin, async (req, res) => {
   return res.status(500).send({ message: ' Error in Updating Product.' });
 });
 
-router.delete('/:id', isAuth, isAdmin, async (req, res) => {
+router.delete('/:id', async (req, res) => {
   const deletedProduct = await Product.findById(req.params.id);
   if (deletedProduct) {
     await deletedProduct.remove();
@@ -88,15 +88,12 @@ router.post('/', async (req, res) => {
     rating: req.body.rating,
     numReviews: req.body.numReviews,
     collectionDate: req.body.collectionDate,
-    headingOnePrice: req.body.headingOnePrice,
-    headingOne: req.body.headingOne,
-    textOne: req.body.textOne,
-    headingTwoPrice: req.body.headingTwoPrice,
-    headingTwo: req.body.headingTwo,
-    textTwo: req.body.textTwo,
-    headingThreePrice: req.body.headingThreePrice,
-    headingThree: req.body.headingThree,
-    textThree: req.body.textThree,
+    mainPrice: req.body.mainPrice,
+    mainTitle: req.body.mainTitle,
+    mainItems: req.body.mainItems,
+    coursePrice: req.body.coursePrice,
+    courseTitle: req.body.courseTitle,
+    courseText: req.body.courseText,
     pickupPoints: req.body.pickupPoints,
     otherinfo: req.body.otherinfo,
   });

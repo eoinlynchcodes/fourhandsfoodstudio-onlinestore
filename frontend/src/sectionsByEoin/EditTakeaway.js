@@ -21,43 +21,31 @@ function EditTakeaway(props) {
   } = productDelete;
 
   const dispatch = useDispatch();
-
-  const [outgoingTakeawayData, setOutgoingTakeawayData] = useState({
-    isTakeaway: true,
-    collectionDate: "",
-    headingOnePrice: null,
-    headingOne: "",
-    textOne: "",
-    headingTwoPrice: null,
-    headingTwo: "",
-    textTwo: "",
-    headingThreePrice: null,
-    headingThree: "",
-    textThree: "",
-    pickupPoints: "",
-    otherinfo: "",
-  });
   const [takeawayData, setTakeawayData] = useState([]);
 
+  // For handling main courses.
+  const [main, setMain] = useState({
+    isTakeaway: true,
+    mainCourse: true,
+    collectionDate: "",
+    price: "",
+    mainTitle: "",
+    mainItems: "",
+  });
 
-  const deleteHandler = (takeaway) => {
-    dispatch(deleteProdcut(takeaway._id));
-    window.location.reload();
-  };
-
-  const handleChange = (event) => {
-    setOutgoingTakeawayData({
-      ...outgoingTakeawayData,
+  const handleChangeMain = (event) => {
+    setMain({
+      ...main,
       [event.target.name]: event.target.value,
     });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmitMain = (event) => {
     event.preventDefault();
     axios
-      .post("/api/products/", outgoingTakeawayData)
+      .post("/api/products/", main)
       .then((response) => {
-        setOutgoingTakeawayData(response.data);
+        setMain(response.data);
         window.location.reload();
       })
       .catch((error) => {
@@ -65,6 +53,70 @@ function EditTakeaway(props) {
       });
   };
 
+  // For Handling other courses.
+
+  const [course, setCourse] = useState({
+    isTakeaway: true,
+    mainCourse: false,
+    collectionDate: "",
+    countInStock: "",
+    price: "null",
+    mainTitle: "",
+    mainItems: "",
+  });
+
+  const handleCourseChange = (event) => {
+    setCourse({
+      ...course,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleSubmitCourses = (event) => {
+    event.preventDefault();
+    axios
+      .post("/api/products/", course)
+      .then((response) => {
+        setCourse(response.data);
+        window.location.reload();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  // For Handling Details - Date, Pickup Location, etc.
+
+  const [details, setDetails] = useState({
+    isTakeaway: true,
+    collectionDate: "",
+    pickupPoints: "",
+    otherinfo: "",
+  });
+
+  const handleChangeDetails = (event) => {
+    setDetails({
+      ...details,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleSubmitDetails = (event) => {
+    event.preventDefault();
+    debugger
+    console.log(details);
+    axios
+      .post("/api/products/", details)
+      .then((response) => {
+        setDetails(response.data);
+        window.location.reload();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  // Get takeaways.
   useEffect(() => {
     axios
       .get("/api/products/")
@@ -76,162 +128,171 @@ function EditTakeaway(props) {
       });
   }, []);
 
+  // Delete takeaway
+  const deleteHandler = (takeaway) => {
+    dispatch(deleteProdcut(takeaway._id));
+    window.location.reload();
+  };
+
   return (
-    <section className="homepageContainer">
+    <section className="editTakeawayPage">
       <hr />
-      <div className="editTakeawaySection">
-        <div>
-          <br />
-          {takeawayData.map((takeaway) => {
-            console.log(takeaway);
-            if (takeaway.isTakeaway === true) {
-              return (
+      <div>
+        <h2>Menu currently online</h2>
+        {takeawayData.map((takeaway) => {
+          if (takeaway.isTakeaway === true) {
+            return (
+              <div className="menuTakeawaySection">
                 <div>
-                  <h2>Menu currently online</h2>
-                  <div>
-                    <button onClick={() => deleteHandler(takeaway)}>
-                      Delete Takeaway
-                    </button>
-                    <h4>
-                      <u>
-                        {takeaway.headingOne}, {takeaway.headingOnePrice}
-                      </u>
-                    </h4>
-                    <p>{takeaway.textOne}</p>
-                  </div>
-                  <div>
-                    <h4>
-                      <u>
-                        {takeaway.headingTwo}, {takeaway.headingTwoPrice}
-                      </u>
-                    </h4>
-                    <p> {takeaway.textTwo}</p>
-                  </div>
-                  <p>
-                    <u>Pick-up points:</u>
-                  </p>
-                  <p>{takeaway.pickupPoints}</p>
+                  <h5>{takeaway.collectionDate}</h5>
+                  <h4>
+                    <u>{takeaway.mainTitle}</u>
+                  </h4>
+                  <h4>
+                    <u>{takeaway.courseTitle}</u>
+                  </h4>
+                  <p> {takeaway.mainITems}</p>
+                  <p> {takeaway.courseText}</p>
+                  {takeaway.price ? <p>Price: <u>€{takeaway.price}</u></p> : null}
+                  {takeaway.countInStock ? <p>Quantity available: <u>{takeaway.countInStock}</u></p> : null}
+                  
+                  <p>{takeaway.mainItems}</p>
                 </div>
-              );
-            } else {
-              return null;
-            }
-          })}
-        </div>
-        <div>
-          <form
-            onSubmit={(event) => handleSubmit(event)}
-            className="editTakeawayForm"
-          >
-            <h3>Add Takeaway</h3>
+                {takeaway.pickupPoints ? (
+                  <div>Pick-up Points: {takeaway.pickupPoints}</div>
+                ) : null}
+                {takeaway.otherinfo ? (
+                  <div>Other Info: {takeaway.otherinfo}</div>
+                ) : null}
+                <button onClick={() => deleteHandler(takeaway)}>
+                    Delete
+                  </button>
+              </div>
+            );
+          } else {
+            return null;
+          }
+        })}
+      </div>
 
-            <label>Collection Date:</label>
-            <input
-              name="collectionDate"
-              placeholder="Date"
-              onChange={(event) => handleChange(event)}
-            />
-            <br />
+      <div>
+        <form
+          onSubmit={(event) => handleSubmitMain(event)}
+          className="editTakeawayForm"
+        >
+          <h2>Add Main Course</h2>
+          <label>Main Course Price:</label>
+          <input
+            name="price"
+            placeholder="Price in €"
+            type="number"
+            onChange={(event) => handleChangeMain(event)}
+          />
+          <br />
 
-            <label>Heading One Price:</label>
-            <input
-              name="headingOnePrice"
-              placeholder="Price in €"
-              type="price"
-              onChange={(event) => handleChange(event)}
-            />
-            <br />
+          <label>Number Available:</label>
+          <input
+            name="countInStock"
+            type="number"
+            placeholder="Number Available:"
+            onChange={(event) => handleChangeMain(event)}
+          />
+          <br />
 
-            <label>Heading One:</label>
-            <textarea
-              name="headingOne"
-              placeholder="Course Name:"
-              onChange={(event) => handleChange(event)}
-            />
-            <br />
+          <label>Main Course Title:</label>
+          <textarea
+            name="mainTitle"
+            placeholder="Course Name:"
+            onChange={(event) => handleChangeMain(event)}
+          />
+          <br />
 
-            <label>Text Area One:</label>
-            <textarea
-              name="textOne"
-              placeholder="Course Contents:"
-              rows="6"
-              onChange={(event) => handleChange(event)}
-            />
-            <br />
+          <label>Main Course Items/Text:</label>
+          <textarea
+            name="mainItems"
+            placeholder="Course Contents:"
+            rows="6"
+            onChange={(event) => handleChangeMain(event)}
+          />
+          <button type="submit">Add Main Course</button>
+        </form>
 
-            <label>Heading Two Price:</label>
-            <input
-              name="headingTwoPrice"
-              placeholder="Price in €"
-              type="price"
-              onChange={(event) => handleChange(event)}
-            />
-            <br />
+        <form
+          onSubmit={(event) => handleSubmitCourses(event)}
+          className="editTakeawayForm"
+        >
+          <h3>Add Other Course</h3>
+          <label>Course Price:</label>
+          <input
+            name="price"
+            placeholder="Price in €"
+            type="number"
+            onChange={(event) => handleCourseChange(event)}
+          />
+          <br />
 
-            <label>Heading Two:</label>
-            <textarea
-              name="headingTwo"
-              placeholder="Course Name:"
-              onChange={(event) => handleChange(event)}
-            />
-            <br />
+          <label>Number Available:</label>
+          <input
+            name="countInStock"
+            type="number"
+            placeholder="Number Available:"
+            onChange={(event) => handleCourseChange(event)}
+          />
+          <br />
 
-            <label>Text Area Two:</label>
-            <textarea
-              name="textTwo"
-              placeholder="Course Contents:"
-              rows="6"
-              onChange={(event) => handleChange(event)}
-            />
-            <br />
+          <label>Course Title:</label>
+          <textarea
+            name="courseTitle"
+            placeholder="Course Name:"
+            onChange={(event) => handleCourseChange(event)}
+          />
+          <br />
 
-            <label>Heading Three Price:</label>
-            <input
-              name="headingThreePrice"
-              placeholder="Price in €"
-              type="price"
-              onChange={(event) => handleChange(event)}
-            />
-            <br />
+          <label>Course Text:</label>
+          <textarea
+            name="courseText"
+            placeholder="Course Contents:"
+            rows="6"
+            onChange={(event) => handleCourseChange(event)}
+          />
+          <br />
+          <button type="submit">Add</button>
+          <br />
+        </form>
 
-            <label>Heading Three:</label>
-            <textarea
-              name="headingThree"
-              placeholder="Course Name:"
-              onChange={(event) => handleChange(event)}
-            />
-            <br />
+        <form
+          onSubmit={(event) => handleSubmitDetails(event)}
+          className="editTakeawayForm"
+        >
+          <h2>Add Details</h2>
+          <label>Collection Date:</label>
+          <input
+            name="collectionDate"
+            placeholder="Date"
+            onChange={(event) => handleChangeDetails(event)}
+          />
+          <br />
 
-            <label>Text Area Three:</label>
-            <textarea
-              name="textThree"
-              placeholder="Course Contents:"
-              rows="6"
-              onChange={(event) => handleChange(event)}
-            />
-            <br />
+          <label>Pick-Up Points:</label>
+          <textarea
+            name="pickupPoints"
+            placeholder="Where can it be collected?"
+            rows="6"
+            onChange={(event) => handleChangeDetails(event)}
+          />
+          <br/>
 
-            <label>Pick-Up Points:</label>
-            <textarea
-              name="pickupPoints"
-              placeholder="Where can it be collected?"
-              rows="6"
-              onChange={(event) => handleChange(event)}
-            />
-
-            <label>Other Information to Add:</label>
-            <textarea
-              name="otherinfo"
-              placeholder="Any other information to add:"
-              rows="8"
-              onChange={(event) => handleChange(event)}
-            />
-            <br />
-            <br />
-            <button type="submit">Add</button>
-            <br />
-          </form>
-        </div>
+          <label>Other Information to Add:</label>
+          <textarea
+            name="otherinfo"
+            placeholder="Any other information to add:"
+            rows="8"
+            onChange={(event) => handleChangeDetails(event)}
+          />
+          <br />
+          <button type="submit">Add Details</button>
+          <br />
+        </form>
       </div>
     </section>
   );

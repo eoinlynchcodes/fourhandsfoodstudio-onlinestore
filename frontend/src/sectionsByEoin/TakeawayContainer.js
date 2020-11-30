@@ -27,37 +27,33 @@ function TakeawayContainer(props) {
   }
 
   return (
-    <div>
+    <div className="menuTakeawaySection">
+        <h2>This week's menu:</h2>
       {takeawayData.map((takeaway) => {
         if(takeaway.isTakeaway === true){
         return (
-          <div className="menuTakeawaySection">
-            <div>{console.log(takeaway)}
-              <h2>This week's menu:</h2>
-              <p>For collection on: <u>{takeaway.collectionDate}</u></p>
+          <div>
+            <div>
+              {takeaway.collectionDate ? <p><u className="yellowText" >Collection Date:</u><br/> {takeaway.collectionDate}</p> : null }
               <p className="yellowText">
                 <u>
-                  {takeaway.headingOne}, {takeaway.headingOnePrice}
+                  {takeaway.mainTitle}
                 </u>
               </p>
-              <p>{takeaway.textOne}</p>
+              <p>{takeaway.mainItems}</p>
             </div>
             <div>
               <p>
                 <u className="yellowText">
-                  {takeaway.headingTwo}, {takeaway.headingTwoPrice}
+                  {takeaway.courseTitle}
                 </u>
-                <p> {takeaway.textTwo}</p>
+                {takeaway.price ? <p><u>Price:</u> €{takeaway.price} </p> : null}
+                <p> {takeaway.courseText}</p>
               </p>
             </div>
-            <p className="yellowText">
-              <u>Pick-up points:</u>
-            </p>
-            <p>{takeaway.pickupPoints}</p>
-            <div onClick={() => orderTakeaway(takeaway._id)} className="orderButton">
-              <b>
-                <p>ORDER</p>
-              </b>
+            <div>
+            { takeaway.price ? <div onClick={() => orderTakeaway(takeaway._id)} className="orderButton"><b><p>ORDER</p></b></div> : null }
+            { takeaway.pickupPoints ? (<p><u className="yellowText">Pick-up points:</u><br/> {takeaway.pickupPoints}</p>) : null }
             </div>
           </div>
         );} else {

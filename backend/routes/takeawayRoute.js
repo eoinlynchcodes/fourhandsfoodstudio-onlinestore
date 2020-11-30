@@ -12,9 +12,10 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
   const takeaway = new Takeaway({
     collectionDate: req.body.collectionDate,
-    headingOnePrice: req.body.headingOnePrice,
-    headingOne: req.body.headingOne,
-    textOne: req.body.textOne,
+    course: req.body.course,
+    mainPrice: req.body.mainPrice,
+    mainTitle: req.body.mainTitle,
+    mainItems: req.body.mainItems,
     headingTwoPrice: req.body.headingTwoPrice,
     headingTwo: req.body.headingTwo,
     textTwo: req.body.textTwo,

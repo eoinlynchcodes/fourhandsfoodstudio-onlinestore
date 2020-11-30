@@ -1760,14 +1760,14 @@ td {
   margin: 0 auto;
 }
 
-.editTakeawaySection {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
 .editTakeawayForm {
   display: flex;
   flex-direction: column;
 }
 
+.editTakeawayPage{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 90%;
+}
