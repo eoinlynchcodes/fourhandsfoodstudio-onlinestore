@@ -371,7 +371,7 @@ flex-basis: 50%;
 
 .headingColours{
   color: black;
-  background-color: orange;
+  background-color: #f4c1a8;
   padding: 0em 1em;
   display: flex;
   flex-direction: row;
