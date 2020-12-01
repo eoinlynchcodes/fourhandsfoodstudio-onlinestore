@@ -82,6 +82,9 @@ function App() {
           </div>
                 <hr/>
           <div className="theActualNav">
+            <Link to="/">
+              <h2>Home</h2>
+            </Link>
             <Link to="/about">
               <h2>About</h2>
             </Link>
@@ -96,9 +99,6 @@ function App() {
             </Link>
             <Link to="/events">
               <h2>Events</h2>
-            </Link>
-            <Link to="/newsletter">
-              <h2>Newsletter</h2>
             </Link>
           </div>
         </header>
@@ -118,7 +118,6 @@ function App() {
               <Link to="/takeaway">Takeaway</Link>
               <Link to="/blog">Recipes</Link>
               <Link to="/events">Events</Link>
-              <Link to="/newsletter">Newsletter</Link>
             </li>
           </ul>
         </aside>

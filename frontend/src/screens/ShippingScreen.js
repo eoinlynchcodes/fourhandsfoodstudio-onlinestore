@@ -22,7 +22,7 @@ function ShippingScreen(props) {
     dispatch(savePayment({ paymentMethod: 'paypal' }));
     props.history.push('/placeorder');
   }
-  return <div>
+  return <div className="shippingScreenToFitMobile">
     <CheckoutSteps step1 step2 ></CheckoutSteps>
     <div className="form">
       <form onSubmit={submitHandler} >
@@ -54,11 +54,12 @@ function ShippingScreen(props) {
           </li>
           <li>
             <label htmlFor="country">
-              Country
+              County
           </label>
             <input type="text" name="country" id="country" onChange={(e) => setCountry(e.target.value)}>
             </input>
           </li>
+          <label className="redText">Please note we currently only deliver in Ireland. </label>
 
           <li>
             <button type="submit" className="button primary">Continue</button>

@@ -43,10 +43,12 @@ html {
   .homepageContainer{
     width: 100%;
     margin: 0 auto;
+    overflow: hidden;
   }
 
   .homeImages{
     height: 100%;
+    overflow: hidden;
   }
 
   .flexRoseAndMargaux{
@@ -78,6 +80,18 @@ html {
   .homepageSection{
     padding: 0em 0em;
   }
+
+  .shippingScreenToFitMobile .form .form-container{
+    width: 100%;
+  }
+}
+
+.checkout-steps{
+  max-width: 90%;
+}
+
+.redText{
+  color: red;
 }
 
 .homeImages img {
@@ -361,6 +375,7 @@ flex-basis: 50%;
 .aboutMainText{
   width: 80%;
   margin: 0 auto;
+  height: auto;
   padding: 4em 0em;
   text-align: center;
 }
