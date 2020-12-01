@@ -20,7 +20,7 @@ function ShippingScreen(props) {
     e.preventDefault();
     dispatch(saveShipping({ address, city, postalCode, country }));
     dispatch(savePayment({ paymentMethod: 'paypal' }));
-    props.history.push('placeorder');
+    props.history.push('/placeorder');
   }
   return <div>
     <CheckoutSteps step1 step2 ></CheckoutSteps>

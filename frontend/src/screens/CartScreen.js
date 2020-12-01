@@ -26,6 +26,8 @@ function CartScreen(props) {
 
   const checkoutHandler = () => {
     props.history.push("/signin?redirect=shipping");
+    // props.history.push("/payment");
+
   };
 
   const history = useHistory();
@@ -40,7 +42,7 @@ function CartScreen(props) {
         <ul className="cart-list-container">
           <li>
             <h3>Shopping Cart</h3>
-            <div>Price</div>
+            <div>Details</div>
           </li>
           {cartItems.length === 0 ? (
             <div>
@@ -63,7 +65,7 @@ function CartScreen(props) {
                       className="cart-product-name"
                       to={"/product/" + item.product}
                     >
-                      {item.name ? item.name : "Friday Takeaway"}
+                      {item.name ? item.name : "Takeaway for collection"}
                     </Link>
                   </div>
                   <div>
@@ -81,7 +83,7 @@ function CartScreen(props) {
                       ))}
                     </select>
                     <div className="">
-                      <p>€{item.price}</p>
+                      <p>Price: €{item.price}</p>
                     </div>
                     <p onClick={() => removeFromCartHandler(item.product)}>
                       <u>Delete</u>

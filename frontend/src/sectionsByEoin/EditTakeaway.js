@@ -103,8 +103,6 @@ function EditTakeaway(props) {
 
   const handleSubmitDetails = (event) => {
     event.preventDefault();
-    debugger
-    console.log(details);
     axios
       .post("/api/products/", details)
       .then((response) => {
