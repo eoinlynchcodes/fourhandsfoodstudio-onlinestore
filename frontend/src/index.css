@@ -3,6 +3,7 @@
 html {
   font-size: 16px; /* 16px * 62.5 = 10px = 1rem */
   box-sizing: border-box;
+  background-color: #e8eaee;
 }
 body {
   font: 1.6em ;
@@ -61,6 +62,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  background-color: white;
 }
 
 .fourHandsHeading{
@@ -473,6 +475,7 @@ a > .rating > span:last-child {
   height: 100%;
 }
 .form-container {
+  background-color: white;
   display: flex;
   flex-direction: column;
   width: 32rem;
@@ -506,6 +509,7 @@ input {
 }
 
 .table {
+  background-color: white;
   width: 100%;
 }
 th {
@@ -702,6 +706,7 @@ tbody > tr:nth-child(odd) {
 }
 
 .aboutContainer{
+  background-color: white;
   width: 90%;
   margin: 0 auto;
   display: flex;

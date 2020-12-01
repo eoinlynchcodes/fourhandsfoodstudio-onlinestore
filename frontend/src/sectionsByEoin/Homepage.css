@@ -12,6 +12,10 @@ html {
   overflow: hidden;
 }
 
+.homepageContainer{
+  background-color: white;
+}
+
 @media only screen and (max-width: 1200px){
   .homepageContainer{
     border-left: .5px solid black;
@@ -268,6 +272,7 @@ html {
 .violet {
   background-color: #EDCCE0;
   color: #4D453A;
+  padding-top: 0%;
   display: flex;
   justify-content: center;
 }

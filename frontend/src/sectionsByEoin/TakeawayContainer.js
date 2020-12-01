@@ -26,7 +26,7 @@ function TakeawayContainer(props) {
 
   return (
     <div className="menuTakeawaySection">
-      <h2>This week's menu:</h2>
+      <h2>This week's takeaway menu:</h2>
 
       {/* For Details */}
 
@@ -34,7 +34,7 @@ function TakeawayContainer(props) {
         if (takeaway.isTakeaway === true) {
           return (
             <div>
-              <div className="takeawayDetails">
+              <div>
                 {takeaway.collectionDate ? (
                   <p>
                     <u className="yellowText">Collection Date:</u>
@@ -45,16 +45,22 @@ function TakeawayContainer(props) {
                   <p>
                     <u className="yellowText">Pick-up points:</u>
                     <br /> {takeaway.pickupPoints}
+                    <br/><br/>
                   </p>
                 ) : null}
               </div>
+              {takeaway.otherinfo ? (
+                  <p>
+                    <u className="yellowText">Other Information:</u>
+                    <br /> {takeaway.otherinfo}
+                  </p>
+                ) : null}
             </div>
           );
         } else {
           return null;
         }
       })}
-      <hr />
 
       {/* For Menu */}
       {takeawayData.map((takeaway) => {

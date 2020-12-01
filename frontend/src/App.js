@@ -56,13 +56,14 @@ function App() {
             </div>
 
             <div className="header-links">
-              <Link className="cartIconAndLength" to="/cart/:id?">
-                <img className="trolley" src={trolley32px} />{" "}
-                {cart.cartItems.length ? (
+              <Link className="" to="/cart/:id?">
+                {/* <img className="trolley" src={trolley32px} />{" "} */}
+              <h5>CART{cart.cartItems.length ? <h5>({cart.cartItems.length})</h5> : null} </h5>
+                {/* {cart.cartItems.length ? (
                   <div className="cartLength">
                     <p>{cart.cartItems.length}</p>
                   </div>
-                ) : null}
+                ) : null} */}
               </Link>
               {userInfo ? <Link to="/profile">{userInfo.name}</Link> : null}
               {userInfo && userInfo.isAdmin && (
@@ -101,6 +102,7 @@ function App() {
             </Link>
           </div>
         </header>
+        <hr/>
        
 
         <aside className="sidebar">
