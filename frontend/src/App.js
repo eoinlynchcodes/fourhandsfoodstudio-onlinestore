@@ -79,9 +79,6 @@ function App() {
               )}
             </div>
           </div>
-          <h2 className="dancingFont">
-                  <i>Always driven by nature!</i>
-                </h2>
                 <hr/>
           <div className="theActualNav">
             <Link to="/about">

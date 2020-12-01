@@ -29,12 +29,30 @@ function TakeawayContainer(props) {
   return (
     <div className="menuTakeawaySection">
         <h2>This week's menu:</h2>
+
+{/* For Details */}
+
+{takeawayData.map((takeaway) => {
+        if(takeaway.isTakeaway === true){
+        return (
+          <div>
+            <div className="takeawayDetails">
+              {takeaway.collectionDate ? <p><u className="yellowText" >Collection Date:</u><br/> {takeaway.collectionDate}</p> : null }
+              {takeaway.pickupPoints ? (<p><u className="yellowText">Pick-up points:</u><br/> {takeaway.pickupPoints}</p>) : null }
+            </div>
+          </div>
+        );} else {
+          return null;
+        }
+      })}
+      <hr/>
+
+{/* For Menu */}
       {takeawayData.map((takeaway) => {
         if(takeaway.isTakeaway === true){
         return (
           <div>
             <div>
-              {takeaway.collectionDate ? <p><u className="yellowText" >Collection Date:</u><br/> {takeaway.collectionDate}</p> : null }
               <p className="yellowText">
                 <u>
                   {takeaway.mainTitle}
@@ -54,7 +72,6 @@ function TakeawayContainer(props) {
             </div>
             <div>
             { takeaway.price ? <div onClick={() => orderTakeaway(takeaway._id)} className="orderButton"><b><p>ORDER</p></b></div> : null }
-            { takeaway.pickupPoints ? (<p><u className="yellowText">Pick-up points:</u><br/> {takeaway.pickupPoints}</p>) : null }
             </div>
             <hr/>
           </div>
