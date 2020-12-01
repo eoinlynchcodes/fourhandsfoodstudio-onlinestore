@@ -130,7 +130,7 @@ function About() {
           <hr/>
         <section className="principlesbox">
             <div className="coloredBox extraMargin orange">
-              <h3>Our Principles</h3>
+              <h3>Principles</h3>
             </div>
             <div id="principles" className="white">
               <hr />
