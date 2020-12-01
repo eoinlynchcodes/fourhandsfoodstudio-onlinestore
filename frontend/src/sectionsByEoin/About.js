@@ -122,7 +122,7 @@ function About() {
                   how lucky we are to live in a world which knows better how to
                   care for itself than we ever could."
                 </i>
-                <br /> <br /><p className="centreThisHereText">- Rose Greene &amp; Margaux Dejardin,<br/> 4 Hands Food
+                <br /> <br /><p className="centreThisHereText">- Rose Greene &amp; Margaux Dejardin,<br/> Founders of 4 Hands Food
                 Studio</p>
               </p>
             </div>
