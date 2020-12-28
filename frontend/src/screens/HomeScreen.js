@@ -64,9 +64,10 @@ function HomeScreen(props) {
       </div>
 
       <div className="homepageContainer">
-        <div className="vl"></div>
         <div>
           <div className="homepageFirstPiece">
+          <div id="thisOneVL"></div>
+
             <section className="first homepageSection">
               <div className="violet">
                 <h3>The Fermented Goods</h3>
@@ -91,7 +92,7 @@ function HomeScreen(props) {
                     <u>Online Store. </u>
                 </a>
               </p>
-              <div className="redButton" onClick={goToProducts}>
+              <div id="orangeButton" className="redButton" onClick={goToProducts}>
                 <p>
                   <b>CHECK OUT HERE</b>
                 </p>
@@ -110,12 +111,13 @@ function HomeScreen(props) {
                 microwave food is not an option. Spaces are limited so click in
                 to order!
               </p>
-              <div onClick={buyTakeAway} className="redButton">
+              <div onClick={buyTakeAway} id="greenButton" className="redButton">
                 <b>
                   <p>ORDER</p>
                 </b>
               </div>
             </section>
+            <div id="thisOneVL"></div>
           </div>
 
           <section className="homepageSection">
@@ -156,7 +158,6 @@ function HomeScreen(props) {
             <hr className="bottomHR" />
           </section>
         </div>
-        <div className="vl"></div>
       </div>
     </>
   );

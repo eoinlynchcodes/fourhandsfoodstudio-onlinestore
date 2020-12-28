@@ -140,6 +140,14 @@ html {
   max-width: 80%;
 }
 
+#orangeButton{
+  border-color: #AD612A;
+}
+
+#greenButton{
+  border-color: #405449;
+}
+
 @media only screen and (max-width: 1200px) {
   .homepageContainer {
     display: flex;
@@ -283,8 +291,8 @@ html {
 }
 
 .violet {
-  background-color: #EDCCE0;
-  color: #4D453A;
+  color: #AD612A;
+  background-color: #F0F0F0;
   padding-top: 0%;
   display: flex;
   justify-content: center;
@@ -317,8 +325,8 @@ html {
 }
 
 .green {
-  background-color: #718279;
-  color: white;
+  background-color: #F0F0F0;
+  color: #405449;
   display: flex;
   justify-content: center;
 }
