@@ -50,7 +50,7 @@ function App() {
             <div className="fourHandsHeading">
               <Link to="/">
                 <h3 className="fourHandsHeadingText">
-                  <span className="headingColours">4 Hands</span> Food Studio
+                  <span className="headingColours">4 Hands</span>Food Studio
                 </h3>
               </Link>
             </div>
