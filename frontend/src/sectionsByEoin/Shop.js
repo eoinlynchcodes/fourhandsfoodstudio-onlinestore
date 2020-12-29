@@ -26,7 +26,7 @@ function Shop(props) {
   return (
     <section className="homepageContainer">
       <div className="vl"></div>
-      <section id="shop" className="">
+      <section id="" className="">
         <div className="coloredBox violet">
           <h2>Products</h2>
         </div>
