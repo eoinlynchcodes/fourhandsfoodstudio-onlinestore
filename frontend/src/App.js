@@ -102,7 +102,7 @@ function App() {
             </Link>
           </div>
         </header>
-        <hr/>
+        {/* <hr/> */}
        
 
         <aside className="sidebar">

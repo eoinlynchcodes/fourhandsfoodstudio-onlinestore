@@ -341,25 +341,39 @@ a > .rating > span:last-child {
 }
 
 /* Product Details */
+
+.productScreenDiv{
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+
 .details {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
   flex-wrap: wrap;
   padding: 1rem;
 }
-.details-image {
-  flex: 2 1 60rem;
+
+.details-image{
+  display: flex;
+  justify-content: center;
 }
+
 .details-image img {
-  max-width: 60rem;
-  width: 100%;
+  width: 40%;
+  height: auto;
+  justify-items: center;
 }
+
 .details-info {
   flex: 1 1 30rem;
 }
+
 .details-action {
   flex: 1 1 30rem;
+  margin: 1rem auto;
+  max-width: 70%;
 }
 
 .details-info ul,
