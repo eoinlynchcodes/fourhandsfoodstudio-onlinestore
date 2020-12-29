@@ -5,7 +5,7 @@ export default class ContactForm extends React.Component {
     super(props);
     this.submitForm = this.submitForm.bind(this);
     this.state = {
-      status: ""
+      status: "",
     };
   }
 
@@ -13,26 +13,32 @@ export default class ContactForm extends React.Component {
     const { status } = this.state;
 
     return (
-      <form
-      className="contacform"
-        onSubmit={this.submitForm}
-        action="https://formspree.io/f/mdopppvr"
-        method="POST"
-      >
-         <label>Name:</label>
-        <input type="text" name="name" /> 
-        <br/>
-        <label>Phone Number:</label>
-        <input type="text" name="phone" />
-        <br/>
-        <label>Email:</label>
-        <input type="email" name="email" />
-        <br/>
-        <label>Message:</label>
-        <textarea type="text" rows="8" name="message" /><br/>
-        {status === "SUCCESS" ? <p>Thanks!</p> : <button>Submit</button>}
-        {status === "ERROR" && <p>Ooops! There was an error.</p>}
-      </form>
+      <div>
+          <div className="paraforalignment">
+              <p>Feel free to contact us to about commercial orders, ask us questions or anything else.</p>
+          </div>
+        <form
+          className="contacform"
+          onSubmit={this.submitForm}
+          action="https://formspree.io/f/mdopppvr"
+          method="POST"
+        >
+          <label>Name:</label>
+          <input type="text" name="name" />
+          <br />
+          <label>Phone Number:</label>
+          <input type="text" name="phone" />
+          <br />
+          <label>Email:</label>
+          <input type="email" name="email" />
+          <br />
+          <label>Message:</label>
+          <textarea type="text" rows="8" name="message" />
+          <br />
+          {status === "SUCCESS" ? <p>Thanks!</p> : <button>Submit</button>}
+          {status === "ERROR" && <p>Ooops! There was an error.</p>}
+        </form>
+      </div>
     );
   }
 
