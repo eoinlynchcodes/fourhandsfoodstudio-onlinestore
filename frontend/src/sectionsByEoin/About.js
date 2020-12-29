@@ -8,7 +8,7 @@ function About() {
     <section className="aboutContainer">
       <div className="vl"></div>
       <div>
-        <div className="coloredBox red">
+        <div className="coloredBox">
           <h2>About</h2>
         </div>
         <br/>
@@ -135,54 +135,37 @@ function About() {
             <div id="principles" className="white">
               <hr />
               <p>1. Make the best product possible</p>
-              <br />
-              <br />
               <hr />
               <p>
                 2. Always strive to improve and innovate on every level.
               </p>
-              <br />
-              <br />
               <hr />
               <p>3. Nutrition is key.</p>
-              <br />
-              <br />
               <hr />
               <p>
                 4. Connect with suppliers, continually control and monitor
                 supply chain.
               </p>
-              <br />
-              <br />
               <hr />
               <p>5. Minimize the creation of waste.</p>
-              <br />
-              <br />
               <hr />
               <p>
                 6. Assess the environmental outcome of any business decision
                 before making
               </p>
-              <br />
-              <br />
               <hr />
               <p>7. Support and promote farmers that fit principles.</p>
-              <br />
-              <br />
               <hr />
               <p>8. Engage with and teach food citizens (customers).</p>
-              <br />
-              <br />
               <hr />
               <p>
                 9. Continually push for the collective good, to give better
                 access to sustainable food to a maximum of people, while
                 supporting biodiversity and regenerative agriculture.
               </p>
-              <br />
-              <br />
               <hr />
               <p>10. Lead by example.</p>
+              <hr/>
             </div>
           </section>
       </div>

@@ -202,8 +202,8 @@ a:hover {
 .orderButton{
   cursor: pointer;
   border: 1px solid black;
-  background-color: red;
-  color: white;
+  background-color: #F4F4F4;
+  color: black;
   margin: 0 auto;
   display: flex;
   width: 40%;
