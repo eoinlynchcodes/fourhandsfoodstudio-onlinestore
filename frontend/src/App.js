@@ -23,6 +23,7 @@ import About from "./sectionsByEoin/About";
 import TakeawayHandling from "./screens/TakeawayHandling";
 import Blog from "./sectionsByEoin/Blog";
 import EditTakeaway from "./sectionsByEoin/EditTakeaway";
+import ContactForm from './sectionsByEoin/ContactForm.js';
 
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
@@ -143,6 +144,7 @@ function App() {
             <Route path="/cart/:id?" component={CartScreen} />
             <Route path="/category/:id" component={HomeScreen} />
             <Route path="/" exact={true} component={HomeScreen} />
+            <Route path="/contact" component={ContactForm} />
           </div>
         </main>
         <Footer />

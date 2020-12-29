@@ -442,6 +442,12 @@ flex-basis: 50%;
   cursor: pointer;
 }
 
+.contacform{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 2rem auto;
+}
 
 .submitButton{
   width: 50%;
