@@ -163,6 +163,10 @@ html {
     width: 80%;
   }
 
+  #greenButton{
+    margin: 0 auto;
+  }
+
   .homepageFirstPiece{
     display: flex;
     flex-direction: column;

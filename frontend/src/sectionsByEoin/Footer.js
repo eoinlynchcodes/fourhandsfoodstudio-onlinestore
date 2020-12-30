@@ -93,7 +93,7 @@ function Footer() {
       <div className="bottom">
           <a><p>&copy; 4 Hands Food Studio 2020</p></a>
           <a href="https://eoinlynch.com">
-            <p className="blackenThisEoinLynch">Design &amp; Code by <u>Eoin Lynch</u></p>
+            <p className="blackenThisEoinLynch">A website by <u>Eoin Lynch</u></p>
           </a>
       </div>
     </footer>
