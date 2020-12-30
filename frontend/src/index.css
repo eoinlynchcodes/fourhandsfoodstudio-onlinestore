@@ -423,7 +423,8 @@ a > .rating > span:last-child {
   flex-direction: column;
   margin: 1rem;
   align-items: flex-start;
-  height: 50em;
+  min-height: 50rem;
+  height: auto;
 }
 .cart-list {
   width: 80%;

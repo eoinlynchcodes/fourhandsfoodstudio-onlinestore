@@ -124,8 +124,7 @@ function HomeScreen(props) {
             <div className="yellow">
               <h2>Newsletter Signup</h2>
             </div>
-            <div className="vl"></div>
-            <div className="newsletterComponent centreNewsletter">
+            <div className="newsletterComponent centreNewsletter sideborders">
             <br/><br/>
               <p className="paraforalignment">
                 Join our mailing list to receive our weekly takeaway offering
@@ -153,8 +152,6 @@ function HomeScreen(props) {
                 </div>
               </form>
             </div>
-            <div className="vl"></div>
-
             <hr className="bottomHR" />
           </section>
         </div>

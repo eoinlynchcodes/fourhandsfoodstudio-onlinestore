@@ -147,7 +147,14 @@ html {
 
 #greenButton{
   border-color: #405449;
+  margin-top: 7rem;
 }
+
+.sideborders{
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
 
 @media only screen and (max-width: 1200px) {
   .homepageContainer {
@@ -184,6 +191,10 @@ html {
 
   .redButton{
     margin: 0 auto;
+  }
+
+  .sideborders{
+    border: none;
   }
 
   .homepageSection{
@@ -338,6 +349,7 @@ html {
   display: flex;
   justify-content: center;
   margin: 0 auto;
+  width: 90%;
 }
 
 .blue {
