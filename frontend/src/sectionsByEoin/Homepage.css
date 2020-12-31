@@ -233,6 +233,11 @@ html {
 
 }
 
+.linksToFlex{
+  display: flex;
+  
+}
+
 
 .homepagebox {
   margin: 2rem;

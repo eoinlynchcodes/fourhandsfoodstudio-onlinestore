@@ -120,7 +120,7 @@ function HomeScreen(props) {
             <div id="thisOneVL"></div>
           </div>
 
-          <section className="homepageSection">
+          {/* <section className="homepageSection">
             <div className="yellow">
               <h2>Newsletter Signup</h2>
             </div>
@@ -153,7 +153,7 @@ function HomeScreen(props) {
               </form>
             </div>
             <hr className="bottomHR" />
-          </section>
+          </section> */}
         </div>
       </div>
     </>
