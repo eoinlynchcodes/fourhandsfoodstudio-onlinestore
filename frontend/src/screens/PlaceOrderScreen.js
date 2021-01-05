@@ -3,6 +3,9 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import CheckoutSteps from '../components/CheckoutSteps';
 import { createOrder } from '../actions/orderActions';
+import StripeCheckout from '../components/StripeCheckout';
+import '../stripebutton.css';
+
 function PlaceOrderScreen(props) {
 
   const cart = useSelector(state => state.cart);
@@ -102,6 +105,9 @@ function PlaceOrderScreen(props) {
         <ul>
           <li>
             <button className="button primary full-width" onClick={placeOrderHandler} >Place Order</button>
+          </li>
+          <li>
+            <StripeCheckout/>
           </li>
           <li>
             <h3>Order Summary</h3>

@@ -24,6 +24,10 @@ import TakeawayHandling from "./screens/TakeawayHandling";
 import Blog from "./sectionsByEoin/Blog";
 import EditTakeaway from "./sectionsByEoin/EditTakeaway";
 import ContactForm from './sectionsByEoin/ContactForm.js';
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+
+const promise = loadStripe('pk_test_51I6HfqKCoR6minuUWX6pYxagadWiNnVY7SRQGpPCoiKTA5yo0NzPgY0QCmbltHAGGLwx1uWiTr2THMpQVh2Lhl6i00sVGtNjCP');
 
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
@@ -40,6 +44,8 @@ function App() {
   };
   return (
     <BrowserRouter>
+      <Elements stripe={promise}>
+
       <div className="entireparentcontainer">
         <header className="flexTheHeader">
           <div className="header">
@@ -149,6 +155,7 @@ function App() {
         </main>
         <Footer />
       </div>
+      </Elements>
     </BrowserRouter>
   );
 }
