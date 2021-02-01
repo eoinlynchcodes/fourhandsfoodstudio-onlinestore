@@ -9,8 +9,6 @@ import orderRoute from './routes/orderRoute';
 import uploadRoute from './routes/uploadRoute';
 import takeawayRoute from './routes/takeawayRoute';
 
-const stripe = require('stripe')('pk_test_51I6HfqKCoR6minuUWX6pYxagadWiNnVY7SRQGpPCoiKTA5yo0NzPgY0QCmbltHAGGLwx1uWiTr2THMpQVh2Lhl6i00sVGtNjCP');
-
 const mongodbUrl = config.MONGODB_URL;
 mongoose
   .connect(mongodbUrl, {
@@ -35,24 +33,6 @@ app.use('/uploads', express.static(path.join(__dirname, '/../uploads')));
 app.use(express.static(path.join(__dirname, '/../frontend/build')));
 app.get('*', (req, res) => {
   res.sendFile(path.join(`${__dirname}/../frontend/build/index.html`));
-});
-
-const calculateOrderAmount = items => {
-  // Replace this constant with a calculation of the order's amount
-  // Calculate the order total on the server to prevent
-  // people from directly manipulating the amount on the client
-  return 1400;
-};
-app.post('/create-payment-intent', async (req, res) => {
-  const { items } = req.body;
-  // Create a PaymentIntent with the order amount and currency
-  const paymentIntent = await stripe.paymentIntents.create({
-    amount: calculateOrderAmount(items),
-    currency: 'eur',
-  });
-  res.send({
-    clientSecret: paymentIntent.client_secret,
-  });
 });
 
 app.listen(config.PORT, () => {

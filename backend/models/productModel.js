@@ -11,7 +11,7 @@ const reviewSchema = new mongoose.Schema(
   },
 );
 const productSchema = new mongoose.Schema({
-  isTakeaway: { type: Boolean, required: true },
+  isTakeaway: { type: Boolean, required: false },
   name: { type: String, required: false },
   image: { type: String, required: false },
   size: { type: String, required: false },

@@ -40,7 +40,7 @@ function Shop(props) {
           ) : error ? (
             <div>{error}</div>
           ) : (
-            <ul className="products removeBullets">
+            <ul className="c">
               {products.map((product) => {
                 if(product.isTakeaway === false){
                   return (
